@@ -1,5 +1,5 @@
         // <--[tag]
-        // @attribute <EntityTag.client_channels>
+        // @attribute <PlayerTag.client_channels>
         // @returns ListTag
         // @plugin Paper, DenizenAdditions
         // @description
