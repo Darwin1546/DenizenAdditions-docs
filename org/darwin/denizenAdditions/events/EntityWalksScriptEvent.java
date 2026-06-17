@@ -4,7 +4,7 @@
     //
     // @Group Entity
     //
-    // @Triggers when a player stopping using an item.
+    // @Triggers when a entity moves in the slightest.
     //
     // @Context
     // <context.entity> returns the entity.

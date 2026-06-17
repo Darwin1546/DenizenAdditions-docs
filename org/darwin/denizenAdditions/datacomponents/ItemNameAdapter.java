@@ -2,6 +2,7 @@
     // @object ItemTag
     // @name item_name
     // @input ElementTag
+    // @plugin DenizenAdditions
     // @description
     // Sets vanilla style item name. <@link language Item Components>.
     // @mechanism
