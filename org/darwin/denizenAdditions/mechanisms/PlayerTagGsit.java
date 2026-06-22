@@ -18,3 +18,19 @@
         // Leave the input empty to remove the current GSit pose.
         // -->
 
+        // <--[tag]
+        // @attribute <PlayerTag.gcrawl>
+        // @returns ElementTag(Boolean)
+        // @plugin GSit, DenizenAdditions
+        // @description
+        // Returns whether the player is currently crawling through GSit.
+        // -->
+
+        // <--[tag]
+        // @attribute <PlayerTag.gpose>
+        // @returns ElementTag
+        // @plugin GSit, DenizenAdditions
+        // @description
+        // Returns the player's current GSit pose, if any.
+        // -->
+
