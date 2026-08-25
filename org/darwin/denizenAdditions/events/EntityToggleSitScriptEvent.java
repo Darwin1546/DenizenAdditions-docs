@@ -4,6 +4,8 @@
     //
     // @Group Entity
     //
+    // @Cancellable true
+    //
     // @Triggers when an entity starts or stops sitting.
     //
     // @Context

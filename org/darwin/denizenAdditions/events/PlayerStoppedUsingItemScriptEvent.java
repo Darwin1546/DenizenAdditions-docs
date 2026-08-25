@@ -4,11 +4,11 @@
     //
     // @Group Player
     //
-    // @Triggers when a player stopping using an item.
+    // @Triggers when a player stops using an item (eating, drawing a bow, raising a shield, etc).
     //
     // @Context
-    // <context.item> returns used item.
-    // <context.held> returns the duration item was used.
+    // <context.item> returns the ItemTag that was being used.
+    // <context.held> returns the DurationTag of how long the item was used for.
     //
     // @Player Always.
     // -->
