@@ -4,5 +4,6 @@
         // @plugin Paper, DenizenAdditions
         // @description
         // Returns MapTag with persistent fake location and entity definitions.
+        // The 'fake' key is only present while the fake actually has a spawned packet entity.
         // -->
 

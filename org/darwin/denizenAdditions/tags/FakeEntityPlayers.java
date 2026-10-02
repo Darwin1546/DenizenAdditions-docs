@@ -3,6 +3,7 @@
         // @returns ListTag(PlayerTag)
         // @plugin DenizenAdditions
         // @description
-        // Returns the list of players currently stored in the persistent fake entity's viewer list.
+        // Returns the list of players currently being sent the persistent fake entity's packets.
+        // Empty if the fake has no spawned packet entity, or nobody is in range of it.
         // -->
 
