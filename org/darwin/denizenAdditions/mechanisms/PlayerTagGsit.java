@@ -14,7 +14,7 @@
         // @plugin GSit, DenizenAdditions
         // @description
         // Sets the player's GSit pose.
-        // Valid poses are LAY, LAY_BACK, BELLYFLOP, and SPIN.
+        // Valid poses are LAY, LEGS_UP, BELLYFLOP, and SPIN.
         // Leave the input empty to remove the current GSit pose.
         // -->
 
