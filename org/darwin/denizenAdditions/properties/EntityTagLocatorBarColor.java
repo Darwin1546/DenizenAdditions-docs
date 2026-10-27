@@ -9,8 +9,6 @@
     // For the mechanism: provide no input to go back to that fallback.
     // The alpha channel is dropped - the client is never sent it.
     // This only controls how the icon looks - an entity is only on the locator bar at all while its 'waypoint_transmit_range'
-    // attribute is above zero, see <@link tag EntityTag.attribute_base_values>.
-    // @tags
-    // <EntityTag.locator_bar_color>
+    // attribute is above zero, see <@link mechanism EntityTag.attribute_base_values>.
     // -->
 

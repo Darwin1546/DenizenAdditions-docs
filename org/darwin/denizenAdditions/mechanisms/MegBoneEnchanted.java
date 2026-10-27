@@ -1,9 +1,9 @@
         // <--[mechanism]
         // @object MegBoneTag
-        // @name brightness
-        // @input ElementTag
+        // @name is_enchanted
+        // @input ElementTag(Boolean)
         // @plugin Megizen, DenizenAdditions
         // @description
-        // Sets if bone should have enchantment visuals.
+        // Sets whether the bone shows the enchantment glint.
         // -->
 

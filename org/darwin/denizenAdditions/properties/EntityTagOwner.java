@@ -1,10 +1,10 @@
     // <--[property]
     // @object EntityTag
     // @name item_owner
-    // @returns PlayerTag
+    // @input PlayerTag
     // @plugin DenizenAdditions
     // @description
-    // Controls the owner of the dropped item entity. Only owner of the item will be able to pick it up.
-    // Returns an PlayerTag or null if none is set.
+    // Controls the owner of a dropped item entity. Only the owner will be able to pick the item up.
+    // The tag returns null if no owner is set.
     // -->
 

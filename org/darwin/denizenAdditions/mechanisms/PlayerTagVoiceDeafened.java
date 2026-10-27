@@ -2,6 +2,7 @@
         // @attribute <PlayerTag.voice_deafened>
         // @returns ElementTag(Boolean)
         // @plugin DenizenAdditions, PlasmoVoice
+        // @mechanism PlayerTag.voice_deafened
         // @description
         // Returns whether the player has been stopped from hearing PlasmoVoice audio by <@link mechanism PlayerTag.voice_deafened>.
         // -->

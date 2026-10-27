@@ -1,10 +1,10 @@
     // <--[property]
     // @object EntityTag
     // @name thrower
-    // @returns PlayerTag
+    // @input PlayerTag
     // @plugin DenizenAdditions
     // @description
-    // Controls the thrower of the dropped item entity.
-    // Returns an PlayerTag or null if none is set.
+    // Controls the thrower of a dropped item entity.
+    // The tag returns null if no thrower is set.
     // -->
 

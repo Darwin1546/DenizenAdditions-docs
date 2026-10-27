@@ -1,9 +1,9 @@
     // <--[property]
     // @object EntityTag
     // @name immovable
-    // @returns ElementTag
+    // @input ElementTag(Boolean)
     // @plugin DenizenAdditions
     // @description
-    // Controls the immovable state of mannequin entity type.
+    // Controls whether a mannequin is immovable.
     // -->
 

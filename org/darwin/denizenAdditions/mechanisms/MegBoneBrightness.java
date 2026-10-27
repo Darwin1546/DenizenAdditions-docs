@@ -1,9 +1,10 @@
         // <--[mechanism]
         // @object MegBoneTag
         // @name brightness
-        // @input Maptag
+        // @input MapTag
         // @plugin Megizen, DenizenAdditions
         // @description
-        // Sets item in display type bone.
+        // Sets the light levels the bone is rendered with, as a map with the keys 'block' and 'sky' (each 0 to 15).
+        // Keys left out of the map are not changed.
         // -->
 

@@ -2,6 +2,7 @@
         // @attribute <MythicMobsMobTag.owner>
         // @returns PlayerTag
         // @plugin DenizenAdditions, Depenizen, MythicMobs
+        // @mechanism MythicMobsMobTag.owner
         // @description
         // Returns the MythicMob's owner, or null if it has none.
         // This is the value MythicMobs' own 'setowner' skill mechanic writes.
