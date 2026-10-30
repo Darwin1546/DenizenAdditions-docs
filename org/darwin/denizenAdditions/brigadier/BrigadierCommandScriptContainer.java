@@ -1,6 +1,6 @@
     // <--[language]
     // @name Brigadier Command Script Containers
-    //
+    // @group Script Container System
     // @description
     // Like a 'command' script container, but the command is built on Brigadier, the same system vanilla commands use.
     // The client knows the whole command tree, so it highlights each argument as it is typed, marks invalid input red

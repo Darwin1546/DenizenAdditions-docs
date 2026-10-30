@@ -1,6 +1,6 @@
     // <--[language]
     // @name Dialog Script Containers
-    //
+    // @group Script Container System
     // @description
     // Dialog script containers define native client-side dialog windows (Paper's dialog API).
     // Show one with <@link command showdialog> or <@link mechanism PlayerTag.show_dialog>.

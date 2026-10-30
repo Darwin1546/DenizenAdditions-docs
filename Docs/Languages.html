@@ -48,11 +48,47 @@
 </span>
 <center>
 <div class="categories_box"><h4>Categories:</h4><div class="categories_container">
-<a class="category_link" data-category="%28missing+group%29" href="#%28missing+group%29" onclick="doFlashFor('%28missing+group%29')">(Missing Group)</a>
- | <a class="category_link" data-category="script+container+system" href="#script+container+system" onclick="doFlashFor('script+container+system')">Script Container System</a>
+<a class="category_link" data-category="script+container+system" href="#script+container+system" onclick="doFlashFor('script+container+system')">Script Container System</a>
 </div></div>
-<div class="meta_category" data-category="%28missing+group%29"><div class="category_header"><br><hr><br><h4>Category: <a id="%28missing+group%29" href="#%28missing+group%29" onclick="doFlashFor('%28missing+group%29')">(Missing Group)</a></h4><br></div>
-<div class="meta_entry" data-names="brigadier command script containers" data-text="brigadier command script containers brigadier command script containers like a &#x27;command&#x27; script container, but the command is built on brigadier, the same system vanilla commands use. the client knows the whole command tree, so it highlights each argument as it is typed, marks invalid input red before it is sent, shows tooltips on suggestions, and accepts selectors and relative coordinates natively. the command also works inside &#x27;/execute as ... at ... run&#x27;. the container itself is the root literal: its &#x27;script&#x27; key runs for the bare command, and &#x27;then&#x27; holds the nodes after it. every node under &#x27;then&#x27; is either a literal (a fixed word) or, if it has a &#x27;type&#x27; key, an argument. a node can have these keys: - type: the argument type, see &lt;@link language brigadier argument types&gt;. leave it out for a literal. - permission: the permission needed to see and use this node (and everything below it). - script: runs when the input ends at this node. - suggest: for arguments only. either a tag returning a list (or a map of value to tooltip), or a script section that does &#x27;determine&#x27; with such a list/map. a script section may use waits and ~waitable commands (like ~webget): the client simply gets the suggestions once the queue finishes. suggestions are filtered by what is typed so far automatically. - then: the child nodes. argument types can have extra keys, like &#x27;min&#x27; and &#x27;max&#x27; for numbers. inside &#x27;script&#x27;, every argument on the way to the node is available as &lt;context.(argument name)&gt;, already converted to a denizen object (a players argument becomes a listtag of playertags, a block_position becomes a locationtag, etc). other context: &lt;context.alias&gt; (the label used), &lt;context.raw_args&gt; (everything after the label), &lt;context.source_type&gt; (player, command_block, command_minecart, entity or server), &lt;context.server&gt; (true if not run by a player), &lt;context.location&gt; (where the command runs, changed by &#x27;execute at/positioned&#x27;), and &lt;context.executor&gt; (the entity it runs as, changed by &#x27;execute as&#x27;). the linked player is the executor when that is a player, otherwise the sender when that is a player. &#x27;determine&#x27; a number to set the command result (as seen by &#x27;execute store result&#x27;). inside a &#x27;suggest&#x27; tag or script, arguments typed before the current one are available the same way, plus &lt;context.current&gt; - the text typed so far for the current argument. &#x27;permission&#x27; is the only access check: paper sends the command tree from another thread, where script tags can&#x27;t run. commands update for online players on &#x27;/ex reload&#x27;. &lt;code&gt; brigadier_command_script_name: type: brigadier_command # the name of the command, as in &#x27;/warp&#x27;. name: warp # | optional aliases: - w # | optional. needed for the whole command. permission: myserver.warp # | optional. runs for the bare &#x27;/warp&#x27;. script: - narrate &quot;usage: /warp tp &lt;&amp;lt&gt;name&lt;&amp;gt&gt; [players]&quot; then: # a literal: &#x27;/warp set ...&#x27; set: permission: myserver.warp.set then: # an argument: it has a &#x27;type&#x27;. name: type: word script: - flag server warps.&lt;context.name&gt;:&lt;player.location&gt; tp: then: name: type: word # a map gives each suggestion a tooltip. suggest: &lt;server.flag[warps].parse_value_tag[&lt;[parse_value].simple&gt;]&gt; script: - teleport &lt;player&gt; &lt;server.flag[warps.&lt;context.name&gt;]&gt; then: targets: type: players permission: myserver.warp.others script: - teleport &lt;context.targets&gt; &lt;server.flag[warps.&lt;context.name&gt;]&gt; give: then: amount: type: integer min: 1 max: 64 # a script section can wait for anything before answering. suggest: - ~webget https://example.com/amounts save:request - determine &lt;entry[request].result.split[,]&gt; script: - give stone quantity:&lt;context.amount&gt; &lt;/code&gt;"><table class="table table-hover"><tbody>
+<div class="meta_category" data-category="script+container+system"><div class="category_header"><br><hr><br><h4>Category: <a id="script+container+system" href="#script+container+system" onclick="doFlashFor('script+container+system')">Script Container System</a></h4><br></div>
+<div class="meta_entry" data-names="brigadier argument types" data-text="brigadier argument types brigadier argument types script container system the &#x27;type&#x27; values available to arguments in &lt;@link language brigadier command script containers&gt;, and what each one becomes in &lt;context.(argument name)&gt;. text: - word: a single word (no spaces). elementtag. - string: a single word, or &quot;a quoted phrase&quot;. elementtag. - greedy: everything until the end of the input. must be the last argument. elementtag. - text: a json text component, as in /tellraw. elementtag of denizen formatted text. numbers (&#x27;min&#x27; and &#x27;max&#x27; keys are optional and checked by the client): - integer, long, float, double: elementtag(number). - bool: true or false. elementtag(boolean). game objects: - player: one player, by name or a single-player selector. playertag. - players: any number of players, by name or selector. listtag(playertag). - entity: one entity, by selector or uuid. entitytag. - entities: any number of entities. listtag(entitytag). - block_position: block coordinates, with ~ and ^ support. locationtag. - position: exact coordinates, with ~ and ^ support. locationtag. - angle: a yaw angle, with ~ support. elementtag(decimal). - block_state: a block with optional states, like oak_stairs[facing=north]. materialtag. - item: an item with optional components, like diamond_sword[damage=5]. itemtag. - world: a world (dimension) key. worldtag. - gamemode: a game mode name. elementtag. - color: a named chat color, like &#x27;red&#x27;. elementtag. - hex_color: a hex color, like &#x27;ff0000&#x27;. colortag. - uuid: a uuid. elementtag. - key: a namespaced key, like &#x27;minecraft:stone&#x27;. elementtag. - time: a duration like &#x27;5s&#x27;, &#x27;2d&#x27; or &#x27;100&#x27; (ticks). optional &#x27;min&#x27; key, in ticks. durationtag. - resource: an entry of a registry, chosen with the &#x27;registry&#x27; key (like &#x27;enchantment&#x27;, &#x27;biome&#x27;, &#x27;entity_type&#x27;, or a full registry name like &#x27;worldgen/biome&#x27;). the client suggests every entry. elementtag of its key."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="brigadier argument types" href="#brigadier%20argument%20types" onclick="doFlashFor('brigadier argument types')"><span class="doc_name">Brigadier Argument Types</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>The 'type' values available to arguments in <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=brigadier%20command%20script%20containers">Brigadier Command Script Containers</a>,
+<br>and what each one becomes in &lt;context.(argument name)&gt;.
+<br>
+<br>Text:
+<br>- word: a single word (no spaces). ElementTag.
+<br>- string: a single word, or "a quoted phrase". ElementTag.
+<br>- greedy: everything until the end of the input. Must be the last argument. ElementTag.
+<br>- text: a JSON text component, as in /tellraw. ElementTag of Denizen formatted text.
+<br>
+<br>Numbers ('min' and 'max' keys are optional and checked by the client):
+<br>- integer, long, float, double: ElementTag(Number).
+<br>- bool: true or false. ElementTag(Boolean).
+<br>
+<br>Game objects:
+<br>- player: one player, by name or a single-player selector. PlayerTag.
+<br>- players: any number of players, by name or selector. ListTag(PlayerTag).
+<br>- entity: one entity, by selector or UUID. EntityTag.
+<br>- entities: any number of entities. ListTag(EntityTag).
+<br>- block_position: block coordinates, with ~ and ^ support. LocationTag.
+<br>- position: exact coordinates, with ~ and ^ support. LocationTag.
+<br>- angle: a yaw angle, with ~ support. ElementTag(Decimal).
+<br>- block_state: a block with optional states, like oak_stairs[facing=north]. MaterialTag.
+<br>- item: an item with optional components, like diamond_sword[damage=5]. ItemTag.
+<br>- world: a world (dimension) key. WorldTag.
+<br>- gamemode: a game mode name. ElementTag.
+<br>- color: a named chat color, like 'red'. ElementTag.
+<br>- hex_color: a hex color, like 'FF0000'. ColorTag.
+<br>- uuid: a UUID. ElementTag.
+<br>- key: a namespaced key, like 'minecraft:stone'. ElementTag.
+<br>- time: a duration like '5s', '2d' or '100' (ticks). Optional 'min' key, in ticks. DurationTag.
+<br>- resource: an entry of a registry, chosen with the 'registry' key (like 'enchantment', 'biome', 'entity_type',
+<br>  or a full registry name like 'worldgen/biome'). The client suggests every entry. ElementTag of its key.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Script Container System</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/brigadier/BrigadierArgumentTypes.java#L1">org/darwin/denizenAdditions/brigadier/BrigadierArgumentTypes.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="brigadier command script containers" data-text="brigadier command script containers brigadier command script containers script container system like a &#x27;command&#x27; script container, but the command is built on brigadier, the same system vanilla commands use. the client knows the whole command tree, so it highlights each argument as it is typed, marks invalid input red before it is sent, shows tooltips on suggestions, and accepts selectors and relative coordinates natively. the command also works inside &#x27;/execute as ... at ... run&#x27;. the container itself is the root literal: its &#x27;script&#x27; key runs for the bare command, and &#x27;then&#x27; holds the nodes after it. every node under &#x27;then&#x27; is either a literal (a fixed word) or, if it has a &#x27;type&#x27; key, an argument. a node can have these keys: - type: the argument type, see &lt;@link language brigadier argument types&gt;. leave it out for a literal. - permission: the permission needed to see and use this node (and everything below it). - script: runs when the input ends at this node. - suggest: for arguments only. either a tag returning a list (or a map of value to tooltip), or a script section that does &#x27;determine&#x27; with such a list/map. a script section may use waits and ~waitable commands (like ~webget): the client simply gets the suggestions once the queue finishes. suggestions are filtered by what is typed so far automatically. - then: the child nodes. argument types can have extra keys, like &#x27;min&#x27; and &#x27;max&#x27; for numbers. inside &#x27;script&#x27;, every argument on the way to the node is available as &lt;context.(argument name)&gt;, already converted to a denizen object (a players argument becomes a listtag of playertags, a block_position becomes a locationtag, etc). other context: &lt;context.alias&gt; (the label used), &lt;context.raw_args&gt; (everything after the label), &lt;context.source_type&gt; (player, command_block, command_minecart, entity or server), &lt;context.server&gt; (true if not run by a player), &lt;context.location&gt; (where the command runs, changed by &#x27;execute at/positioned&#x27;), and &lt;context.executor&gt; (the entity it runs as, changed by &#x27;execute as&#x27;). the linked player is the executor when that is a player, otherwise the sender when that is a player. &#x27;determine&#x27; a number to set the command result (as seen by &#x27;execute store result&#x27;). inside a &#x27;suggest&#x27; tag or script, arguments typed before the current one are available the same way, plus &lt;context.current&gt; - the text typed so far for the current argument. &#x27;permission&#x27; is the only access check: paper sends the command tree from another thread, where script tags can&#x27;t run. commands update for online players on &#x27;/ex reload&#x27;. &lt;code&gt; brigadier_command_script_name: type: brigadier_command # the name of the command, as in &#x27;/warp&#x27;. name: warp # | optional aliases: - w # | optional. needed for the whole command. permission: myserver.warp # | optional. runs for the bare &#x27;/warp&#x27;. script: - narrate &quot;usage: /warp tp &lt;&amp;lt&gt;name&lt;&amp;gt&gt; [players]&quot; then: # a literal: &#x27;/warp set ...&#x27; set: permission: myserver.warp.set then: # an argument: it has a &#x27;type&#x27;. name: type: word script: - flag server warps.&lt;context.name&gt;:&lt;player.location&gt; tp: then: name: type: word # a map gives each suggestion a tooltip. suggest: &lt;server.flag[warps].parse_value_tag[&lt;[parse_value].simple&gt;]&gt; script: - teleport &lt;player&gt; &lt;server.flag[warps.&lt;context.name&gt;]&gt; then: targets: type: players permission: myserver.warp.others script: - teleport &lt;context.targets&gt; &lt;server.flag[warps.&lt;context.name&gt;]&gt; give: then: amount: type: integer min: 1 max: 64 # a script section can wait for anything before answering. suggest: - ~webget https://example.com/amounts save:request - determine &lt;entry[request].result.split[,]&gt; script: - give stone quantity:&lt;context.amount&gt; &lt;/code&gt;"><table class="table table-hover"><tbody>
 <tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="brigadier command script containers" href="#brigadier%20command%20script%20containers" onclick="doFlashFor('brigadier command script containers')"><span class="doc_name">Brigadier Command Script Containers</span></a></td></tr>
 <tr class="table-default"><td class="td-doc-key">Description</td><td>Like a 'command' script container, but the command is built on Brigadier, the same system vanilla commands use.
 <br>The client knows the whole command tree, so it highlights each argument as it is typed, marks invalid input red
@@ -141,143 +177,8 @@
 <span class="script_normal">                    -</span><span class="script_command"> determine</span> <span class="script_tag">&lt;</span><span class="script_tag">entry</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">request</span><span class="script_tag_param_bracket">]</span><span class="script_tag_dot">.</span><span class="script_tag">result</span><span class="script_tag_dot">.</span><span class="script_tag">split</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">,</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span>
 <span class="script_key">                    script</span><span class="script_colon">:</span>
 <span class="script_normal">                    -</span><span class="script_command"> give</span> <span class="script_normal">stone</span> <span class="script_normal">quantity:</span><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">amount</span><span class="script_tag">&gt;</span></code></pre></td></tr>
-<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/brigadier/BrigadierCommandScriptContainer.java#L1">org/darwin/denizenAdditions/brigadier/BrigadierCommandScriptContainer.java#L1</a></td></tr>
-</tbody></table></div>
-<div class="meta_entry" data-names="dialog script containers" data-text="dialog script containers dialog script containers dialog script containers define native client-side dialog windows (paper&#x27;s dialog api). show one with &lt;@link command showdialog&gt; or &lt;@link mechanism playertag.show_dialog&gt;. each dialog requires a &#x27;base&#x27; section with a &#x27;title&#x27; and a &#x27;type&#x27;. types: - confirm : two-button confirmation dialog, uses &#x27;yes:&#x27; and &#x27;no:&#x27; - notice : simple dialog with a single &#x27;button:&#x27; - list : shows buttons that open other dialog scripts, listed under &#x27;dialogs:&#x27; - multi : grid of action buttons, listed under &#x27;buttons:&#x27; &#x27;base.after action&#x27; decides what happens after a button is clicked: &#x27;close&#x27; (default), &#x27;none&#x27; (stay open) or &#x27;wait_for_response&#x27; (stays open until the server shows another dialog or closes it). every tag in the container is parsed when the dialog is shown, for the player it is shown to, with the definitions passed to the command (and the definitions of the queue that showed it). button &#x27;script&#x27; sections run when clicked, with the same definitions. &#x27;condition&#x27; on an input, body or button hides it unless the tag returns true. dynamic generation (procedural): a &#x27;procedural&#x27; script section at the root of the container runs when the dialog is shown, and can &#x27;determine&#x27; maps for &#x27;inputs&#x27;, &#x27;bodies&#x27; or &#x27;buttons&#x27;. their entries are added on top of (and replace same-named) entries of the static section. tags inside &#x27;script&#x27; keys and &#x27;&lt;context.inputs...&gt;&#x27; tags are escaped automatically when the script loads, so inside &#x27;procedural&#x27; they are only parsed when the button is clicked. &lt;code&gt; dialog_script_name: type: dialog # names the definitions passed with &#x27;showdialog ... def:&#x27;. definitions: target base: title: &lt;yellow&gt;main menu type: multi # optional window settings external title: app title can close with escape: true after action: close # layout columns (list or multi) columns: 3 # button width (only for &#x27;list&#x27;) button width: 100 # exit button (list or multi) exit button: label: exit # procedural queue to generate elements dynamically procedural: - repeat 15 as:x: - definemap button: label: &lt;[x]&gt; width: 15 script: - announce &quot;clicked button &lt;context.button_id&gt;&quot; - define buttons.&lt;[x]&gt;:&lt;[button]&gt; - determine buttons:&lt;[buttons]&gt; # only for &#x27;list&#x27; dialogs: - other_dialog_script # static content displayed in the dialog bodies: my_text: type: message message: hello, &lt;player.name&gt;! # input fields inputs: 1: type: text key: custom_context_name label: name my_input: type: text label: name2 # interaction buttons # &#x27;multi&#x27; uses &#x27;buttons:&#x27; # &#x27;confirm&#x27; uses &#x27;yes:&#x27; and &#x27;no:&#x27; # &#x27;notice&#x27; uses &#x27;button:&#x27; buttons: submit: label: submit script: - narrate &quot;context is &lt;context.custom_context_name&gt;, &lt;context.my_input&gt;, target is &lt;[target]&gt;&quot; &lt;/code&gt; see also &lt;@link language dialog inputs&gt;, &lt;@link language dialog buttons&gt; and &lt;@link language dialog bodies&gt;."><table class="table table-hover"><tbody>
-<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="dialog script containers" href="#dialog%20script%20containers" onclick="doFlashFor('dialog script containers')"><span class="doc_name">Dialog Script Containers</span></a></td></tr>
-<tr class="table-default"><td class="td-doc-key">Description</td><td>Dialog script containers define native client-side dialog windows (Paper's dialog API).
-<br>Show one with <span class="meta_url">Command:</span><a href="../Docs/Commands.html?q=showdialog">showdialog</a> or <span class="meta_url">Mechanism:</span><a href="../Docs/Mechanisms.html?q=playertag.show_dialog">PlayerTag.show_dialog</a>.
-<br>
-<br>Each dialog requires a 'base' section with a 'title' and a 'type'.
-<br>
-<br>TYPES:
-<br>- confirm : Two-button confirmation dialog, uses 'yes:' and 'no:'
-<br>- notice  : Simple dialog with a single 'button:'
-<br>- list    : Shows buttons that open other dialog scripts, listed under 'dialogs:'
-<br>- multi   : Grid of action buttons, listed under 'buttons:'
-<br>
-<br>'base.after action' decides what happens after a button is clicked: 'close' (default), 'none' (stay open)
-<br>or 'wait_for_response' (stays open until the server shows another dialog or closes it).
-<br>
-<br>Every tag in the container is parsed when the dialog is shown, for the player it is shown to,
-<br>with the definitions passed to the command (and the definitions of the queue that showed it).
-<br>Button 'script' sections run when clicked, with the same definitions.
-<br>'condition' on an input, body or button hides it unless the tag returns true.
-<br>
-<br>DYNAMIC GENERATION (Procedural):
-<br>A 'procedural' script section at the root of the container runs when the dialog is shown,
-<br>and can 'determine' maps for 'inputs', 'bodies' or 'buttons'. Their entries are added on top of
-<br>(and replace same-named) entries of the static section.
-<br>Tags inside 'script' keys and '&lt;context.inputs...&gt;' tags are escaped automatically when the script loads,
-<br>so inside 'procedural' they are only parsed when the button is clicked.
-<br>
-<br><pre><code><span class="script_key">Dialog_Script_Name</span><span class="script_colon">:</span>
-<span class="script_key">    type</span><span class="script_colon">:</span><span class="script_normal"> dialog</span>
-
-<span class="script_comment_normal">    # Names the definitions passed with 'showdialog ... def:'.</span>
-<span class="script_key">    definitions</span><span class="script_colon">:</span><span class="script_normal"> target</span>
-
-<span class="script_key">    base</span><span class="script_colon">:</span>
-<span class="script_key">        title</span><span class="script_colon">:</span><span class="script_normal"> </span><span class="script_tag">&lt;</span><span class="script_tag">yellow</span><span class="script_tag">&gt;</span><span class="script_normal">Main Menu</span>
-<span class="script_key">        type</span><span class="script_colon">:</span><span class="script_normal"> multi</span>
-
-<span class="script_comment_normal">        # Optional window settings</span>
-<span class="script_key">        external title</span><span class="script_colon">:</span><span class="script_normal"> App Title</span>
-<span class="script_key">        can close with escape</span><span class="script_colon">:</span><span class="script_normal"> true</span>
-<span class="script_key">        after action</span><span class="script_colon">:</span><span class="script_normal"> close</span>
-
-<span class="script_comment_normal">        # Layout columns (list or multi)</span>
-<span class="script_key">        columns</span><span class="script_colon">:</span><span class="script_normal"> 3</span>
-
-<span class="script_comment_normal">        # Button width (only for 'list')</span>
-<span class="script_key">        button width</span><span class="script_colon">:</span><span class="script_normal"> 100</span>
-
-<span class="script_comment_normal">    # Exit button (list or multi)</span>
-<span class="script_key">    exit button</span><span class="script_colon">:</span>
-<span class="script_key">        label</span><span class="script_colon">:</span><span class="script_normal"> Exit</span>
-
-<span class="script_comment_normal">    # Procedural queue to generate elements dynamically</span>
-<span class="script_key">    procedural</span><span class="script_colon">:</span>
-<span class="script_normal">    -</span><span class="script_command"> repeat</span> <span class="script_normal">15</span> <span class="script_normal">as:</span><span class="script_def_name">x</span><span class="script_colon">:</span>
-<span class="script_normal">        -</span><span class="script_command"> definemap</span> <span class="script_def_name">button</span><span class="script_colon">:</span>
-<span class="script_key">            label</span><span class="script_colon">:</span><span class="script_normal"> </span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">x</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span>
-<span class="script_key">            width</span><span class="script_colon">:</span><span class="script_normal"> 15</span>
-<span class="script_key">            script</span><span class="script_colon">:</span>
-<span class="script_normal">            -</span><span class="script_command"> announce</span> <span class="script_quote_double">"Clicked button </span><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">button_id</span><span class="script_tag">&gt;</span><span class="script_quote_double">"</span>
-<span class="script_normal">        -</span><span class="script_command"> define</span> <span class="script_normal">buttons.</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">x</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span><span class="script_normal">:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">button</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span>
-<span class="script_normal">    -</span><span class="script_command"> determine</span> <span class="script_normal">buttons:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">buttons</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span>
-
-<span class="script_comment_normal">    # only for 'list'</span>
-<span class="script_key">    dialogs</span><span class="script_colon">:</span>
-<span class="script_normal">    -</span><span class="script_command"> other_dialog_script</span>
-
-<span class="script_comment_normal">    # Static content displayed in the dialog</span>
-<span class="script_key">    bodies</span><span class="script_colon">:</span>
-<span class="script_key">        my_text</span><span class="script_colon">:</span>
-<span class="script_key">            type</span><span class="script_colon">:</span><span class="script_normal"> message</span>
-<span class="script_key">            message</span><span class="script_colon">:</span><span class="script_normal"> Hello, </span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag_dot">.</span><span class="script_tag">name</span><span class="script_tag">&gt;</span><span class="script_normal">!</span>
-
-<span class="script_comment_normal">    # Input fields</span>
-<span class="script_key">    inputs</span><span class="script_colon">:</span>
-<span class="script_key">        1</span><span class="script_colon">:</span>
-<span class="script_key">            type</span><span class="script_colon">:</span><span class="script_normal"> text</span>
-<span class="script_key">            key</span><span class="script_colon">:</span><span class="script_normal"> custom_context_name</span>
-<span class="script_key">            label</span><span class="script_colon">:</span><span class="script_normal"> Name</span>
-<span class="script_key">        my_input</span><span class="script_colon">:</span>
-<span class="script_key">            type</span><span class="script_colon">:</span><span class="script_normal"> text</span>
-<span class="script_key">            label</span><span class="script_colon">:</span><span class="script_normal"> Name2</span>
-
-<span class="script_comment_normal">    # Interaction buttons</span>
-<span class="script_comment_normal">    # 'multi' uses 'buttons:'</span>
-<span class="script_comment_normal">    # 'confirm' uses 'yes:' and 'no:'</span>
-<span class="script_comment_normal">    # 'notice' uses 'button:'</span>
-<span class="script_key">    buttons</span><span class="script_colon">:</span>
-<span class="script_key">        submit</span><span class="script_colon">:</span>
-<span class="script_key">            label</span><span class="script_colon">:</span><span class="script_normal"> Submit</span>
-<span class="script_key">            script</span><span class="script_colon">:</span>
-<span class="script_normal">            -</span><span class="script_command"> narrate</span> <span class="script_quote_double">"Context is </span><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">custom_context_name</span><span class="script_tag">&gt;</span><span class="script_quote_double">, </span><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">my_input</span><span class="script_tag">&gt;</span><span class="script_quote_double">, target is </span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">target</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span><span class="script_quote_double">"</span></code></pre>
-<br>
-<br>See also <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20inputs">Dialog Inputs</a>, <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20buttons">Dialog Buttons</a> and <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20bodies">Dialog Bodies</a>.</td></tr>
-<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/dialog/DialogScriptContainer.java#L1">org/darwin/denizenAdditions/dialog/DialogScriptContainer.java#L1</a></td></tr>
-</tbody></table></div>
-</div>
-<div class="meta_category" data-category="script+container+system"><div class="category_header"><br><hr><br><h4>Category: <a id="script+container+system" href="#script+container+system" onclick="doFlashFor('script+container+system')">Script Container System</a></h4><br></div>
-<div class="meta_entry" data-names="brigadier argument types" data-text="brigadier argument types brigadier argument types script container system the &#x27;type&#x27; values available to arguments in &lt;@link language brigadier command script containers&gt;, and what each one becomes in &lt;context.(argument name)&gt;. text: - word: a single word (no spaces). elementtag. - string: a single word, or &quot;a quoted phrase&quot;. elementtag. - greedy: everything until the end of the input. must be the last argument. elementtag. - text: a json text component, as in /tellraw. elementtag of denizen formatted text. numbers (&#x27;min&#x27; and &#x27;max&#x27; keys are optional and checked by the client): - integer, long, float, double: elementtag(number). - bool: true or false. elementtag(boolean). game objects: - player: one player, by name or a single-player selector. playertag. - players: any number of players, by name or selector. listtag(playertag). - entity: one entity, by selector or uuid. entitytag. - entities: any number of entities. listtag(entitytag). - block_position: block coordinates, with ~ and ^ support. locationtag. - position: exact coordinates, with ~ and ^ support. locationtag. - angle: a yaw angle, with ~ support. elementtag(decimal). - block_state: a block with optional states, like oak_stairs[facing=north]. materialtag. - item: an item with optional components, like diamond_sword[damage=5]. itemtag. - world: a world (dimension) key. worldtag. - gamemode: a game mode name. elementtag. - color: a named chat color, like &#x27;red&#x27;. elementtag. - hex_color: a hex color, like &#x27;ff0000&#x27;. colortag. - uuid: a uuid. elementtag. - key: a namespaced key, like &#x27;minecraft:stone&#x27;. elementtag. - time: a duration like &#x27;5s&#x27;, &#x27;2d&#x27; or &#x27;100&#x27; (ticks). optional &#x27;min&#x27; key, in ticks. durationtag. - resource: an entry of a registry, chosen with the &#x27;registry&#x27; key (like &#x27;enchantment&#x27;, &#x27;biome&#x27;, &#x27;entity_type&#x27;, or a full registry name like &#x27;worldgen/biome&#x27;). the client suggests every entry. elementtag of its key."><table class="table table-hover"><tbody>
-<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="brigadier argument types" href="#brigadier%20argument%20types" onclick="doFlashFor('brigadier argument types')"><span class="doc_name">Brigadier Argument Types</span></a></td></tr>
-<tr class="table-default"><td class="td-doc-key">Description</td><td>The 'type' values available to arguments in <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=brigadier%20command%20script%20containers">Brigadier Command Script Containers</a>,
-<br>and what each one becomes in &lt;context.(argument name)&gt;.
-<br>
-<br>Text:
-<br>- word: a single word (no spaces). ElementTag.
-<br>- string: a single word, or "a quoted phrase". ElementTag.
-<br>- greedy: everything until the end of the input. Must be the last argument. ElementTag.
-<br>- text: a JSON text component, as in /tellraw. ElementTag of Denizen formatted text.
-<br>
-<br>Numbers ('min' and 'max' keys are optional and checked by the client):
-<br>- integer, long, float, double: ElementTag(Number).
-<br>- bool: true or false. ElementTag(Boolean).
-<br>
-<br>Game objects:
-<br>- player: one player, by name or a single-player selector. PlayerTag.
-<br>- players: any number of players, by name or selector. ListTag(PlayerTag).
-<br>- entity: one entity, by selector or UUID. EntityTag.
-<br>- entities: any number of entities. ListTag(EntityTag).
-<br>- block_position: block coordinates, with ~ and ^ support. LocationTag.
-<br>- position: exact coordinates, with ~ and ^ support. LocationTag.
-<br>- angle: a yaw angle, with ~ support. ElementTag(Decimal).
-<br>- block_state: a block with optional states, like oak_stairs[facing=north]. MaterialTag.
-<br>- item: an item with optional components, like diamond_sword[damage=5]. ItemTag.
-<br>- world: a world (dimension) key. WorldTag.
-<br>- gamemode: a game mode name. ElementTag.
-<br>- color: a named chat color, like 'red'. ElementTag.
-<br>- hex_color: a hex color, like 'FF0000'. ColorTag.
-<br>- uuid: a UUID. ElementTag.
-<br>- key: a namespaced key, like 'minecraft:stone'. ElementTag.
-<br>- time: a duration like '5s', '2d' or '100' (ticks). Optional 'min' key, in ticks. DurationTag.
-<br>- resource: an entry of a registry, chosen with the 'registry' key (like 'enchantment', 'biome', 'entity_type',
-<br>  or a full registry name like 'worldgen/biome'). The client suggests every entry. ElementTag of its key.</td></tr>
 <tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Script Container System</td></tr>
-<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/brigadier/BrigadierArgumentTypes.java#L1">org/darwin/denizenAdditions/brigadier/BrigadierArgumentTypes.java#L1</a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/brigadier/BrigadierCommandScriptContainer.java#L1">org/darwin/denizenAdditions/brigadier/BrigadierCommandScriptContainer.java#L1</a></td></tr>
 </tbody></table></div>
 <div class="meta_entry" data-names="dialog bodies" data-text="dialog bodies dialog bodies script container system bodies define static content displayed inside the dialog. message displays formatted text. - type: message - message: &lt;text&gt; (required) - width: &lt;number&gt; item displays an item preview. - type: item - item: &lt;itemtag&gt; (required) - width: &lt;number&gt; - height: &lt;number&gt; - show tooltip: true/false - show decorations: true/false optional description: - description: message: &lt;text&gt; width: &lt;number&gt;"><table class="table table-hover"><tbody>
 <tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="dialog bodies" href="#dialog%20bodies" onclick="doFlashFor('dialog bodies')"><span class="doc_name">Dialog Bodies</span></a></td></tr>
@@ -423,6 +324,104 @@
 <br>        initial: true/false</td></tr>
 <tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Script Container System</td></tr>
 <tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/dialog/DialogScriptContainer.java#L102">org/darwin/denizenAdditions/dialog/DialogScriptContainer.java#L102</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="dialog script containers" data-text="dialog script containers dialog script containers script container system dialog script containers define native client-side dialog windows (paper&#x27;s dialog api). show one with &lt;@link command showdialog&gt; or &lt;@link mechanism playertag.show_dialog&gt;. each dialog requires a &#x27;base&#x27; section with a &#x27;title&#x27; and a &#x27;type&#x27;. types: - confirm : two-button confirmation dialog, uses &#x27;yes:&#x27; and &#x27;no:&#x27; - notice : simple dialog with a single &#x27;button:&#x27; - list : shows buttons that open other dialog scripts, listed under &#x27;dialogs:&#x27; - multi : grid of action buttons, listed under &#x27;buttons:&#x27; &#x27;base.after action&#x27; decides what happens after a button is clicked: &#x27;close&#x27; (default), &#x27;none&#x27; (stay open) or &#x27;wait_for_response&#x27; (stays open until the server shows another dialog or closes it). every tag in the container is parsed when the dialog is shown, for the player it is shown to, with the definitions passed to the command (and the definitions of the queue that showed it). button &#x27;script&#x27; sections run when clicked, with the same definitions. &#x27;condition&#x27; on an input, body or button hides it unless the tag returns true. dynamic generation (procedural): a &#x27;procedural&#x27; script section at the root of the container runs when the dialog is shown, and can &#x27;determine&#x27; maps for &#x27;inputs&#x27;, &#x27;bodies&#x27; or &#x27;buttons&#x27;. their entries are added on top of (and replace same-named) entries of the static section. tags inside &#x27;script&#x27; keys and &#x27;&lt;context.inputs...&gt;&#x27; tags are escaped automatically when the script loads, so inside &#x27;procedural&#x27; they are only parsed when the button is clicked. &lt;code&gt; dialog_script_name: type: dialog # names the definitions passed with &#x27;showdialog ... def:&#x27;. definitions: target base: title: &lt;yellow&gt;main menu type: multi # optional window settings external title: app title can close with escape: true after action: close # layout columns (list or multi) columns: 3 # button width (only for &#x27;list&#x27;) button width: 100 # exit button (list or multi) exit button: label: exit # procedural queue to generate elements dynamically procedural: - repeat 15 as:x: - definemap button: label: &lt;[x]&gt; width: 15 script: - announce &quot;clicked button &lt;context.button_id&gt;&quot; - define buttons.&lt;[x]&gt;:&lt;[button]&gt; - determine buttons:&lt;[buttons]&gt; # only for &#x27;list&#x27; dialogs: - other_dialog_script # static content displayed in the dialog bodies: my_text: type: message message: hello, &lt;player.name&gt;! # input fields inputs: 1: type: text key: custom_context_name label: name my_input: type: text label: name2 # interaction buttons # &#x27;multi&#x27; uses &#x27;buttons:&#x27; # &#x27;confirm&#x27; uses &#x27;yes:&#x27; and &#x27;no:&#x27; # &#x27;notice&#x27; uses &#x27;button:&#x27; buttons: submit: label: submit script: - narrate &quot;context is &lt;context.custom_context_name&gt;, &lt;context.my_input&gt;, target is &lt;[target]&gt;&quot; &lt;/code&gt; see also &lt;@link language dialog inputs&gt;, &lt;@link language dialog buttons&gt; and &lt;@link language dialog bodies&gt;."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="dialog script containers" href="#dialog%20script%20containers" onclick="doFlashFor('dialog script containers')"><span class="doc_name">Dialog Script Containers</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Dialog script containers define native client-side dialog windows (Paper's dialog API).
+<br>Show one with <span class="meta_url">Command:</span><a href="../Docs/Commands.html?q=showdialog">showdialog</a> or <span class="meta_url">Mechanism:</span><a href="../Docs/Mechanisms.html?q=playertag.show_dialog">PlayerTag.show_dialog</a>.
+<br>
+<br>Each dialog requires a 'base' section with a 'title' and a 'type'.
+<br>
+<br>TYPES:
+<br>- confirm : Two-button confirmation dialog, uses 'yes:' and 'no:'
+<br>- notice  : Simple dialog with a single 'button:'
+<br>- list    : Shows buttons that open other dialog scripts, listed under 'dialogs:'
+<br>- multi   : Grid of action buttons, listed under 'buttons:'
+<br>
+<br>'base.after action' decides what happens after a button is clicked: 'close' (default), 'none' (stay open)
+<br>or 'wait_for_response' (stays open until the server shows another dialog or closes it).
+<br>
+<br>Every tag in the container is parsed when the dialog is shown, for the player it is shown to,
+<br>with the definitions passed to the command (and the definitions of the queue that showed it).
+<br>Button 'script' sections run when clicked, with the same definitions.
+<br>'condition' on an input, body or button hides it unless the tag returns true.
+<br>
+<br>DYNAMIC GENERATION (Procedural):
+<br>A 'procedural' script section at the root of the container runs when the dialog is shown,
+<br>and can 'determine' maps for 'inputs', 'bodies' or 'buttons'. Their entries are added on top of
+<br>(and replace same-named) entries of the static section.
+<br>Tags inside 'script' keys and '&lt;context.inputs...&gt;' tags are escaped automatically when the script loads,
+<br>so inside 'procedural' they are only parsed when the button is clicked.
+<br>
+<br><pre><code><span class="script_key">Dialog_Script_Name</span><span class="script_colon">:</span>
+<span class="script_key">    type</span><span class="script_colon">:</span><span class="script_normal"> dialog</span>
+
+<span class="script_comment_normal">    # Names the definitions passed with 'showdialog ... def:'.</span>
+<span class="script_key">    definitions</span><span class="script_colon">:</span><span class="script_normal"> target</span>
+
+<span class="script_key">    base</span><span class="script_colon">:</span>
+<span class="script_key">        title</span><span class="script_colon">:</span><span class="script_normal"> </span><span class="script_tag">&lt;</span><span class="script_tag">yellow</span><span class="script_tag">&gt;</span><span class="script_normal">Main Menu</span>
+<span class="script_key">        type</span><span class="script_colon">:</span><span class="script_normal"> multi</span>
+
+<span class="script_comment_normal">        # Optional window settings</span>
+<span class="script_key">        external title</span><span class="script_colon">:</span><span class="script_normal"> App Title</span>
+<span class="script_key">        can close with escape</span><span class="script_colon">:</span><span class="script_normal"> true</span>
+<span class="script_key">        after action</span><span class="script_colon">:</span><span class="script_normal"> close</span>
+
+<span class="script_comment_normal">        # Layout columns (list or multi)</span>
+<span class="script_key">        columns</span><span class="script_colon">:</span><span class="script_normal"> 3</span>
+
+<span class="script_comment_normal">        # Button width (only for 'list')</span>
+<span class="script_key">        button width</span><span class="script_colon">:</span><span class="script_normal"> 100</span>
+
+<span class="script_comment_normal">    # Exit button (list or multi)</span>
+<span class="script_key">    exit button</span><span class="script_colon">:</span>
+<span class="script_key">        label</span><span class="script_colon">:</span><span class="script_normal"> Exit</span>
+
+<span class="script_comment_normal">    # Procedural queue to generate elements dynamically</span>
+<span class="script_key">    procedural</span><span class="script_colon">:</span>
+<span class="script_normal">    -</span><span class="script_command"> repeat</span> <span class="script_normal">15</span> <span class="script_normal">as:</span><span class="script_def_name">x</span><span class="script_colon">:</span>
+<span class="script_normal">        -</span><span class="script_command"> definemap</span> <span class="script_def_name">button</span><span class="script_colon">:</span>
+<span class="script_key">            label</span><span class="script_colon">:</span><span class="script_normal"> </span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">x</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span>
+<span class="script_key">            width</span><span class="script_colon">:</span><span class="script_normal"> 15</span>
+<span class="script_key">            script</span><span class="script_colon">:</span>
+<span class="script_normal">            -</span><span class="script_command"> announce</span> <span class="script_quote_double">"Clicked button </span><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">button_id</span><span class="script_tag">&gt;</span><span class="script_quote_double">"</span>
+<span class="script_normal">        -</span><span class="script_command"> define</span> <span class="script_normal">buttons.</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">x</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span><span class="script_normal">:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">button</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span>
+<span class="script_normal">    -</span><span class="script_command"> determine</span> <span class="script_normal">buttons:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">buttons</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span>
+
+<span class="script_comment_normal">    # only for 'list'</span>
+<span class="script_key">    dialogs</span><span class="script_colon">:</span>
+<span class="script_normal">    -</span><span class="script_command"> other_dialog_script</span>
+
+<span class="script_comment_normal">    # Static content displayed in the dialog</span>
+<span class="script_key">    bodies</span><span class="script_colon">:</span>
+<span class="script_key">        my_text</span><span class="script_colon">:</span>
+<span class="script_key">            type</span><span class="script_colon">:</span><span class="script_normal"> message</span>
+<span class="script_key">            message</span><span class="script_colon">:</span><span class="script_normal"> Hello, </span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag_dot">.</span><span class="script_tag">name</span><span class="script_tag">&gt;</span><span class="script_normal">!</span>
+
+<span class="script_comment_normal">    # Input fields</span>
+<span class="script_key">    inputs</span><span class="script_colon">:</span>
+<span class="script_key">        1</span><span class="script_colon">:</span>
+<span class="script_key">            type</span><span class="script_colon">:</span><span class="script_normal"> text</span>
+<span class="script_key">            key</span><span class="script_colon">:</span><span class="script_normal"> custom_context_name</span>
+<span class="script_key">            label</span><span class="script_colon">:</span><span class="script_normal"> Name</span>
+<span class="script_key">        my_input</span><span class="script_colon">:</span>
+<span class="script_key">            type</span><span class="script_colon">:</span><span class="script_normal"> text</span>
+<span class="script_key">            label</span><span class="script_colon">:</span><span class="script_normal"> Name2</span>
+
+<span class="script_comment_normal">    # Interaction buttons</span>
+<span class="script_comment_normal">    # 'multi' uses 'buttons:'</span>
+<span class="script_comment_normal">    # 'confirm' uses 'yes:' and 'no:'</span>
+<span class="script_comment_normal">    # 'notice' uses 'button:'</span>
+<span class="script_key">    buttons</span><span class="script_colon">:</span>
+<span class="script_key">        submit</span><span class="script_colon">:</span>
+<span class="script_key">            label</span><span class="script_colon">:</span><span class="script_normal"> Submit</span>
+<span class="script_key">            script</span><span class="script_colon">:</span>
+<span class="script_normal">            -</span><span class="script_command"> narrate</span> <span class="script_quote_double">"Context is </span><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">custom_context_name</span><span class="script_tag">&gt;</span><span class="script_quote_double">, </span><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">my_input</span><span class="script_tag">&gt;</span><span class="script_quote_double">, target is </span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">target</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span><span class="script_quote_double">"</span></code></pre>
+<br>
+<br>See also <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20inputs">Dialog Inputs</a>, <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20buttons">Dialog Buttons</a> and <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20bodies">Dialog Bodies</a>.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Script Container System</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/dialog/DialogScriptContainer.java#L1">org/darwin/denizenAdditions/dialog/DialogScriptContainer.java#L1</a></td></tr>
 </tbody></table></div>
 </div>
 
