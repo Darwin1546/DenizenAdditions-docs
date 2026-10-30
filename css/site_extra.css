@@ -1,0 +1,43 @@
+/* Additions for the static build: meta_site.css is kept as DenizenMetaWebsite has it. */
+[hidden] {
+    display: none !important;
+}
+.dropdown-item {
+    cursor: pointer;
+}
+.meta_entry {
+    margin-bottom: 1.5rem;
+}
+.meta_url a, a.official_link {
+    opacity: 1;
+}
+@media (max-width: 900px) {
+    .navbar-fixed-ifier {
+        position: static;
+    }
+    .navbar, .navbar > div {
+        flex-wrap: wrap;
+    }
+    .navbar-nav {
+        flex-wrap: wrap;
+    }
+    .topsearchbar {
+        position: static;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .nav_spacer {
+        display: none;
+    }
+    table {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+    .td-doc-key {
+        width: auto;
+    }
+    pre {
+        white-space: pre-wrap;
+    }
+}

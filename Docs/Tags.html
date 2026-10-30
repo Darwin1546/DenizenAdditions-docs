@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html data-root="../">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="bootstrap_css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="../css/meta_site.css">
+    <link id="theme_css" rel="stylesheet" href="../css/theme/colors_dark.css">
+    <link rel="stylesheet" href="../css/site_extra.css">
+    <script src="../js/meta.js"></script>
+    <title>Tags | DenizenAdditions Meta Documentation</title>
+    <meta name="description" content="DenizenAdditions tags" />
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary navbar-fixed-ifier">
+        <a class="navbar-brand" href="../index.html">DenizenAdditions Meta Documentation</a>
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="https://meta.denizenscript.com/">Denizen Meta</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Commands.html">Commands</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Tags.html">Tags</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Mechanisms.html">Mechanisms</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Languages.html">Language Explanations</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true">Theme</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" title="created by Alex 'mcmonkey' Goodwin" onclick="changetheme('dark')">Standard Dark</a>
+                        <a class="dropdown-item" title="created by Alex 'mcmonkey' Goodwin" onclick="changetheme('light')">Quite Light</a>
+                    </div>
+                </li>
+                <span class="topsearchbar">
+                    <input class="form-control mr-sm-2" type="text" id="top_search_bar" placeholder="Search">
+                </span>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav_spacer" style="height:90px;"></div>
+<span class="center_helper">
+    <div class="jumbotron">
+        <h3>DenizenAdditions Tags</h3>
+        <br>Tags are always written with a '&lt;' before them, and a '&gt;' after them, and are a way of reading information from the game.
+        <br>These are only the ones DenizenAdditions adds. For everything in Denizen itself, see the <a href="https://meta.denizenscript.com/Docs/Tags">Denizen Meta Documentation</a>.
+    </div>
+    <input type="text" id="search_bar" placeholder="Search Tags...">
+    <br><br>
+    <h5 id="shown_count" data-total="63" data-noun="tags">Showing all 63 tags...</h5>
+</span>
+<center>
+<div class="categories_box"><h4>Categories:</h4><div class="categories_container">
+<a class="category_link" data-category="binarytag" href="#binarytag" onclick="doFlashFor('binarytag')">BinaryTag</a>
+ | <a class="category_link" data-category="cuboidtag" href="#cuboidtag" onclick="doFlashFor('cuboidtag')">CuboidTag</a>
+ | <a class="category_link" data-category="entitytag" href="#entitytag" onclick="doFlashFor('entitytag')">EntityTag</a>
+ | <a class="category_link" data-category="itemtag" href="#itemtag" onclick="doFlashFor('itemtag')">ItemTag</a>
+ | <a class="category_link" data-category="locationtag" href="#locationtag" onclick="doFlashFor('locationtag')">LocationTag</a>
+ | <a class="category_link" data-category="materialtag" href="#materialtag" onclick="doFlashFor('materialtag')">MaterialTag</a>
+ | <a class="category_link" data-category="megactivemodeltag" href="#megactivemodeltag" onclick="doFlashFor('megactivemodeltag')">MegActiveModelTag</a>
+ | <a class="category_link" data-category="mythicmobsmobtag" href="#mythicmobsmobtag" onclick="doFlashFor('mythicmobsmobtag')">MythicMobsMobTag</a>
+ | <a class="category_link" data-category="playertag" href="#playertag" onclick="doFlashFor('playertag')">PlayerTag</a>
+ | <a class="category_link" data-category="scripttag" href="#scripttag" onclick="doFlashFor('scripttag')">ScriptTag</a>
+ | <a class="category_link" data-category="server" href="#server" onclick="doFlashFor('server')">server</a>
+ | <a class="category_link" data-category="util" href="#util" onclick="doFlashFor('util')">util</a>
+ | <a class="category_link" data-category="worldtag" href="#worldtag" onclick="doFlashFor('worldtag')">WorldTag</a>
+</div></div>
+<div class="meta_category" data-category="binarytag"><div class="category_header"><br><hr><br><h4>Category: <a id="binarytag" href="#binarytag" onclick="doFlashFor('binarytag')">BinaryTag</a></h4><br></div>
+<div class="meta_entry" data-names="binarytag.decrypt|decrypt" data-text="&lt;binarytag.decrypt[&lt;key&gt;]&gt; &lt;binarytag.decrypt[&lt;key&gt;]&gt; binarytag denizenadditions decrypts aes-encrypted data, using the specified key."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="binarytag.decrypt" href="#binarytag.decrypt" onclick="doFlashFor('binarytag.decrypt')"><span class="doc_name">&lt;BinaryTag.decrypt[&lt;key&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/BinaryTag">BinaryTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Decrypts AES-encrypted data, using the specified key.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/BinaryTagEncrypt.java#L9">org/darwin/denizenAdditions/tags/BinaryTagEncrypt.java#L9</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="binarytag.encrypt|encrypt" data-text="&lt;binarytag.encrypt[&lt;key&gt;]&gt; &lt;binarytag.encrypt[&lt;key&gt;]&gt; binarytag denizenadditions encrypts the contents of the binarytag using aes with the specified key."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="binarytag.encrypt" href="#binarytag.encrypt" onclick="doFlashFor('binarytag.encrypt')"><span class="doc_name">&lt;BinaryTag.encrypt[&lt;key&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/BinaryTag">BinaryTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Encrypts the contents of the BinaryTag using AES with the specified key.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/BinaryTagEncrypt.java#L1">org/darwin/denizenAdditions/tags/BinaryTagEncrypt.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="cuboidtag"><div class="category_header"><br><hr><br><h4>Category: <a id="cuboidtag" href="#cuboidtag" onclick="doFlashFor('cuboidtag')">CuboidTag</a></h4><br></div>
+<div class="meta_entry" data-names="cuboidtag.persistent_fakes|persistent_fakes" data-text="&lt;cuboidtag.persistent_fakes&gt; &lt;cuboidtag.persistent_fakes&gt; listtag(entitytag) paper, denizenadditions returns list of persistent fake entities in this cuboid."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="cuboidtag.persistent_fakes" href="#cuboidtag.persistent_fakes" onclick="doFlashFor('cuboidtag.persistent_fakes')"><span class="doc_name">&lt;CuboidTag.persistent_fakes&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(EntityTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns list of persistent fake entities in this cuboid.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/CuboidTagPersistentFakes.java#L1">org/darwin/denizenAdditions/tags/CuboidTagPersistentFakes.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="entitytag"><div class="category_header"><br><hr><br><h4>Category: <a id="entitytag" href="#entitytag" onclick="doFlashFor('entitytag')">EntityTag</a></h4><br></div>
+<div class="meta_entry" data-names="entitytag.ai_goals|ai_goals" data-text="&lt;entitytag.ai_goals&gt; &lt;entitytag.ai_goals&gt; listtag denizenadditions returns all entity ai goals."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.ai_goals" href="#entitytag.ai_goals" onclick="doFlashFor('entitytag.ai_goals')"><span class="doc_name">&lt;EntityTag.ai_goals&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns all entity ai goals.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityTagAiGoals.java#L1">org/darwin/denizenAdditions/tags/EntityTagAiGoals.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.can_reach|can_reach" data-text="&lt;entitytag.can_reach[&lt;location&gt;/&lt;entity&gt;]&gt; &lt;entitytag.can_reach[&lt;location&gt;/&lt;entity&gt;]&gt; elementtag(boolean) paper, denizenadditions returns whether the mob can find a path all the way to the given location or entity. only works for mobs (entities that pathfind): returns null for any other entity."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.can_reach" href="#entitytag.can_reach" onclick="doFlashFor('entitytag.can_reach')"><span class="doc_name">&lt;EntityTag.can_reach[&lt;location&gt;/&lt;entity&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether the mob can find a path all the way to the given location or entity.
+<br>Only works for mobs (entities that pathfind): returns null for any other entity.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityTagCanReach.java#L1">org/darwin/denizenAdditions/tags/EntityTagCanReach.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.effect|effect" data-text="&lt;entitytag.effect[&lt;effect&gt;]&gt; &lt;entitytag.effect[&lt;effect&gt;]&gt; maptag denizenadditions returns the potion effect maptag entity has. returns null if entity has no specified potion effect. the effect type must be from &lt;@link url https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/potioneffecttype.html&gt;."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.effect" href="#entitytag.effect" onclick="doFlashFor('entitytag.effect')"><span class="doc_name">&lt;EntityTag.effect[&lt;effect&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the potion effect MapTag entity has.
+<br>Returns null if entity has no specified potion effect.
+<br>The effect type must be from <span class="meta_url"><span title="External Link">&#x1f517;</span></span><a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html">https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html</a>.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityTagPotionEffect.java#L1">org/darwin/denizenAdditions/tags/EntityTagPotionEffect.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.freeze_locked|freeze_locked" data-text="&lt;entitytag.freeze_locked&gt; entitytag freeze_locked elementtag(boolean) paper, denizenadditions controls whether an entity’s freeze duration is locked to a fixed value, preventing changes from vanilla freezing mechanics. note: this only affects the server; clients may still display frost visuals when in powder snow. elementtag(boolean) entitytag.freeze_locked properties (property) returns whether an entity’s freeze duration is locked to a fixed value, preventing changes from vanilla freezing mechanics. note: this only affects the server; clients may still display frost visuals when in powder snow. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.freeze_locked" href="#entitytag.freeze_locked" onclick="doFlashFor('entitytag.freeze_locked')"><span class="doc_name">&lt;EntityTag.freeze_locked&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=entitytag.freeze_locked">EntityTag.freeze_locked</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns whether an entity’s freeze duration is locked to a fixed value, preventing changes from vanilla freezing mechanics.
+<br>Note: This only affects the server; clients may still display frost visuals when in powder snow.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/EntityFreezeTickingLocked.java#L1">org/darwin/denizenAdditions/properties/EntityFreezeTickingLocked.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.has_target|has_target" data-text="&lt;entitytag.has_target&gt; &lt;entitytag.has_target&gt; elementtag(boolean) denizenadditions returns whether the entity currently has a target that is still valid. unlike just checking whether &lt;@link tag entitytag.target&gt; returned anything, this also verifies the target is still spawned and alive. that matters because an entity with its ai disabled can keep a stale target that has already died or been removed from the world. returns false for entities that can&#x27;t hold a target at all."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.has_target" href="#entitytag.has_target" onclick="doFlashFor('entitytag.has_target')"><span class="doc_name">&lt;EntityTag.has_target&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether the entity currently has a target that is still valid.
+<br>Unlike just checking whether <span class="meta_url">Tag:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Tags/EntityTag.target">EntityTag.target</a> returned anything, this also verifies the target is still spawned and alive.
+<br>That matters because an entity with its AI disabled can keep a stale target that has already died or been removed from the world.
+<br>Returns false for entities that can't hold a target at all.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityTagHasTarget.java#L1">org/darwin/denizenAdditions/tags/EntityTagHasTarget.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.holds|holds" data-text="&lt;entitytag.holds[&lt;item-matcher&gt;]&gt; &lt;entitytag.holds[&lt;item-matcher&gt;]&gt; elementtag(boolean) denizenadditions returns whether the entity holds item that matches the given item matcher."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.holds" href="#entitytag.holds" onclick="doFlashFor('entitytag.holds')"><span class="doc_name">&lt;EntityTag.holds[&lt;item-matcher&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether the entity holds item that matches the given item matcher.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityTagHolds.java#L1">org/darwin/denizenAdditions/tags/EntityTagHolds.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.immovable|immovable" data-text="&lt;entitytag.immovable&gt; entitytag immovable elementtag(boolean) denizenadditions controls whether a mannequin is immovable. elementtag(boolean) entitytag.immovable properties (property) returns whether a mannequin is immovable. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.immovable" href="#entitytag.immovable" onclick="doFlashFor('entitytag.immovable')"><span class="doc_name">&lt;EntityTag.immovable&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=entitytag.immovable">EntityTag.immovable</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns whether a mannequin is immovable.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/EntityTagImmovable.java#L1">org/darwin/denizenAdditions/properties/EntityTagImmovable.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.in_snow|in_snow" data-text="&lt;entitytag.in_snow&gt; &lt;entitytag.in_snow&gt; elementtag(boolean) denizenadditions returns true if entity is in powdered snow."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.in_snow" href="#entitytag.in_snow" onclick="doFlashFor('entitytag.in_snow')"><span class="doc_name">&lt;EntityTag.in_snow&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns true if entity is in powdered snow.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityTagInSnow.java#L1">org/darwin/denizenAdditions/tags/EntityTagInSnow.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.is_underwater|is_underwater" data-text="&lt;entitytag.is_underwater&gt; &lt;entitytag.is_underwater&gt; elementtag(boolean) denizenadditions returns whether the entity fully submerged in water."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.is_underwater" href="#entitytag.is_underwater" onclick="doFlashFor('entitytag.is_underwater')"><span class="doc_name">&lt;EntityTag.is_underwater&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether the entity fully submerged in water.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityIsUnderwater.java#L1">org/darwin/denizenAdditions/tags/EntityIsUnderwater.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.item_owner|item_owner" data-text="&lt;entitytag.item_owner&gt; entitytag item_owner playertag denizenadditions controls the owner of a dropped item entity. only the owner will be able to pick the item up. the tag returns null if no owner is set. playertag entitytag.item_owner properties (property) returns the owner of a dropped item entity. only the owner will be able to pick the item up. the tag returns null if no owner is set. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.item_owner" href="#entitytag.item_owner" onclick="doFlashFor('entitytag.item_owner')"><span class="doc_name">&lt;EntityTag.item_owner&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/PlayerTag">PlayerTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=entitytag.item_owner">EntityTag.item_owner</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns the owner of a dropped item entity. Only the owner will be able to pick the item up.
+<br>The tag returns null if no owner is set.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/EntityTagOwner.java#L1">org/darwin/denizenAdditions/properties/EntityTagOwner.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.locator_bar_color|locator_bar_color" data-text="&lt;entitytag.locator_bar_color&gt; entitytag locator_bar_color colortag denizenadditions the color of the entity&#x27;s icon on the locator bar, if it has been given one. with no color of its own the icon falls back to the entity&#x27;s team color, and to the style&#x27;s own color if it has no team. for the mechanism: provide no input to go back to that fallback. the alpha channel is dropped - the client is never sent it. this only controls how the icon looks - an entity is only on the locator bar at all while its &#x27;waypoint_transmit_range&#x27; attribute is above zero, see &lt;@link mechanism entitytag.attribute_base_values&gt;. colortag entitytag.locator_bar_color properties (property) the color of the entity&#x27;s icon on the locator bar, if it has been given one. with no color of its own the icon falls back to the entity&#x27;s team color, and to the style&#x27;s own color if it has no team. for the mechanism: provide no input to go back to that fallback. the alpha channel is dropped - the client is never sent it. this only controls how the icon looks - an entity is only on the locator bar at all while its &#x27;waypoint_transmit_range&#x27; attribute is above zero, see &lt;@link mechanism entitytag.attribute_base_values&gt;. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.locator_bar_color" href="#entitytag.locator_bar_color" onclick="doFlashFor('entitytag.locator_bar_color')"><span class="doc_name">&lt;EntityTag.locator_bar_color&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ColorTag">ColorTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=entitytag.locator_bar_color">EntityTag.locator_bar_color</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) The color of the entity's icon on the locator bar, if it has been given one.
+<br>With no color of its own the icon falls back to the entity's team color, and to the style's own color if it has no team.
+<br>For the mechanism: provide no input to go back to that fallback.
+<br>The alpha channel is dropped - the client is never sent it.
+<br>This only controls how the icon looks - an entity is only on the locator bar at all while its 'waypoint_transmit_range'
+<br>attribute is above zero, see <span class="meta_url">Mechanism:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Mechanisms/EntityTag.attribute_base_values">EntityTag.attribute_base_values</a>.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/EntityTagLocatorBarColor.java#L1">org/darwin/denizenAdditions/properties/EntityTagLocatorBarColor.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.locator_bar_style|locator_bar_style" data-text="&lt;entitytag.locator_bar_style&gt; entitytag locator_bar_style elementtag denizenadditions the style of the entity&#x27;s icon on the locator bar, as a namespaced key. the vanilla client only ships &quot;default&quot; and &quot;bowtie&quot;; a resource pack can add more, see &lt;@link url https://minecraft.wiki/w/waypoint_style&gt;. for the mechanism: provide no input to go back to &quot;default&quot;. this only controls how the icon looks - an entity is only on the locator bar at all while its &#x27;waypoint_transmit_range&#x27; attribute is above zero, see &lt;@link mechanism entitytag.attribute_base_values&gt;. elementtag entitytag.locator_bar_style properties (property) the style of the entity&#x27;s icon on the locator bar, as a namespaced key. the vanilla client only ships &quot;default&quot; and &quot;bowtie&quot;; a resource pack can add more, see &lt;@link url https://minecraft.wiki/w/waypoint_style&gt;. for the mechanism: provide no input to go back to &quot;default&quot;. this only controls how the icon looks - an entity is only on the locator bar at all while its &#x27;waypoint_transmit_range&#x27; attribute is above zero, see &lt;@link mechanism entitytag.attribute_base_values&gt;. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.locator_bar_style" href="#entitytag.locator_bar_style" onclick="doFlashFor('entitytag.locator_bar_style')"><span class="doc_name">&lt;EntityTag.locator_bar_style&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=entitytag.locator_bar_style">EntityTag.locator_bar_style</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) The style of the entity's icon on the locator bar, as a namespaced key.
+<br>The vanilla client only ships "default" and "bowtie"; a resource pack can add more, see <span class="meta_url"><span title="External Link">&#x1f517;</span></span><a href="https://minecraft.wiki/w/Waypoint_style">https://minecraft.wiki/w/Waypoint_style</a>.
+<br>For the mechanism: provide no input to go back to "default".
+<br>This only controls how the icon looks - an entity is only on the locator bar at all while its 'waypoint_transmit_range'
+<br>attribute is above zero, see <span class="meta_url">Mechanism:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Mechanisms/EntityTag.attribute_base_values">EntityTag.attribute_base_values</a>.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/EntityTagLocatorBarStyle.java#L1">org/darwin/denizenAdditions/properties/EntityTagLocatorBarStyle.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.mannequin_skin|mannequin_skin" data-text="&lt;entitytag.mannequin_skin&gt; entitytag mannequin_skin elementtag denizenadditions controls the skin of a mannequin, as a skin blob in the format &quot;texture;signature&quot; (two values separated by a semicolon). see also &lt;@link language player entity skins (skin blobs)&gt;. elementtag entitytag.mannequin_skin properties (property) returns the skin of a mannequin, as a skin blob in the format &quot;texture;signature&quot; (two values separated by a semicolon). see also &lt;@link language player entity skins (skin blobs)&gt;. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.mannequin_skin" href="#entitytag.mannequin_skin" onclick="doFlashFor('entitytag.mannequin_skin')"><span class="doc_name">&lt;EntityTag.mannequin_skin&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=entitytag.mannequin_skin">EntityTag.mannequin_skin</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns the skin of a mannequin, as a skin blob in the format "texture;signature" (two values separated by a semicolon).
+<br>See also <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Player%20Entity%20Skins%20%28Skin%20Blobs%29">Player Entity Skins (Skin Blobs)</a>.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/EntityTagMannequinSkin.java#L1">org/darwin/denizenAdditions/properties/EntityTagMannequinSkin.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.thrower|thrower" data-text="&lt;entitytag.thrower&gt; entitytag thrower playertag denizenadditions controls the thrower of a dropped item entity. the tag returns null if no thrower is set. playertag entitytag.thrower properties (property) returns the thrower of a dropped item entity. the tag returns null if no thrower is set. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.thrower" href="#entitytag.thrower" onclick="doFlashFor('entitytag.thrower')"><span class="doc_name">&lt;EntityTag.thrower&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/PlayerTag">PlayerTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=entitytag.thrower">EntityTag.thrower</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns the thrower of a dropped item entity.
+<br>The tag returns null if no thrower is set.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/EntityTagThrower.java#L1">org/darwin/denizenAdditions/properties/EntityTagThrower.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.touches|touches" data-text="&lt;entitytag.touches[&lt;matcher&gt;]&gt; &lt;entitytag.touches[&lt;matcher&gt;]&gt; locationtag denizenadditions returns the locationtag at which the entity touches the given material. entity bounding box is expanded by 0.2."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.touches" href="#entitytag.touches" onclick="doFlashFor('entitytag.touches')"><span class="doc_name">&lt;EntityTag.touches[&lt;matcher&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/LocationTag">LocationTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the LocationTag at which the entity touches the given Material.
+<br>Entity bounding box is expanded by 0.2.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityTagTouchesMaterial.java#L1">org/darwin/denizenAdditions/tags/EntityTagTouchesMaterial.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.trace_map_on|trace_map_on" data-text="&lt;entitytag.trace_map_on[&lt;entity&gt;]&gt; &lt;entitytag.trace_map_on[&lt;entity&gt;]&gt; maptag denizenadditions returns where on the given item frame&#x27;s map this entity is looking, as keys &quot;x&quot; and &quot;y&quot; in the range 0 to 127, or null if it is not looking at that frame&#x27;s map. same geometry as &lt;@link tag entitytag.trace_framed_map&gt;, including the correction for a rotated frame, but for one frame that is already known instead of searching for one. that tag pulls every entity in a 200x200x200 box to find its target, which is far too much to repeat every tick while a player drags a brush across a canvas."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.trace_map_on" href="#entitytag.trace_map_on" onclick="doFlashFor('entitytag.trace_map_on')"><span class="doc_name">&lt;EntityTag.trace_map_on[&lt;entity&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns where on the given item frame's map this entity is looking, as keys "x" and "y" in the range 0 to 127,
+<br>or null if it is not looking at that frame's map.
+<br>
+<br>Same geometry as <span class="meta_url">Tag:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Tags/EntityTag.trace_framed_map">EntityTag.trace_framed_map</a>, including the correction for a rotated frame,
+<br>but for one frame that is already known instead of searching for one.
+<br>That tag pulls every entity in a 200x200x200 box to find its target, which is far too much to repeat
+<br>every tick while a player drags a brush across a canvas.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/EntityTagTraceMapOn.java#L1">org/darwin/denizenAdditions/tags/EntityTagTraceMapOn.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="entitytag.trusted_players|trusted_players" data-text="&lt;entitytag.trusted_players&gt; entitytag trusted_players listtag(playertag) paper, denizenadditions controls the players trusted by a fox, corresponding to bukkit&#x27;s first/second trusted player slots. input is a list of 0 to 2 playertags: the 1st entry becomes the first trusted player, the 2nd becomes the second trusted player. returns a listtag of the currently trusted players, or null if the fox trusts no one. listtag(playertag) entitytag.trusted_players properties (property) returns the players trusted by a fox, corresponding to bukkit&#x27;s first/second trusted player slots. input is a list of 0 to 2 playertags: the 1st entry becomes the first trusted player, the 2nd becomes the second trusted player. returns a listtag of the currently trusted players, or null if the fox trusts no one. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="entitytag.trusted_players" href="#entitytag.trusted_players" onclick="doFlashFor('entitytag.trusted_players')"><span class="doc_name">&lt;EntityTag.trusted_players&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(PlayerTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=entitytag.trusted_players">EntityTag.trusted_players</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns the players trusted by a fox, corresponding to Bukkit's first/second trusted player slots.
+<br>Input is a list of 0 to 2 PlayerTags: the 1st entry becomes the first trusted player, the 2nd becomes the second trusted player.
+<br>Returns a ListTag of the currently trusted players, or null if the fox trusts no one.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/EntityTagFoxTrustedPlayers.java#L1">org/darwin/denizenAdditions/properties/EntityTagFoxTrustedPlayers.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="itemtag"><div class="category_header"><br><hr><br><h4>Category: <a id="itemtag" href="#itemtag" onclick="doFlashFor('itemtag')">ItemTag</a></h4><br></div>
+<div class="meta_entry" data-names="itemtag.consumable|consumable" data-text="&lt;itemtag.consumable&gt; itemtag consumable maptag denizenadditions controls how an item is consumed when held down. &lt;@link language item components&gt;. map keys are &quot;consume_seconds&quot; (decimal), &quot;animation&quot; (one of: none, eat, drink, block, bow, trident, crossbow, spyglass, toot_horn, brush, bundle, spear), &quot;sound&quot; (namespaced key), &quot;has_consume_particles&quot; (boolean), and &quot;effects&quot; (a listtag of maptags). each entry of &quot;effects&quot; has a &quot;type&quot; key choosing what it does, matching the vanilla consume effect names: &quot;apply_effects&quot; - keys &quot;effects&quot; (a listtag of potion effect maps, same format as &lt;@link tag entitytag.effects_data&gt;) and optionally &quot;probability&quot; (decimal 0.0 to 1.0). &quot;remove_effects&quot; - key &quot;effects&quot; (a listtag of potion effect type names, or a single &#x27;#&#x27;-prefixed effect tag key). &quot;clear_all_effects&quot; - no further keys. &quot;play_sound&quot; - key &quot;sound&quot; (namespaced key). &quot;teleport_randomly&quot; - key &quot;diameter&quot; (decimal). provide no input to reset the item to its default value. maptag itemtag.consumable properties (property) returns how an item is consumed when held down. &lt;@link language item components&gt;. map keys are &quot;consume_seconds&quot; (decimal), &quot;animation&quot; (one of: none, eat, drink, block, bow, trident, crossbow, spyglass, toot_horn, brush, bundle, spear), &quot;sound&quot; (namespaced key), &quot;has_consume_particles&quot; (boolean), and &quot;effects&quot; (a listtag of maptags). each entry of &quot;effects&quot; has a &quot;type&quot; key choosing what it does, matching the vanilla consume effect names: &quot;apply_effects&quot; - keys &quot;effects&quot; (a listtag of potion effect maps, same format as &lt;@link tag entitytag.effects_data&gt;) and optionally &quot;probability&quot; (decimal 0.0 to 1.0). &quot;remove_effects&quot; - key &quot;effects&quot; (a listtag of potion effect type names, or a single &#x27;#&#x27;-prefixed effect tag key). &quot;clear_all_effects&quot; - no further keys. &quot;play_sound&quot; - key &quot;sound&quot; (namespaced key). &quot;teleport_randomly&quot; - key &quot;diameter&quot; (decimal). []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.consumable" href="#itemtag.consumable" onclick="doFlashFor('itemtag.consumable')"><span class="doc_name">&lt;ItemTag.consumable&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=itemtag.consumable">ItemTag.consumable</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns how an item is consumed when held down. <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Item%20Components">Item Components</a>.
+<br>Map keys are "consume_seconds" (decimal), "animation" (one of: none, eat, drink, block, bow, trident, crossbow, spyglass, toot_horn, brush, bundle, spear),
+<br>"sound" (namespaced key), "has_consume_particles" (boolean), and "effects" (a ListTag of MapTags).
+<br>
+<br>Each entry of "effects" has a "type" key choosing what it does, matching the vanilla consume effect names:
+<br>"apply_effects" - keys "effects" (a ListTag of potion effect maps, same format as <span class="meta_url">Tag:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Tags/EntityTag.effects_data">EntityTag.effects_data</a>) and optionally "probability" (decimal 0.0 to 1.0).
+<br>"remove_effects" - key "effects" (a ListTag of potion effect type names, or a single '#'-prefixed effect tag key).
+<br>"clear_all_effects" - no further keys.
+<br>"play_sound" - key "sound" (namespaced key).
+<br>"teleport_randomly" - key "diameter" (decimal).</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/datacomponents/ConsumableAdapter.java#L1">org/darwin/denizenAdditions/datacomponents/ConsumableAdapter.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.custom_model_data_map|custom_model_data_map" data-text="&lt;itemtag.custom_model_data_map&gt; itemtag custom_model_data_map maptag denizenadditions controls the item&#x27;s full custom model data component, unlike &lt;@link property itemtag.custom_model_data&gt;, which only handles a single number. &lt;@link language item components&gt;. map keys are &quot;floats&quot; (listtag of decimal numbers), &quot;flags&quot; (listtag of booleans), &quot;strings&quot; (listtag of text) and &quot;colors&quot; (listtag of colortags). missing keys are treated as empty lists. item model definitions read these by index: &quot;range_dispatch&quot; for floats, &quot;condition&quot; for flags, &quot;select&quot; for strings, and &quot;tints&quot; for colors. provide no input to reset the item to its default value. maptag itemtag.custom_model_data_map properties (property) returns the item&#x27;s full custom model data component, unlike &lt;@link property itemtag.custom_model_data&gt;, which only handles a single number. &lt;@link language item components&gt;. map keys are &quot;floats&quot; (listtag of decimal numbers), &quot;flags&quot; (listtag of booleans), &quot;strings&quot; (listtag of text) and &quot;colors&quot; (listtag of colortags). missing keys are treated as empty lists. item model definitions read these by index: &quot;range_dispatch&quot; for floats, &quot;condition&quot; for flags, &quot;select&quot; for strings, and &quot;tints&quot; for colors. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.custom_model_data_map" href="#itemtag.custom_model_data_map" onclick="doFlashFor('itemtag.custom_model_data_map')"><span class="doc_name">&lt;ItemTag.custom_model_data_map&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=itemtag.custom_model_data_map">ItemTag.custom_model_data_map</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns the item's full custom model data component, unlike <span class="meta_url">Property:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Mechanisms/ItemTag.custom_model_data">ItemTag.custom_model_data</a>, which only handles a single number. <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Item%20Components">Item Components</a>.
+<br>Map keys are "floats" (ListTag of decimal numbers), "flags" (ListTag of booleans), "strings" (ListTag of text) and "colors" (ListTag of ColorTags).
+<br>Missing keys are treated as empty lists.
+<br>Item model definitions read these by index: "range_dispatch" for floats, "condition" for flags, "select" for strings, and "tints" for colors.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/datacomponents/CustomModelDataAdapter.java#L1">org/darwin/denizenAdditions/datacomponents/CustomModelDataAdapter.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.dyed_color|dyed_color" data-text="&lt;itemtag.dyed_color&gt; itemtag dyed_color colortag denizenadditions controls whether an item should be replaced with a remainder item if its stack count has decreased after use. &lt;@link language item components&gt;. provide no input to reset the item to its default value. colortag itemtag.dyed_color properties (property) returns whether an item should be replaced with a remainder item if its stack count has decreased after use. &lt;@link language item components&gt;. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.dyed_color" href="#itemtag.dyed_color" onclick="doFlashFor('itemtag.dyed_color')"><span class="doc_name">&lt;ItemTag.dyed_color&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ColorTag">ColorTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=itemtag.dyed_color">ItemTag.dyed_color</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns whether an item should be replaced with a remainder item if its stack count has decreased after use. <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Item%20Components">Item Components</a>.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/datacomponents/DyedColorAdapter.java#L1">org/darwin/denizenAdditions/datacomponents/DyedColorAdapter.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.equippable|equippable" data-text="&lt;itemtag.equippable&gt; itemtag equippable maptag denizenadditions controls how an item can be equipped by entities. &lt;@link language item components&gt;. map keys are &quot;slot&quot; (required, equipment slot name), &quot;equip_sound&quot; (namespaced key), &quot;asset_id&quot; (namespaced key), &quot;camera_overlay&quot; (namespaced key), &quot;dispensable&quot; (boolean), &quot;swappable&quot; (boolean), &quot;damage_on_hurt&quot; (boolean), &quot;equip_on_interact&quot; (boolean), &quot;can_be_sheared&quot; (boolean), &quot;shear_sound&quot; (namespaced key), and optionally &quot;allowed_entities&quot; (a listtag of entity types, or a single &#x27;#&#x27;-prefixed entity tag key, e.g. &quot;#skeletons&quot;). provide no input to reset the item to its default value. maptag itemtag.equippable properties (property) returns how an item can be equipped by entities. &lt;@link language item components&gt;. map keys are &quot;slot&quot; (required, equipment slot name), &quot;equip_sound&quot; (namespaced key), &quot;asset_id&quot; (namespaced key), &quot;camera_overlay&quot; (namespaced key), &quot;dispensable&quot; (boolean), &quot;swappable&quot; (boolean), &quot;damage_on_hurt&quot; (boolean), &quot;equip_on_interact&quot; (boolean), &quot;can_be_sheared&quot; (boolean), &quot;shear_sound&quot; (namespaced key), and optionally &quot;allowed_entities&quot; (a listtag of entity types, or a single &#x27;#&#x27;-prefixed entity tag key, e.g. &quot;#skeletons&quot;). []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.equippable" href="#itemtag.equippable" onclick="doFlashFor('itemtag.equippable')"><span class="doc_name">&lt;ItemTag.equippable&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=itemtag.equippable">ItemTag.equippable</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns how an item can be equipped by entities. <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Item%20Components">Item Components</a>.
+<br>Map keys are "slot" (required, equipment slot name), "equip_sound" (namespaced key), "asset_id" (namespaced key),
+<br>"camera_overlay" (namespaced key), "dispensable" (boolean), "swappable" (boolean), "damage_on_hurt" (boolean),
+<br>"equip_on_interact" (boolean), "can_be_sheared" (boolean), "shear_sound" (namespaced key),
+<br>and optionally "allowed_entities" (a ListTag of entity types, or a single '#'-prefixed entity tag key, e.g. "#skeletons").</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/datacomponents/EquippableAdapter.java#L1">org/darwin/denizenAdditions/datacomponents/EquippableAdapter.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.map_pixel|map_pixel" data-text="&lt;itemtag.map_pixel[x=&lt;#&gt;;y=&lt;#&gt;]&gt; &lt;itemtag.map_pixel[x=&lt;#&gt;;y=&lt;#&gt;]&gt; colortag denizenadditions returns the color of one pixel of this map item, read straight from the map&#x27;s vanilla pixel data - the same data &lt;@link command mapdraw&gt; writes into. 0,0 is the top left corner, maps are 128x128. takes a map with &quot;x&quot; and &quot;y&quot; keys, so the result of &lt;@link tag entitytag.trace_map_on&gt; can be passed in as-is. returns null if the item is not a map, the point is outside the map, or the pixel is transparent (never drawn on). the color is always one of the map palette&#x27;s colors, so drawing it back with mapdraw gives the exact same pixel."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.map_pixel" href="#itemtag.map_pixel" onclick="doFlashFor('itemtag.map_pixel')"><span class="doc_name">&lt;ItemTag.map_pixel[x=&lt;#&gt;;y=&lt;#&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ColorTag">ColorTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the color of one pixel of this map item, read straight from the map's vanilla pixel data -
+<br>the same data <span class="meta_url">Command:</span><a href="../Docs/Commands.html?q=mapdraw">mapdraw</a> writes into. 0,0 is the top left corner, maps are 128x128.
+<br>Takes a map with "x" and "y" keys, so the result of <span class="meta_url">Tag:</span><a href="../Docs/Tags.html?q=entitytag.trace_map_on">EntityTag.trace_map_on</a> can be passed in as-is.
+<br>Returns null if the item is not a map, the point is outside the map, or the pixel is transparent (never drawn on).
+<br>The color is always one of the map palette's colors, so drawing it back with mapdraw gives the exact same pixel.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/ItemTagMapPixel.java#L1">org/darwin/denizenAdditions/tags/ItemTagMapPixel.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.provides_banner_patterns|provides_banner_patterns" data-text="&lt;itemtag.provides_banner_patterns&gt; itemtag provides_banner_patterns objecttag denizenadditions controls the banner patterns an item unlocks when placed in a loom&#x27;s pattern slot. &lt;@link language item components&gt;. this is either a listtag of banner pattern keys (like &#x27;creeper|skull&#x27;), or a single &#x27;#&#x27;-prefixed banner pattern tag key (like &#x27;#pattern_item/flower&#x27;). provide no input to reset the item to its default value. objecttag itemtag.provides_banner_patterns properties (property) returns the banner patterns an item unlocks when placed in a loom&#x27;s pattern slot. &lt;@link language item components&gt;. this is either a listtag of banner pattern keys (like &#x27;creeper|skull&#x27;), or a single &#x27;#&#x27;-prefixed banner pattern tag key (like &#x27;#pattern_item/flower&#x27;). []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.provides_banner_patterns" href="#itemtag.provides_banner_patterns" onclick="doFlashFor('itemtag.provides_banner_patterns')"><span class="doc_name">&lt;ItemTag.provides_banner_patterns&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ObjectTag">ObjectTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=itemtag.provides_banner_patterns">ItemTag.provides_banner_patterns</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns the banner patterns an item unlocks when placed in a loom's pattern slot. <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Item%20Components">Item Components</a>.
+<br>This is either a ListTag of banner pattern keys (like 'creeper|skull'), or a single '#'-prefixed banner pattern tag key (like '#pattern_item/flower').</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/datacomponents/ProvidesBannerPatternsAdapter.java#L1">org/darwin/denizenAdditions/datacomponents/ProvidesBannerPatternsAdapter.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.rarity_color|rarity_color" data-text="&lt;itemtag.rarity_color&gt; &lt;itemtag.rarity_color&gt; colortag denizenadditions returns the color of item&#x27;s rarity."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.rarity_color" href="#itemtag.rarity_color" onclick="doFlashFor('itemtag.rarity_color')"><span class="doc_name">&lt;ItemTag.rarity_color&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ColorTag">ColorTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the color of item's rarity.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/ItemTagRarityColor.java#L1">org/darwin/denizenAdditions/tags/ItemTagRarityColor.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.tool|tool" data-text="&lt;itemtag.tool&gt; itemtag tool maptag denizenadditions controls vanilla tool behavior. &lt;@link language item components&gt;. map keys are &quot;default_mining_speed&quot; (decimal), &quot;damage_per_block&quot; (integer), &quot;can_destroy_blocks_in_creative&quot; (boolean), and optional &quot;rules&quot; (listtag of maptags). rule maps use &quot;blocks&quot; (a listtag of block materials/keys, or a single &#x27;#&#x27;-prefixed block tag key, e.g. &quot;#wool&quot;), plus optional &quot;speed&quot; (decimal) and &quot;correct_for_drops&quot; (boolean or &quot;not_set&quot;). provide no input to reset the item to its default value. maptag itemtag.tool properties (property) returns vanilla tool behavior. &lt;@link language item components&gt;. map keys are &quot;default_mining_speed&quot; (decimal), &quot;damage_per_block&quot; (integer), &quot;can_destroy_blocks_in_creative&quot; (boolean), and optional &quot;rules&quot; (listtag of maptags). rule maps use &quot;blocks&quot; (a listtag of block materials/keys, or a single &#x27;#&#x27;-prefixed block tag key, e.g. &quot;#wool&quot;), plus optional &quot;speed&quot; (decimal) and &quot;correct_for_drops&quot; (boolean or &quot;not_set&quot;). []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.tool" href="#itemtag.tool" onclick="doFlashFor('itemtag.tool')"><span class="doc_name">&lt;ItemTag.tool&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=itemtag.tool">ItemTag.tool</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns vanilla tool behavior. <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Item%20Components">Item Components</a>.
+<br>Map keys are "default_mining_speed" (decimal), "damage_per_block" (integer),
+<br>"can_destroy_blocks_in_creative" (boolean), and optional "rules" (ListTag of MapTags).
+<br>Rule maps use "blocks" (a ListTag of block materials/keys, or a single '#'-prefixed block tag key, e.g. "#wool"),
+<br>plus optional "speed" (decimal) and "correct_for_drops" (boolean or "not_set").</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/datacomponents/ToolAdapter.java#L1">org/darwin/denizenAdditions/datacomponents/ToolAdapter.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.tooltip_display|tooltip_display" data-text="&lt;itemtag.tooltip_display&gt; itemtag tooltip_display maptag denizenadditions controls whether the item tooltip or specific item components should be hidden. &lt;@link language item components&gt;. map keys are &quot;hide_tooltip&quot; (boolean) and &quot;hidden_components&quot; (listtag of item component names). provide no input to reset the item to its default value. maptag itemtag.tooltip_display properties (property) returns whether the item tooltip or specific item components should be hidden. &lt;@link language item components&gt;. map keys are &quot;hide_tooltip&quot; (boolean) and &quot;hidden_components&quot; (listtag of item component names). []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.tooltip_display" href="#itemtag.tooltip_display" onclick="doFlashFor('itemtag.tooltip_display')"><span class="doc_name">&lt;ItemTag.tooltip_display&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=itemtag.tooltip_display">ItemTag.tooltip_display</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns whether the item tooltip or specific item components should be hidden. <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Item%20Components">Item Components</a>.
+<br>Map keys are "hide_tooltip" (boolean) and "hidden_components" (ListTag of item component names).</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/datacomponents/TooltipDisplayAdapter.java#L1">org/darwin/denizenAdditions/datacomponents/TooltipDisplayAdapter.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="itemtag.use_remainder|use_remainder" data-text="&lt;itemtag.use_remainder&gt; itemtag use_remainder itemtag denizenadditions controls whether an item should be replaced with a remainder item if its stack count has decreased after use. &lt;@link language item components&gt;. provide no input to reset the item to its default value. itemtag itemtag.use_remainder properties (property) returns whether an item should be replaced with a remainder item if its stack count has decreased after use. &lt;@link language item components&gt;. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="itemtag.use_remainder" href="#itemtag.use_remainder" onclick="doFlashFor('itemtag.use_remainder')"><span class="doc_name">&lt;ItemTag.use_remainder&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ItemTag">ItemTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=itemtag.use_remainder">ItemTag.use_remainder</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns whether an item should be replaced with a remainder item if its stack count has decreased after use. <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/Item%20Components">Item Components</a>.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/datacomponents/UseRemainderAdapter.java#L1">org/darwin/denizenAdditions/datacomponents/UseRemainderAdapter.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="locationtag"><div class="category_header"><br><hr><br><h4>Category: <a id="locationtag" href="#locationtag" onclick="doFlashFor('locationtag')">LocationTag</a></h4><br></div>
+<div class="meta_entry" data-names="locationtag.adjacent|adjacent" data-text="&lt;locationtag.adjacent[(&lt;matcher&gt;)]&gt; &lt;locationtag.adjacent[(&lt;matcher&gt;)]&gt; listtag(locationtag) denizenadditions returns list of up to 6 adjacent locations optionally matched to given input."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="locationtag.adjacent" href="#locationtag.adjacent" onclick="doFlashFor('locationtag.adjacent')"><span class="doc_name">&lt;LocationTag.adjacent[(&lt;matcher&gt;)]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(LocationTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns list of up to 6 adjacent locations optionally matched to given input.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/LocationTagAdjacent.java#L1">org/darwin/denizenAdditions/tags/LocationTagAdjacent.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="locationtag.adjacent_horizontal|adjacent_horizontal" data-text="&lt;locationtag.adjacent_horizontal[(&lt;matcher&gt;)]&gt; &lt;locationtag.adjacent_horizontal[(&lt;matcher&gt;)]&gt; listtag(locationtag) denizenadditions returns list of up to 4 horizontally adjacent locations optionally matched to given input."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="locationtag.adjacent_horizontal" href="#locationtag.adjacent_horizontal" onclick="doFlashFor('locationtag.adjacent_horizontal')"><span class="doc_name">&lt;LocationTag.adjacent_horizontal[(&lt;matcher&gt;)]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(LocationTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns list of up to 4 horizontally adjacent locations optionally matched to given input.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/LocationTagAdjacentHorizontal.java#L1">org/darwin/denizenAdditions/tags/LocationTagAdjacentHorizontal.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="locationtag.find_persistent_fakes_within|find_persistent_fakes_within" data-text="&lt;locationtag.find_persistent_fakes_within[&lt;#.#&gt;]&gt; &lt;locationtag.find_persistent_fakes_within[&lt;#.#&gt;]&gt; listtag(entitytag) paper, denizenadditions returns list of persistent fake entities within specified radius."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="locationtag.find_persistent_fakes_within" href="#locationtag.find_persistent_fakes_within" onclick="doFlashFor('locationtag.find_persistent_fakes_within')"><span class="doc_name">&lt;LocationTag.find_persistent_fakes_within[&lt;#.#&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(EntityTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns list of persistent fake entities within specified radius.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/LocationTagFindPersistentFakes.java#L1">org/darwin/denizenAdditions/tags/LocationTagFindPersistentFakes.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="locationtag.is_suffocating|is_suffocating" data-text="&lt;locationtag.is_suffocating&gt; &lt;locationtag.is_suffocating&gt; elementtag(boolean) denizenadditions returns whether the location can suffocate an entity."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="locationtag.is_suffocating" href="#locationtag.is_suffocating" onclick="doFlashFor('locationtag.is_suffocating')"><span class="doc_name">&lt;LocationTag.is_suffocating&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether the location can suffocate an entity.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/LocationTagSuffocating.java#L1">org/darwin/denizenAdditions/tags/LocationTagSuffocating.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="locationtag.skull_custom_name|skull_custom_name" data-text="&lt;locationtag.skull_custom_name&gt; &lt;locationtag.skull_custom_name&gt; listtag(locationtag) denizenadditions returns the custom name of this skull."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="locationtag.skull_custom_name" href="#locationtag.skull_custom_name" onclick="doFlashFor('locationtag.skull_custom_name')"><span class="doc_name">&lt;LocationTag.skull_custom_name&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(LocationTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the custom name of this skull.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/LocationTagCustomName.java#L1">org/darwin/denizenAdditions/tags/LocationTagCustomName.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="materialtag"><div class="category_header"><br><hr><br><h4>Category: <a id="materialtag" href="#materialtag" onclick="doFlashFor('materialtag')">MaterialTag</a></h4><br></div>
+<div class="meta_entry" data-names="materialtag.powered|powered" data-text="&lt;materialtag.powered&gt; materialtag powered elementtag(boolean) denizenadditions controls whether a powerable material (doors, trapdoors, fence gates, levers, buttons, pressure plates, repeaters, comparators, copper bulbs, note blocks, etc.) is powered by redstone. unlike &lt;@link tag materialtag.switched&gt;, this always targets the &#x27;powered&#x27; block state, even for materials that are also openable or lightable. elementtag(boolean) materialtag.powered properties (property) returns whether a powerable material (doors, trapdoors, fence gates, levers, buttons, pressure plates, repeaters, comparators, copper bulbs, note blocks, etc.) is powered by redstone. unlike &lt;@link tag materialtag.switched&gt;, this always targets the &#x27;powered&#x27; block state, even for materials that are also openable or lightable. []"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="materialtag.powered" href="#materialtag.powered" onclick="doFlashFor('materialtag.powered')"><span class="doc_name">&lt;MaterialTag.powered&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=materialtag.powered">MaterialTag.powered</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>(Property) Returns whether a powerable material (doors, trapdoors, fence gates, levers, buttons, pressure plates, repeaters, comparators, copper bulbs, note blocks, etc.) is powered by redstone.
+<br>Unlike <span class="meta_url">Tag:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Tags/MaterialTag.switched">MaterialTag.switched</a>, this always targets the 'powered' block state, even for materials that are also openable or lightable.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Properties</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/properties/MaterialTagPowered.java#L1">org/darwin/denizenAdditions/properties/MaterialTagPowered.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="megactivemodeltag"><div class="category_header"><br><hr><br><h4>Category: <a id="megactivemodeltag" href="#megactivemodeltag" onclick="doFlashFor('megactivemodeltag')">MegActiveModelTag</a></h4><br></div>
+<div class="meta_entry" data-names="megactivemodeltag.current_states|current_states" data-text="&lt;megactivemodeltag.current_states&gt; &lt;megactivemodeltag.current_states&gt; listtag megizen, modelengine, denizenadditions returns the list of animation states available running on this model."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="megactivemodeltag.current_states" href="#megactivemodeltag.current_states" onclick="doFlashFor('megactivemodeltag.current_states')"><span class="doc_name">&lt;MegActiveModelTag.current_states&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of animation states available running on this model.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Megizen, ModelEngine, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/MegModelTags.java#L17">org/darwin/denizenAdditions/tags/MegModelTags.java#L17</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="megactivemodeltag.default_states|default_states" data-text="&lt;megactivemodeltag.default_states&gt; &lt;megactivemodeltag.default_states&gt; maptag megizen, modelengine, denizenadditions returns the current default animation states for this model as a map of state type to animation name."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="megactivemodeltag.default_states" href="#megactivemodeltag.default_states" onclick="doFlashFor('megactivemodeltag.default_states')"><span class="doc_name">&lt;MegActiveModelTag.default_states&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the current default animation states for this model as a map of state type to animation name.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Megizen, ModelEngine, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/MegModelTags.java#L25">org/darwin/denizenAdditions/tags/MegModelTags.java#L25</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="megactivemodeltag.state_duration|state_duration" data-text="&lt;megactivemodeltag.state_duration[&lt;state_name&gt;]&gt; &lt;megactivemodeltag.state_duration[&lt;state_name&gt;]&gt; listtag megizen, modelengine, denizenadditions returns the list of animation states available to this model."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="megactivemodeltag.state_duration" href="#megactivemodeltag.state_duration" onclick="doFlashFor('megactivemodeltag.state_duration')"><span class="doc_name">&lt;MegActiveModelTag.state_duration[&lt;state_name&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of animation states available to this model.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Megizen, ModelEngine, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/MegModelTags.java#L1">org/darwin/denizenAdditions/tags/MegModelTags.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="megactivemodeltag.states|states" data-text="&lt;megactivemodeltag.states&gt; &lt;megactivemodeltag.states&gt; listtag megizen, modelengine, denizenadditions returns the list of animation states available to this model."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="megactivemodeltag.states" href="#megactivemodeltag.states" onclick="doFlashFor('megactivemodeltag.states')"><span class="doc_name">&lt;MegActiveModelTag.states&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of animation states available to this model.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Megizen, ModelEngine, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/MegModelTags.java#L9">org/darwin/denizenAdditions/tags/MegModelTags.java#L9</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="mythicmobsmobtag"><div class="category_header"><br><hr><br><h4>Category: <a id="mythicmobsmobtag" href="#mythicmobsmobtag" onclick="doFlashFor('mythicmobsmobtag')">MythicMobsMobTag</a></h4><br></div>
+<div class="meta_entry" data-names="mythicmobsmobtag.owner|owner" data-text="&lt;mythicmobsmobtag.owner&gt; &lt;mythicmobsmobtag.owner&gt; playertag denizenadditions, depenizen, mythicmobs mythicmobsmobtag.owner returns the mythicmob&#x27;s owner, or null if it has none. this is the value mythicmobs&#x27; own &#x27;setowner&#x27; skill mechanic writes. mythicmobs stores only a uuid, so if something set a non-player as the owner, the returned playertag will carry that uuid and won&#x27;t resolve to a real player."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="mythicmobsmobtag.owner" href="#mythicmobsmobtag.owner" onclick="doFlashFor('mythicmobsmobtag.owner')"><span class="doc_name">&lt;MythicMobsMobTag.owner&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/PlayerTag">PlayerTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=mythicmobsmobtag.owner">MythicMobsMobTag.owner</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the MythicMob's owner, or null if it has none.
+<br>This is the value MythicMobs' own 'setowner' skill mechanic writes.
+<br>MythicMobs stores only a UUID, so if something set a non-player as the owner, the returned PlayerTag will
+<br>carry that UUID and won't resolve to a real player.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions, Depenizen, MythicMobs</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/MythicMobsMobTagOwner.java#L1">org/darwin/denizenAdditions/tags/MythicMobsMobTagOwner.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="playertag"><div class="category_header"><br><hr><br><h4>Category: <a id="playertag" href="#playertag" onclick="doFlashFor('playertag')">PlayerTag</a></h4><br></div>
+<div class="meta_entry" data-names="playertag.clickables|clickables" data-text="&lt;playertag.clickables&gt; &lt;playertag.clickables&gt; listtag paper, denizenadditions returns the list of clickables registered by &lt;@link command clickable&gt; with associated player."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.clickables" href="#playertag.clickables" onclick="doFlashFor('playertag.clickables')"><span class="doc_name">&lt;PlayerTag.clickables&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of clickables registered by <span class="meta_url">Command:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Commands/clickable">clickable</a> with associated player.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagClickables.java#L1">org/darwin/denizenAdditions/tags/PlayerTagClickables.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.client_channels|client_channels" data-text="&lt;playertag.client_channels&gt; &lt;playertag.client_channels&gt; listtag paper, denizenadditions returns the list of plugin channels that this player is listening on."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.client_channels" href="#playertag.client_channels" onclick="doFlashFor('playertag.client_channels')"><span class="doc_name">&lt;PlayerTag.client_channels&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of plugin channels that this player is listening on.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagChannels.java#L1">org/darwin/denizenAdditions/tags/PlayerTagChannels.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.detected_mods|detected_mods" data-text="&lt;playertag.detected_mods&gt; &lt;playertag.detected_mods&gt; listtag denizenadditions returns the list of mods detected in the player&#x27;s latest scan."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.detected_mods" href="#playertag.detected_mods" onclick="doFlashFor('playertag.detected_mods')"><span class="doc_name">&lt;PlayerTag.detected_mods&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of mods detected in the player's latest scan.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagDetectedMods.java#L1">org/darwin/denizenAdditions/tags/PlayerTagDetectedMods.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.gcrawl|gcrawl" data-text="&lt;playertag.gcrawl&gt; &lt;playertag.gcrawl&gt; elementtag(boolean) gsit, denizenadditions playertag.gcrawl returns whether the player is currently crawling through gsit."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.gcrawl" href="#playertag.gcrawl" onclick="doFlashFor('playertag.gcrawl')"><span class="doc_name">&lt;PlayerTag.gcrawl&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=playertag.gcrawl">PlayerTag.gcrawl</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether the player is currently crawling through GSit.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>GSit, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/mechanisms/PlayerTagGsit.java#L25">org/darwin/denizenAdditions/mechanisms/PlayerTagGsit.java#L25</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.gpose|gpose" data-text="&lt;playertag.gpose&gt; &lt;playertag.gpose&gt; elementtag gsit, denizenadditions playertag.gpose returns the player&#x27;s current gsit pose, if any."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.gpose" href="#playertag.gpose" onclick="doFlashFor('playertag.gpose')"><span class="doc_name">&lt;PlayerTag.gpose&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=playertag.gpose">PlayerTag.gpose</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the player's current GSit pose, if any.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>GSit, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/mechanisms/PlayerTagGsit.java#L34">org/darwin/denizenAdditions/mechanisms/PlayerTagGsit.java#L34</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.is_gm_invulnerable|is_gm_invulnerable" data-text="&lt;playertag.is_gm_invulnerable&gt; &lt;playertag.is_gm_invulnerable&gt; elementtag(boolean) denizenadditions returns whether this player gamemode is invulnerable (i.e. is either creative or spectator)"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.is_gm_invulnerable" href="#playertag.is_gm_invulnerable" onclick="doFlashFor('playertag.is_gm_invulnerable')"><span class="doc_name">&lt;PlayerTag.is_gm_invulnerable&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether this player gamemode is invulnerable (i.e. is either CREATIVE or SPECTATOR)</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagInvulnerableGamemode.java#L1">org/darwin/denizenAdditions/tags/PlayerTagInvulnerableGamemode.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.is_linked_to|is_linked_to" data-text="&lt;playertag.is_linked_to[&lt;playertag&gt;]&gt; &lt;playertag.is_linked_to[&lt;playertag&gt;]&gt; elementtag(boolean) denizenadditions returns whether this player is linked to the specified player by address."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.is_linked_to" href="#playertag.is_linked_to" onclick="doFlashFor('playertag.is_linked_to')"><span class="doc_name">&lt;PlayerTag.is_linked_to[&lt;PlayerTag&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether this player is linked to the specified player by address.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagLinkedAccounts.java#L9">org/darwin/denizenAdditions/tags/PlayerTagLinkedAccounts.java#L9</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.is_same_client_as|is_same_client_as" data-text="&lt;playertag.is_same_client_as[&lt;playertag&gt;]&gt; &lt;playertag.is_same_client_as[&lt;playertag&gt;]&gt; elementtag(boolean) denizenadditions returns whether this player shares a game client with the specified player."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.is_same_client_as" href="#playertag.is_same_client_as" onclick="doFlashFor('playertag.is_same_client_as')"><span class="doc_name">&lt;PlayerTag.is_same_client_as[&lt;PlayerTag&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether this player shares a game client with the specified player.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagLinkedAccounts.java#L25">org/darwin/denizenAdditions/tags/PlayerTagLinkedAccounts.java#L25</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.linked_accounts|linked_accounts" data-text="&lt;playertag.linked_accounts&gt; &lt;playertag.linked_accounts&gt; listtag(playertag) denizenadditions returns the list of accounts linked to this player by address."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.linked_accounts" href="#playertag.linked_accounts" onclick="doFlashFor('playertag.linked_accounts')"><span class="doc_name">&lt;PlayerTag.linked_accounts&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(PlayerTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of accounts linked to this player by address.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagLinkedAccounts.java#L1">org/darwin/denizenAdditions/tags/PlayerTagLinkedAccounts.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.noclip|noclip" data-text="&lt;playertag.noclip&gt; &lt;playertag.noclip&gt; elementtag(boolean) denizenadditions playertag.noclip returns whether the player has been allowed to noclip by &lt;@link mechanism playertag.noclip&gt;. that mechanism only keeps this in memory: it is lost on restart, but survives the player relogging."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.noclip" href="#playertag.noclip" onclick="doFlashFor('playertag.noclip')"><span class="doc_name">&lt;PlayerTag.noclip&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Mechanisms/PlayerTag.noclip">PlayerTag.noclip</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether the player has been allowed to noclip by <span class="meta_url">Mechanism:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Mechanisms/PlayerTag.noclip">PlayerTag.noclip</a>.
+<br>That mechanism only keeps this in memory: it is lost on restart, but survives the player relogging.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagNoclip.java#L1">org/darwin/denizenAdditions/tags/PlayerTagNoclip.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.runlaters|runlaters" data-text="&lt;playertag.runlaters[(&lt;script&gt;)]&gt; &lt;playertag.runlaters[(&lt;script&gt;)]&gt; listtag(maptag) denizenadditions returns every run still waiting in &lt;@link command runlater&gt; that is linked to this player, soonest first, each as a map in the format described at &lt;@link tag util.runlater&gt;. optionally, only those of the given script. a run is linked to whichever player its queue had when it was scheduled - definitions holding a player don&#x27;t count."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.runlaters" href="#playertag.runlaters" onclick="doFlashFor('playertag.runlaters')"><span class="doc_name">&lt;PlayerTag.runlaters[(&lt;script&gt;)]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(MapTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns every run still waiting in <span class="meta_url">Command:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Commands/runlater">runlater</a> that is linked to this player, soonest first,
+<br>each as a map in the format described at <span class="meta_url">Tag:</span><a href="../Docs/Tags.html?q=util.runlater">util.runlater</a>.
+<br>Optionally, only those of the given script.
+<br>A run is linked to whichever player its queue had when it was scheduled - definitions holding a player don't count.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/RunLaterTags.java#L12">org/darwin/denizenAdditions/tags/RunLaterTags.java#L12</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.same_client_accounts|same_client_accounts" data-text="&lt;playertag.same_client_accounts&gt; &lt;playertag.same_client_accounts&gt; listtag(playertag) denizenadditions returns the list of accounts that share this player&#x27;s game client."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.same_client_accounts" href="#playertag.same_client_accounts" onclick="doFlashFor('playertag.same_client_accounts')"><span class="doc_name">&lt;PlayerTag.same_client_accounts&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(PlayerTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of accounts that share this player's game client.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/PlayerTagLinkedAccounts.java#L17">org/darwin/denizenAdditions/tags/PlayerTagLinkedAccounts.java#L17</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="playertag.voice_deafened|voice_deafened" data-text="&lt;playertag.voice_deafened&gt; &lt;playertag.voice_deafened&gt; elementtag(boolean) denizenadditions, plasmovoice playertag.voice_deafened returns whether the player has been stopped from hearing plasmovoice audio by &lt;@link mechanism playertag.voice_deafened&gt;."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="playertag.voice_deafened" href="#playertag.voice_deafened" onclick="doFlashFor('playertag.voice_deafened')"><span class="doc_name">&lt;PlayerTag.voice_deafened&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Mechanism</td><td><a href="../Docs/Mechanisms.html?q=playertag.voice_deafened">PlayerTag.voice_deafened</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns whether the player has been stopped from hearing PlasmoVoice audio by <span class="meta_url">Mechanism:</span><a href="../Docs/Mechanisms.html?q=playertag.voice_deafened">PlayerTag.voice_deafened</a>.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions, PlasmoVoice</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/mechanisms/PlayerTagVoiceDeafened.java#L1">org/darwin/denizenAdditions/mechanisms/PlayerTagVoiceDeafened.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="scripttag"><div class="category_header"><br><hr><br><h4>Category: <a id="scripttag" href="#scripttag" onclick="doFlashFor('scripttag')">ScriptTag</a></h4><br></div>
+<div class="meta_entry" data-names="scripttag.runlaters|runlaters" data-text="&lt;scripttag.runlaters&gt; &lt;scripttag.runlaters&gt; listtag(maptag) denizenadditions returns every run of this script still waiting in &lt;@link command runlater&gt;, soonest first, each as a map in the format described at &lt;@link tag util.runlater&gt;. unlike &lt;@link tag util.runlater_ids&gt;, this includes runs that were scheduled without an id. to only get the runs linked to one player, use &lt;@link tag playertag.runlaters&gt;."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="scripttag.runlaters" href="#scripttag.runlaters" onclick="doFlashFor('scripttag.runlaters')"><span class="doc_name">&lt;ScriptTag.runlaters&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(MapTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns every run of this script still waiting in <span class="meta_url">Command:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Commands/runlater">runlater</a>, soonest first,
+<br>each as a map in the format described at <span class="meta_url">Tag:</span><a href="../Docs/Tags.html?q=util.runlater">util.runlater</a>.
+<br>Unlike <span class="meta_url">Tag:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Tags/util.runlater_ids">util.runlater_ids</a>, this includes runs that were scheduled without an ID.
+<br>To only get the runs linked to one player, use <span class="meta_url">Tag:</span><a href="../Docs/Tags.html?q=playertag.runlaters">PlayerTag.runlaters</a>.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/RunLaterTags.java#L1">org/darwin/denizenAdditions/tags/RunLaterTags.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="server"><div class="category_header"><br><hr><br><h4>Category: <a id="server" href="#server" onclick="doFlashFor('server')">server</a></h4><br></div>
+<div class="meta_entry" data-names="server.fake_entities|fake_entities" data-text="&lt;server.fake_entities&gt; &lt;server.fake_entities&gt; listtag(entitytag) paper, denizenadditions returns list of all currently spawned fake entities."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="server.fake_entities" href="#server.fake_entities" onclick="doFlashFor('server.fake_entities')"><span class="doc_name">&lt;server.fake_entities&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(EntityTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns list of all currently spawned fake entities.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/ServerTagFakeEntities.java#L1">org/darwin/denizenAdditions/tags/ServerTagFakeEntities.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="server.map_exists|map_exists" data-text="&lt;server.map_exists[&lt;id&gt;]&gt; &lt;server.map_exists[&lt;id&gt;]&gt; elementtag(boolean) paper, denizenadditions returns true if a map with the specified id exists."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="server.map_exists" href="#server.map_exists" onclick="doFlashFor('server.map_exists')"><span class="doc_name">&lt;server.map_exists[&lt;id&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag(Boolean)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns true if a map with the specified id exists.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/ServerTagMapExists.java#L1">org/darwin/denizenAdditions/tags/ServerTagMapExists.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="server.persistent_fakes|persistent_fakes" data-text="&lt;server.persistent_fakes&gt; &lt;server.persistent_fakes&gt; listtag(&lt;id&gt;) paper, denizenadditions return list of all currently spawned persistent fake entities ids."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="server.persistent_fakes" href="#server.persistent_fakes" onclick="doFlashFor('server.persistent_fakes')"><span class="doc_name">&lt;server.persistent_fakes&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(&lt;id&gt;)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Return list of all currently spawned persistent fake entities ids.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/ServerPersistentFakeEntities.java#L1">org/darwin/denizenAdditions/tags/ServerPersistentFakeEntities.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="util"><div class="category_header"><br><hr><br><h4>Category: <a id="util" href="#util" onclick="doFlashFor('util')">util</a></h4><br></div>
+<div class="meta_entry" data-names="util.runlater|runlater" data-text="&lt;util.runlater[&lt;id&gt;]&gt; &lt;util.runlater[&lt;id&gt;]&gt; maptag denizenadditions returns the run scheduled in &lt;@link command runlater&gt; under the given id, as a map with keys: &quot;id&quot;: the id it was scheduled with, if any. &quot;script&quot;: the scripttag that will run - missing if that script no longer exists. &quot;path&quot;: the script path, if one was given. &quot;time&quot;: a timetag of when it is due. &quot;player&quot; / &quot;npc&quot;: the linked player and npc, if any. &quot;definitions&quot;: a maptag of the named definitions, as given to &#x27;def.&lt;name&gt;:&#x27; or &#x27;defmap:&#x27;. &quot;definition_list&quot;: a listtag of the positional definitions given to &#x27;def:&#x27;, as given - they are only matched up with the task script&#x27;s &#x27;definitions&#x27; key once it actually runs. returns null if no run is scheduled under that id."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="util.runlater" href="#util.runlater" onclick="doFlashFor('util.runlater')"><span class="doc_name">&lt;util.runlater[&lt;id&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the run scheduled in <span class="meta_url">Command:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Commands/runlater">runlater</a> under the given ID, as a map with keys:
+<br>"id": the ID it was scheduled with, if any.
+<br>"script": the ScriptTag that will run - missing if that script no longer exists.
+<br>"path": the script path, if one was given.
+<br>"time": a TimeTag of when it is due.
+<br>"player" / "npc": the linked player and NPC, if any.
+<br>"definitions": a MapTag of the named definitions, as given to 'def.&lt;name&gt;:' or 'defmap:'.
+<br>"definition_list": a ListTag of the positional definitions given to 'def:', as given - they are only matched
+<br>up with the task script's 'definitions' key once it actually runs.
+<br>Returns null if no run is scheduled under that ID.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/RunLaterTags.java#L23">org/darwin/denizenAdditions/tags/RunLaterTags.java#L23</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="worldtag"><div class="category_header"><br><hr><br><h4>Category: <a id="worldtag" href="#worldtag" onclick="doFlashFor('worldtag')">WorldTag</a></h4><br></div>
+<div class="meta_entry" data-names="worldtag.logical_height|logical_height" data-text="&lt;worldtag.logical_height&gt; &lt;worldtag.logical_height&gt; elementtag denizenadditions returns the logical height for chorus fruits and nether portals of the world."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="worldtag.logical_height" href="#worldtag.logical_height" onclick="doFlashFor('worldtag.logical_height')"><span class="doc_name">&lt;WorldTag.logical_height&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the logical height for chorus fruits and nether portals of the world.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/WorldTagLogicalHeight.java#L1">org/darwin/denizenAdditions/tags/WorldTagLogicalHeight.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="worldtag.persistent_fake|persistent_fake" data-text="&lt;worldtag.persistent_fake[&lt;id&gt;]&gt; &lt;worldtag.persistent_fake[&lt;id&gt;]&gt; maptag paper, denizenadditions returns maptag with persistent fake location and entity definitions. the &#x27;fake&#x27; key is only present while the fake actually has a spawned packet entity."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="worldtag.persistent_fake" href="#worldtag.persistent_fake" onclick="doFlashFor('worldtag.persistent_fake')"><span class="doc_name">&lt;WorldTag.persistent_fake[&lt;id&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/MapTag">MapTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns MapTag with persistent fake location and entity definitions.
+<br>The 'fake' key is only present while the fake actually has a spawned packet entity.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/WorldTagPersistentFake.java#L1">org/darwin/denizenAdditions/tags/WorldTagPersistentFake.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="worldtag.persistent_fake_players|persistent_fake_players" data-text="&lt;worldtag.persistent_fake_players[&lt;id&gt;]&gt; &lt;worldtag.persistent_fake_players[&lt;id&gt;]&gt; listtag(playertag) denizenadditions returns the list of players currently being sent the persistent fake entity&#x27;s packets. empty if the fake has no spawned packet entity, or nobody is in range of it."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="worldtag.persistent_fake_players" href="#worldtag.persistent_fake_players" onclick="doFlashFor('worldtag.persistent_fake_players')"><span class="doc_name">&lt;WorldTag.persistent_fake_players[&lt;id&gt;]&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(PlayerTag)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns the list of players currently being sent the persistent fake entity's packets.
+<br>Empty if the fake has no spawned packet entity, or nobody is in range of it.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/FakeEntityPlayers.java#L1">org/darwin/denizenAdditions/tags/FakeEntityPlayers.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="worldtag.persistent_fakes|persistent_fakes" data-text="&lt;worldtag.persistent_fakes&gt; &lt;worldtag.persistent_fakes&gt; listtag(&lt;id&gt;) paper, denizenadditions returns list of persistent fake entities ids in this world."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="worldtag.persistent_fakes" href="#worldtag.persistent_fakes" onclick="doFlashFor('worldtag.persistent_fakes')"><span class="doc_name">&lt;WorldTag.persistent_fakes&gt;</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Returns</td><td><a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/ListTag">ListTag(&lt;id&gt;)</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Returns list of persistent fake entities ids in this world.</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>Paper, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/tags/WorldTagPersistentFakes.java#L1">org/darwin/denizenAdditions/tags/WorldTagPersistentFakes.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+
+</center>
+
+    <footer>
+        <center>
+            <br>
+            <hr>
+            DenizenAdditions Meta Documentation: documentation for the commands, tags, events and more that DenizenAdditions adds to Denizen.
+            <br>Generated from the plugin's meta documentation in the format of <a href="https://github.com/DenizenScript/DenizenMetaWebsite">DenizenMetaWebsite</a>
+            (MIT License, Copyright (C) 2021-2026 The Denizen Script Team).
+            <br><span id="theme_footer"></span>
+            <br><br>
+        </center>
+    </footer>
+</body>
+</html>

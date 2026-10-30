@@ -1,0 +1,42 @@
+/* From DenizenMetaWebsite (https://github.com/DenizenScript/DenizenMetaWebsite), MIT License, Copyright (c) 2021-2026 The Denizen Script Team. See LICENSE-DenizenMetaWebsite.txt. */
+/* General Page */
+.lock_top {
+    background-color: #EEEEEE;
+}
+body {
+    background-color: #EEEEEE;
+}
+hr {
+    border-color: #333333;
+}
+/* Quite Light: created by Alex 'mcmonkey' Goodwin */
+/* Denizen Script Colors */
+.script_comment_header{color:#CC0000;}
+.script_comment_normal{color:#007700;}
+.script_comment_code{color:#AA6600;}
+.script_comment_todo{color:#777700;font-weight:bold;}
+.script_key{color:#0000FF;}
+.script_key_inline{color:#0000FF;font-style:italic;}
+.script_command{color:#000000;font-style:italic;}
+.script_quote_double{color:#0066FF;}
+.script_quote_single{color:#0099BB;}
+.script_tag{color:#444444;}
+.script_tag_dot{color:#000000;}
+.script_tag_param{color:#5500FF;}
+.script_tag_param_bracket{color:#5500FF;}
+.script_colon{color:#0000FF;font-weight:bold;}
+.script_bad_space{color:#000000;background-color:#FF6666;}
+.script_normal{color:#000000;}
+.script_def_name{color:#006699;font-style:italic;}
+/* Denizen Command Syntax Colors */
+.syntax_command{color:#000000;}
+.syntax_required{color:#5500FF;font-weight:bold;}
+.syntax_optional{color:#0066FF;}
+.syntax_default{color:#007744;font-style:italic;}
+.syntax_fillable{color:#444444;}
+.syntax_list{color:#000000;}
+.syntax_colon{color:#0000FF;font-weight:bold;}
+/* Fix For Light Theme */
+.doc_name {
+    color: #005500;
+}

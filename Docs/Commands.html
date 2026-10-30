@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html data-root="../">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="bootstrap_css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="../css/meta_site.css">
+    <link id="theme_css" rel="stylesheet" href="../css/theme/colors_dark.css">
+    <link rel="stylesheet" href="../css/site_extra.css">
+    <script src="../js/meta.js"></script>
+    <title>Commands | DenizenAdditions Meta Documentation</title>
+    <meta name="description" content="DenizenAdditions commands" />
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary navbar-fixed-ifier">
+        <a class="navbar-brand" href="../index.html">DenizenAdditions Meta Documentation</a>
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="https://meta.denizenscript.com/">Denizen Meta</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Commands.html">Commands</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Tags.html">Tags</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Mechanisms.html">Mechanisms</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Languages.html">Language Explanations</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true">Theme</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" title="created by Alex 'mcmonkey' Goodwin" onclick="changetheme('dark')">Standard Dark</a>
+                        <a class="dropdown-item" title="created by Alex 'mcmonkey' Goodwin" onclick="changetheme('light')">Quite Light</a>
+                    </div>
+                </li>
+                <span class="topsearchbar">
+                    <input class="form-control mr-sm-2" type="text" id="top_search_bar" placeholder="Search">
+                </span>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav_spacer" style="height:90px;"></div>
+<span class="center_helper">
+    <div class="jumbotron">
+        <h3>DenizenAdditions Commands</h3>
+        <br>Commands are always written with a '-' before them, and are the core component of any script, the primary way to cause things to happen.
+        <br>These are only the ones DenizenAdditions adds. For everything in Denizen itself, see the <a href="https://meta.denizenscript.com/Docs/Commands">Denizen Meta Documentation</a>.
+    </div>
+    <input type="text" id="search_bar" placeholder="Search Commands...">
+    <br><br>
+    <h5 id="shown_count" data-total="10" data-noun="commands">Showing all 10 commands...</h5>
+</span>
+<center>
+<div class="categories_box"><h4>Categories:</h4><div class="categories_container">
+<a class="category_link" data-category="external" href="#external" onclick="doFlashFor('external')">external</a>
+ | <a class="category_link" data-category="item" href="#item" onclick="doFlashFor('item')">item</a>
+ | <a class="category_link" data-category="megizen" href="#megizen" onclick="doFlashFor('megizen')">Megizen</a>
+ | <a class="category_link" data-category="player" href="#player" onclick="doFlashFor('player')">player</a>
+ | <a class="category_link" data-category="queue" href="#queue" onclick="doFlashFor('queue')">queue</a>
+ | <a class="category_link" data-category="world" href="#world" onclick="doFlashFor('world')">world</a>
+</div></div>
+<div class="meta_category" data-category="external"><div class="category_header"><br><hr><br><h4>Category: <a id="external" href="#external" onclick="doFlashFor('external')">external</a></h4><br></div>
+<div class="meta_entry" data-names="plasmotrack" data-text="plasmotrack plasmotrack plasmotrack [&lt;url&gt;] 1 fetches track info from pv-addon-discs. external retrieves the title and final playback url of a track using pv-addon-discs audio manager. &lt;entry[savename].name&gt; returns the track title. &lt;entry[savename].new_url&gt; returns the resolved track url. &lt;entry[savename].failed&gt; returns whether the track resolving has failed."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="plasmotrack" href="#plasmotrack" onclick="doFlashFor('plasmotrack')"><span class="doc_name">plasmotrack</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">plasmotrack</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;url&gt;</span>]</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Fetches track info from pv-addon-discs.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Retrieves the title and final playback URL of a track using pv-addon-discs audio manager.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Related Tags</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">entry</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">saveName</span><span class="script_tag_param_bracket">]</span><span class="script_tag_dot">.</span><span class="script_tag">name</span><span class="script_tag">&gt;</span></code> returns the track title.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">entry</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">saveName</span><span class="script_tag_param_bracket">]</span><span class="script_tag_dot">.</span><span class="script_tag">new_url</span><span class="script_tag">&gt;</span></code> returns the resolved track URL.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">entry</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">saveName</span><span class="script_tag_param_bracket">]</span><span class="script_tag_dot">.</span><span class="script_tag">failed</span><span class="script_tag">&gt;</span></code> returns whether the track resolving has failed.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>external</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/PlasmoTrackCommand.java#L1">org/darwin/denizenAdditions/commands/PlasmoTrackCommand.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="item"><div class="category_header"><br><hr><br><h4>Category: <a id="item" href="#item" onclick="doFlashFor('item')">item</a></h4><br></div>
+<div class="meta_entry" data-names="mapdraw" data-text="mapdraw mapdraw mapdraw [id:&lt;#&gt;/new:&lt;world&gt;/undo:&lt;key&gt;] (pixel/dot/line/rectangle/fill/floodfill/image:&lt;image&gt;) (x:&lt;#&gt;) (y:&lt;#&gt;) (to_x:&lt;#&gt;) (to_y:&lt;#&gt;) (radius:&lt;#&gt;) (width:&lt;#&gt;) (height:&lt;#&gt;) (color:&lt;color&gt;) (record:&lt;key&gt; (begin)) (send:&lt;player&gt;|...) 1 15 draws directly into a map&#x27;s vanilla pixel data. item writes straight into the map&#x27;s own color array, the same one vanilla uses and saves. this is deliberately not the &lt;@link command map&gt; command: that one attaches a denizen map renderer, whose objects are re-rendered in full on every change, are written into maps.yml, and grow without bound. for a map that is drawn on many times - a player-painted canvas, for example - that does not scale. because the drawing lives in the map&#x27;s vanilla data, it is saved and reloaded by the game itself (in &quot;world/data/map_&lt;id&gt;.dat&quot;), so no separate storage, image file or renderer is needed. do not use the &quot;map&quot; command on a map drawn by this command: the denizen renderer it attaches renders once, caches the result and stops looking at the vanilla data, freezing the picture. maps drawn on this way should be given to players with &quot;map_locked=true&quot;. without it, vanilla rescans the terrain into the map whenever a player holds it, wiping the drawing. maps are always 128x128, with 0,0 at the top left corner. anything outside is clipped away. colors are matched to the map palette, which is fairly limited - the drawn color will be the closest one available. fully transparent input is skipped rather than drawn. the shapes are: - &quot;pixel&quot; sets a single pixel at x,y. - &quot;dot&quot; fills a disc centered on x,y, covering every pixel within &#x27;radius&#x27; (radius 0 is one pixel). - &quot;line&quot; drags a &#x27;radius&#x27; sized dot from x,y to to_x,to_y, for joining up sparse input into a stroke. - &quot;rectangle&quot; fills &#x27;width&#x27; by &#x27;height&#x27; pixels starting at x,y. - &quot;fill&quot; covers the entire map, ignoring x/y. - &quot;floodfill&quot; recolors the connected area of same-colored pixels around x,y, like a paint bucket. - &quot;image:&lt;image&gt;&quot; draws an imagetag with its top left corner at x,y. specify &quot;new:&lt;world&gt;&quot; instead of an id to create a fresh map, which is then drawn on the same way. specify &quot;record:&lt;key&gt;&quot; to make the change undoable. every pixel the command changes is remembered, with its previous color, in the key&#x27;s current action - the key is whatever the undo stack belongs to, usually a player&#x27;s uuid. several commands add up into one action until &quot;begin&quot; starts a new one, so a whole brush stroke can be undone at once. &quot;begin&quot; can be given on its own, as &quot;mapdraw record:&lt;key&gt; begin&quot;, to open the next action before drawing anything. drawing on a different map than the current action&#x27;s also starts a new action. each key keeps its last 15 actions, in memory only: the history is gone after a restart. specify &quot;undo:&lt;key&gt;&quot; instead of an id to roll back that key&#x27;s last action and drop it from the history. only the pixels the action itself changed are restored, so other drawing on the same map survives, unless it was painted over the very same pixels afterwards. optionally specify &quot;send&quot; with a list of players to push the map to them immediately. without it the change still reaches viewers, but only on the next item frame sync tick (see &quot;item-frame-cursor-update-interval&quot; in the paper config, 10 ticks by default). &lt;entry[savename].created_map&gt; returns the id of the map created by the &#x27;new:&#x27; argument, if used. &lt;entry[savename].undone_map&gt; returns the id of the map rolled back by the &#x27;undo:&#x27; argument, if there was anything to undo. use to create a blank off-white canvas and hand it to the player. - mapdraw new:&lt;player.world&gt; fill color:233,226,208 save:canvas - give filled_map[map=&lt;entry[canvas].created_map&gt;;map_locked=true] use to put a red blob on a map and show it to the player at once. - mapdraw id:&lt;[map_id]&gt; dot x:64 y:64 radius:3 color:red send:&lt;player&gt; use to draw an undoable stroke as one action, then take it back. - mapdraw id:&lt;[map_id]&gt; dot x:10 y:10 radius:1 color:black record:&lt;player.uuid&gt; begin - mapdraw id:&lt;[map_id]&gt; line x:10 y:10 to_x:40 to_y:20 radius:1 color:black record:&lt;player.uuid&gt; - mapdraw undo:&lt;player.uuid&gt; send:&lt;player&gt;"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="mapdraw" href="#mapdraw" onclick="doFlashFor('mapdraw')"><span class="doc_name">MapDraw</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">mapdraw</span> <span class="syntax_required">[id<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span><span class="syntax_list">/</span>new<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;world&gt;</span><span class="syntax_list">/</span>undo<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;key&gt;</span>]</span> <span class="syntax_optional">(pixel<span class="syntax_list">/</span>dot<span class="syntax_list">/</span>line<span class="syntax_list">/</span>rectangle<span class="syntax_list">/</span>fill<span class="syntax_list">/</span>floodfill<span class="syntax_list">/</span>image<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;image&gt;</span>)</span> <span class="syntax_optional">(x<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span>)</span> <span class="syntax_optional">(y<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span>)</span> <span class="syntax_optional">(to_x<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span>)</span> <span class="syntax_optional">(to_y<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span>)</span> <span class="syntax_optional">(radius<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span>)</span> <span class="syntax_optional">(width<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span>)</span> <span class="syntax_optional">(height<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span>)</span> <span class="syntax_optional">(color<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;color&gt;</span>)</span> <span class="syntax_optional">(record<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;key&gt;</span> <span class="syntax_optional">(begin)</span>)</span> <span class="syntax_optional">(send<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;player&gt;</span><span class="syntax_list">|</span><span class="syntax_list">.</span><span class="syntax_list">.</span><span class="syntax_list">.</span>)</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Draws directly into a map's vanilla pixel data.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Writes straight into the map's own color array, the same one vanilla uses and saves.
+<br>
+<br>This is deliberately not the <span class="meta_url">Command:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Commands/map">map</a> command: that one attaches a Denizen map renderer,
+<br>whose objects are re-rendered in full on every change, are written into maps.yml, and grow without bound.
+<br>For a map that is drawn on many times - a player-painted canvas, for example - that does not scale.
+<br>
+<br>Because the drawing lives in the map's vanilla data, it is saved and reloaded by the game itself
+<br>(in "world/data/map_&lt;id&gt;.dat"), so no separate storage, image file or renderer is needed.
+<br>
+<br>Do NOT use the "map" command on a map drawn by this command: the Denizen renderer it attaches
+<br>renders once, caches the result and stops looking at the vanilla data, freezing the picture.
+<br>
+<br>Maps drawn on this way should be given to players with "map_locked=true". Without it, vanilla
+<br>rescans the terrain into the map whenever a player holds it, wiping the drawing.
+<br>
+<br>Maps are always 128x128, with 0,0 at the top left corner. Anything outside is clipped away.
+<br>
+<br>Colors are matched to the map palette, which is fairly limited - the drawn color will be the
+<br>closest one available. Fully transparent input is skipped rather than drawn.
+<br>
+<br>The shapes are:
+<br>- "pixel" sets a single pixel at x,y.
+<br>- "dot" fills a disc centered on x,y, covering every pixel within 'radius' (radius 0 is one pixel).
+<br>- "line" drags a 'radius' sized dot from x,y to to_x,to_y, for joining up sparse input into a stroke.
+<br>- "rectangle" fills 'width' by 'height' pixels starting at x,y.
+<br>- "fill" covers the entire map, ignoring x/y.
+<br>- "floodfill" recolors the connected area of same-colored pixels around x,y, like a paint bucket.
+<br>- "image:&lt;image&gt;" draws an ImageTag with its top left corner at x,y.
+<br>
+<br>Specify "new:&lt;world&gt;" instead of an id to create a fresh map, which is then drawn on the same way.
+<br>
+<br>Specify "record:&lt;key&gt;" to make the change undoable. Every pixel the command changes is remembered, with its
+<br>previous color, in the key's current action - the key is whatever the undo stack belongs to, usually a player's UUID.
+<br>Several commands add up into one action until "begin" starts a new one, so a whole brush stroke can be undone at once.
+<br>"begin" can be given on its own, as "mapdraw record:&lt;key&gt; begin", to open the next action before drawing anything.
+<br>Drawing on a different map than the current action's also starts a new action.
+<br>Each key keeps its last 15 actions, in memory only: the history is gone after a restart.
+<br>
+<br>Specify "undo:&lt;key&gt;" instead of an id to roll back that key's last action and drop it from the history.
+<br>Only the pixels the action itself changed are restored, so other drawing on the same map survives,
+<br>unless it was painted over the very same pixels afterwards.
+<br>
+<br>Optionally specify "send" with a list of players to push the map to them immediately.
+<br>Without it the change still reaches viewers, but only on the next item frame sync tick
+<br>(see "item-frame-cursor-update-interval" in the Paper config, 10 ticks by default).</td></tr>
+<tr class="table-default"><td class="td-doc-key">Related Tags</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">entry</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">saveName</span><span class="script_tag_param_bracket">]</span><span class="script_tag_dot">.</span><span class="script_tag">created_map</span><span class="script_tag">&gt;</span></code> returns the ID of the map created by the 'new:' argument, if used.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">entry</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">saveName</span><span class="script_tag_param_bracket">]</span><span class="script_tag_dot">.</span><span class="script_tag">undone_map</span><span class="script_tag">&gt;</span></code> returns the ID of the map rolled back by the 'undo:' argument, if there was anything to undo.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to create a blank off-white canvas and hand it to the player.</span>
+<span class="script_normal">-</span><span class="script_command"> mapdraw</span> <span class="script_normal">new:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag_dot">.</span><span class="script_tag">world</span><span class="script_tag">&gt;</span> <span class="script_normal">fill</span> <span class="script_normal">color:233,226,208</span> <span class="script_normal">save:canvas</span>
+<span class="script_normal">-</span><span class="script_command"> give</span> <span class="script_normal">filled_map[map=</span><span class="script_tag">&lt;</span><span class="script_tag">entry</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">canvas</span><span class="script_tag_param_bracket">]</span><span class="script_tag_dot">.</span><span class="script_tag">created_map</span><span class="script_tag">&gt;</span><span class="script_normal">;map_locked=true]</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to put a red blob on a map and show it to the player at once.</span>
+<span class="script_normal">-</span><span class="script_command"> mapdraw</span> <span class="script_normal">id:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">map_id</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span> <span class="script_normal">dot</span> <span class="script_normal">x:64</span> <span class="script_normal">y:64</span> <span class="script_normal">radius:3</span> <span class="script_normal">color:red</span> <span class="script_normal">send:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag">&gt;</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to draw an undoable stroke as one action, then take it back.</span>
+<span class="script_normal">-</span><span class="script_command"> mapdraw</span> <span class="script_normal">id:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">map_id</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span> <span class="script_normal">dot</span> <span class="script_normal">x:10</span> <span class="script_normal">y:10</span> <span class="script_normal">radius:1</span> <span class="script_normal">color:black</span> <span class="script_normal">record:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag_dot">.</span><span class="script_tag">uuid</span><span class="script_tag">&gt;</span> <span class="script_normal">begin</span>
+<span class="script_normal">-</span><span class="script_command"> mapdraw</span> <span class="script_normal">id:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">map_id</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span> <span class="script_normal">line</span> <span class="script_normal">x:10</span> <span class="script_normal">y:10</span> <span class="script_normal">to_x:40</span> <span class="script_normal">to_y:20</span> <span class="script_normal">radius:1</span> <span class="script_normal">color:black</span> <span class="script_normal">record:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag_dot">.</span><span class="script_tag">uuid</span><span class="script_tag">&gt;</span>
+<span class="script_normal">-</span><span class="script_command"> mapdraw</span> <span class="script_normal">undo:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag_dot">.</span><span class="script_tag">uuid</span><span class="script_tag">&gt;</span> <span class="script_normal">send:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag">&gt;</span></code></pre></td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>item</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/MapDrawCommand.java#L1">org/darwin/denizenAdditions/commands/MapDrawCommand.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="megizen"><div class="category_header"><br><hr><br><h4>Category: <a id="megizen" href="#megizen" onclick="doFlashFor('megizen')">Megizen</a></h4><br></div>
+<div class="meta_entry" data-names="megdefaultstate" data-text="megdefaultstate megdefaultstate megdefaultstate [model:&lt;active_model&gt;] [type:&lt;type&gt;] [state:&lt;state&gt;] (lerpin:&lt;duration&gt;) (lerpout:&lt;duration&gt;) (speed:&lt;#.#&gt;) 3 changes a default animation on an active model. megizen changes one of a model&#x27;s default animations to the specified animation state. this command is similar to the &quot;defaultstate&quot; mythic mechanic. the &#x27;type&#x27; argument must be a model engine default state type, for example &#x27;idle&#x27;, &#x27;walk&#x27;, &#x27;jump_start&#x27;, or &#x27;death&#x27;. the &#x27;state&#x27; argument must be an animation name on the active model&#x27;s blueprint, or a model engine animation ref. if &#x27;lerpin&#x27;, &#x27;lerpout&#x27;, or &#x27;speed&#x27; are omitted, the current default values for the selected type are preserved. use to replace the walk default animation with the run animation. - megdefaultstate model:&lt;[model]&gt; type:walk state:run"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="megdefaultstate" href="#megdefaultstate" onclick="doFlashFor('megdefaultstate')"><span class="doc_name">MegDefaultState</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">megdefaultstate</span> <span class="syntax_required">[model<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;active_model&gt;</span>]</span> <span class="syntax_required">[type<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;type&gt;</span>]</span> <span class="syntax_required">[state<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;state&gt;</span>]</span> <span class="syntax_optional">(lerpin<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;duration&gt;</span>)</span> <span class="syntax_optional">(lerpout<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;duration&gt;</span>)</span> <span class="syntax_optional">(speed<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#<span class="syntax_list">.</span>#&gt;</span>)</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Changes a default animation on an active model.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Changes one of a model's default animations to the specified animation state.
+<br>This command is similar to the "defaultstate" Mythic Mechanic.
+<br>
+<br>The 'type' argument must be a Model Engine default state type, for example 'idle', 'walk', 'jump_start', or 'death'.
+<br>The 'state' argument must be an animation name on the active model's blueprint, or a Model Engine animation ref.
+<br>
+<br>If 'lerpin', 'lerpout', or 'speed' are omitted, the current default values for the selected type are preserved.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to replace the walk default animation with the run animation.</span>
+<span class="script_normal">-</span><span class="script_command"> megdefaultstate</span> <span class="script_normal">model:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">model</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span> <span class="script_normal">type:walk</span> <span class="script_normal">state:run</span></code></pre></td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Megizen</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/MegModelDefaultStateCommand.java#L1">org/darwin/denizenAdditions/commands/MegModelDefaultStateCommand.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="player"><div class="category_header"><br><hr><br><h4>Category: <a id="player" href="#player" onclick="doFlashFor('player')">player</a></h4><br></div>
+<div class="meta_entry" data-names="flashbackmarker" data-text="flashbackmarker flashbackmarker flashbackmarker [&lt;text&gt;] (player:&lt;player&gt;) (category:&lt;name&gt;) (color:&lt;color&gt;) (location:&lt;location&gt;) 1 5 serverflashback puts a marker on the serverflashback recording timeline of a player. player adds a marker to the continuous server recording of the player (serverflashback plugin). markers show up on the timeline of the serverflashback client addon and in flashback when the replay is downloaded. the text is normal formatted text: colors and &lt;&amp;translate[...]&gt; work, translations are resolved on the moderator&#x27;s client with the server resource pack. the player defaults to the linked player. the category is shown as its own filter in the addon, defaults to &quot;скрипты&quot;. the color defaults to white. the location is optional and shown in the marker tooltip. does nothing if the player is not being recorded or serverflashback is not installed. mark that the player got a job. - flashbackmarker &quot;получил профессию: &lt;[job]&gt;&quot; category:профессии color:orange mark entering an apartment with its location. - flashbackmarker &quot;зашёл в квартиру №&lt;[flat]&gt;&quot; player:&lt;[target]&gt; category:квартиры color:#55aaff location:&lt;player.location&gt;"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="flashbackmarker" href="#flashbackmarker" onclick="doFlashFor('flashbackmarker')"><span class="doc_name">flashbackmarker</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">flashbackmarker</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;text&gt;</span>]</span> <span class="syntax_optional">(player<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;player&gt;</span>)</span> <span class="syntax_optional">(category<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;name&gt;</span>)</span> <span class="syntax_optional">(color<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;color&gt;</span>)</span> <span class="syntax_optional">(location<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;location&gt;</span>)</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Puts a marker on the ServerFlashback recording timeline of a player.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Adds a marker to the continuous server recording of the player (ServerFlashback plugin).
+<br>Markers show up on the timeline of the ServerFlashback client addon and in Flashback when the replay is downloaded.
+<br>
+<br>The text is normal formatted text: colors and &lt;&amp;translate[...]&gt; work, translations are resolved on the
+<br>moderator's client with the server resource pack.
+<br>The player defaults to the linked player.
+<br>The category is shown as its own filter in the addon, defaults to "Скрипты".
+<br>The color defaults to white. The location is optional and shown in the marker tooltip.
+<br>
+<br>Does nothing if the player is not being recorded or ServerFlashback is not installed.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Mark that the player got a job.</span>
+<span class="script_normal">-</span><span class="script_command"> flashbackmarker</span> <span class="script_quote_double">"Получил профессию: </span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">job</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span><span class="script_quote_double">"</span> <span class="script_normal">category:Профессии</span> <span class="script_normal">color:orange</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Mark entering an apartment with its location.</span>
+<span class="script_normal">-</span><span class="script_command"> flashbackmarker</span> <span class="script_quote_double">"Зашёл в квартиру №</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">flat</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span><span class="script_quote_double">"</span> <span class="script_normal">player:</span><span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">target</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span> <span class="script_normal">category:Квартиры</span> <span class="script_normal">color:#55AAFF</span> <span class="script_normal">location:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag_dot">.</span><span class="script_tag">location</span><span class="script_tag">&gt;</span></code></pre></td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>player</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>ServerFlashback</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/FlashbackMarkerCommand.java#L1">org/darwin/denizenAdditions/commands/FlashbackMarkerCommand.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="showdialog" data-text="showdialog showdialog showdialog [&lt;dialog&gt;] (def:&lt;element&gt;|...) 1 2 opens a dialog script for the linked player. player opens the native dialog window defined by a &lt;@link language dialog script containers&gt; for the linked player. optionally, pass definitions with &#x27;def:&#x27;. they are named by the dialog&#x27;s &#x27;definitions&#x27; key (like a task script&#x27;s), or numbered 1, 2, ... without it. the dialog&#x27;s tags, its &#x27;procedural&#x27; section and its button scripts can use these definitions as well as the definitions of the queue that ran the command. use to open a simple dialog script. - showdialog mysimpledialog use to pass definitions (like a quest id and a reward amount) into the dialog. - showdialog questconfirmdialog def:quest_01|1000"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="showdialog" href="#showdialog" onclick="doFlashFor('showdialog')"><span class="doc_name">showdialog</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">showdialog</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;dialog&gt;</span>]</span> <span class="syntax_optional">(def<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;element&gt;</span><span class="syntax_list">|</span><span class="syntax_list">.</span><span class="syntax_list">.</span><span class="syntax_list">.</span>)</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Opens a dialog script for the linked player.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Opens the native dialog window defined by a <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20script%20containers">Dialog Script Containers</a> for the linked player.
+<br>
+<br>Optionally, pass definitions with 'def:'. They are named by the dialog's 'definitions' key
+<br>(like a task script's), or numbered 1, 2, ... without it.
+<br>The dialog's tags, its 'procedural' section and its button scripts can use these definitions
+<br>as well as the definitions of the queue that ran the command.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to open a simple dialog script.</span>
+<span class="script_normal">-</span><span class="script_command"> showdialog</span> <span class="script_normal">MySimpleDialog</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to pass definitions (like a quest ID and a reward amount) into the dialog.</span>
+<span class="script_normal">-</span><span class="script_command"> showdialog</span> <span class="script_normal">QuestConfirmDialog</span> <span class="script_normal">def:quest_01|1000</span></code></pre></td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>player</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/ShowDialogCommand.java#L1">org/darwin/denizenAdditions/commands/ShowDialogCommand.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="queue"><div class="category_header"><br><hr><br><h4>Category: <a id="queue" href="#queue" onclick="doFlashFor('queue')">queue</a></h4><br></div>
+<div class="meta_entry" data-names="async" data-text="async async async [&lt;commands&gt;] 0 1 runs commands asynchronously (in a separate thread). queue experimental! use only with commands known to be thread-safe. runs all commands inside the following block asynchronously in a worker thread. the block inherits definitions and context from the current queue. if the calling entry used ~waitable, the parent entry will wait until the async block finishes."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="async" href="#async" onclick="doFlashFor('async')"><span class="doc_name">Async</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">async</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;commands&gt;</span>]</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Runs commands asynchronously (in a separate thread).</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Runs all commands inside the following block asynchronously in a worker thread.
+<br>The block inherits definitions and context from the current queue.
+<br>If the calling entry used ~waitable, the parent entry will wait until the async block finishes.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>queue</td></tr>
+<tr class="table-danger"><td class="td-doc-key">Warning(s)</td><td>Experimental! Use only with commands known to be thread-safe.</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/AsyncCommand.java#L1">org/darwin/denizenAdditions/commands/AsyncCommand.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="run_async" data-text="run_async run_async run_async [&lt;script&gt;] (path:&lt;name&gt;) (def:&lt;element&gt;|.../defmap:&lt;map&gt;/def.&lt;name&gt;:&lt;value&gt;) (id:&lt;name&gt;) (delay:&lt;value&gt;) 1 -1 runs a script in a new async queue. https://guide.denizenscript.com/guides/basics/run-options.html queue experimental! use with extreme caution! most commands are not compatible with async execution. runs a script in a new async queue. you must specify a script object to run. optionally, use the &quot;path:&quot; argument to choose a specific sub-path within a script. optionally, use the &quot;def:&quot; argument to specify definition values to pass to the script, the definitions will be named via the &quot;definitions:&quot; script key on the script being ran, or numerically in order if that isn&#x27;t specified (starting with &lt;[1]&gt;). alternately, use &quot;defmap:&lt;map&gt;&quot; to specify definitions to pass as a maptag, where the keys will be definition names and the values will of course be definition values. alternately, use &quot;def.&lt;name&gt;:&lt;value&gt;&quot; to define one or more named definitions individually. optionally, use the &quot;delay:&quot; argument to specify a delay time before the script starts running. optionally, specify the &quot;id:&quot; argument to choose a custom queue id to be used. if none is specified, a randomly generated one will be used. generally, don&#x27;t use this argument. the run command is ~waitable. refer to &lt;@link language ~waitable&gt;. &lt;entry[savename].created_queue&gt; returns the queue that was started by the run command. use to run a task script named &#x27;mytask&#x27;. - run_async mytask use to run a task script named &#x27;mytask&#x27; that isn&#x27;t normally instant, instantly. - run_async mytask instantly use to run a local subscript named &#x27;alt_path&#x27;. - run_async &lt;script&gt; path:alt_path use to run &#x27;mytask&#x27; and pass 3 definitions to it. - run_async mytask def:a|second_def|taco use to run &#x27;mytask&#x27; and pass 3 named definitions to it. - run_async mytask def.count:5 def.type:taco def.smell:tasty use to run &#x27;mytask&#x27; and pass a list as a single definition. - run_async mytask def:&lt;list_single[&lt;list[a|big|list|here]&gt;]&gt; # mytask can then get the list back by doing: - define mylist &lt;[1]&gt;"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="run_async" href="#run_async" onclick="doFlashFor('run_async')"><span class="doc_name">Run_async</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Related Guide Page</td><td><a href="https://guide.denizenscript.com/guides/basics/run-options.html">https://guide.denizenscript.com/guides/basics/run-options.html</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">run_async</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;script&gt;</span>]</span> <span class="syntax_optional">(path<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;name&gt;</span>)</span> <span class="syntax_optional">(def<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;element&gt;</span><span class="syntax_list">|</span><span class="syntax_list">.</span><span class="syntax_list">.</span><span class="syntax_list">.</span><span class="syntax_list">/</span>defmap<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;map&gt;</span><span class="syntax_list">/</span>def<span class="syntax_list">.</span><span class="syntax_fillable">&lt;name&gt;</span><span class="syntax_colon">:</span><span class="syntax_fillable">&lt;value&gt;</span>)</span> <span class="syntax_optional">(id<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;name&gt;</span>)</span> <span class="syntax_optional">(delay<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;value&gt;</span>)</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Runs a script in a new async queue.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Runs a script in a new async queue.
+<br>
+<br>You must specify a script object to run.
+<br>
+<br>Optionally, use the "path:" argument to choose a specific sub-path within a script.
+<br>
+<br>Optionally, use the "def:" argument to specify definition values to pass to the script,
+<br>the definitions will be named via the "definitions:" script key on the script being ran,
+<br>or numerically in order if that isn't specified (starting with &lt;[1]&gt;).
+<br>
+<br>Alternately, use "defmap:&lt;map&gt;" to specify definitions to pass as a MapTag, where the keys will be definition names and the values will of course be definition values.
+<br>
+<br>Alternately, use "def.&lt;name&gt;:&lt;value&gt;" to define one or more  named definitions individually.
+<br>
+<br>Optionally, use the "delay:" argument to specify a delay time before the script starts running.
+<br>
+<br>Optionally, specify the "id:" argument to choose a custom queue ID to be used.
+<br>If none is specified, a randomly generated one will be used. Generally, don't use this argument.
+<br>
+<br>The run command is ~waitable. Refer to <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/~waitable">~waitable</a>.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Related Tags</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">entry</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">saveName</span><span class="script_tag_param_bracket">]</span><span class="script_tag_dot">.</span><span class="script_tag">created_queue</span><span class="script_tag">&gt;</span></code> returns the queue that was started by the run command.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to run a task script named 'MyTask'.</span>
+<span class="script_normal">-</span><span class="script_command"> run_async</span> <span class="script_normal">MyTask</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to run a task script named 'MyTask' that isn't normally instant, instantly.</span>
+<span class="script_normal">-</span><span class="script_command"> run_async</span> <span class="script_normal">MyTask</span> <span class="script_normal">instantly</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to run a local subscript named 'alt_path'.</span>
+<span class="script_normal">-</span><span class="script_command"> run_async</span> <span class="script_tag">&lt;</span><span class="script_tag">script</span><span class="script_tag">&gt;</span> <span class="script_normal">path:alt_path</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to run 'MyTask' and pass 3 definitions to it.</span>
+<span class="script_normal">-</span><span class="script_command"> run_async</span> <span class="script_normal">MyTask</span> <span class="script_normal">def:A|Second_Def|Taco</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to run 'MyTask' and pass 3 named definitions to it.</span>
+<span class="script_normal">-</span><span class="script_command"> run_async</span> <span class="script_normal">MyTask</span> <span class="script_normal">def.count:5</span> <span class="script_normal">def.type:Taco</span> <span class="script_normal">def.smell:Tasty</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to run 'MyTask' and pass a list as a single definition.</span>
+<span class="script_normal">-</span><span class="script_command"> run_async</span> <span class="script_normal">MyTask</span> <span class="script_normal">def:</span><span class="script_tag">&lt;</span><span class="script_tag">list_single</span><span class="script_tag_param_bracket">[</span><span class="script_tag">&lt;</span><span class="script_tag">list</span><span class="script_tag_param_bracket">[</span><span class="script_tag_param">a|big|list|here</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span>
+<span class="script_comment_normal"># MyTask can then get the list back by doing:</span>
+<span class="script_normal">-</span><span class="script_command"> define</span> <span class="script_def_name">mylist</span> <span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">1</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span></code></pre></td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>queue</td></tr>
+<tr class="table-danger"><td class="td-doc-key">Warning(s)</td><td>Experimental! Use with extreme caution!
+<br>Most commands are not compatible with async execution.</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/RunAsyncCommand.java#L1">org/darwin/denizenAdditions/commands/RunAsyncCommand.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="world"><div class="category_header"><br><hr><br><h4>Category: <a id="world" href="#world" onclick="doFlashFor('world')">world</a></h4><br></div>
+<div class="meta_entry" data-names="persistentfake" data-text="persistentfake persistentfake persistentfake [&lt;id&gt;] [&lt;location&gt;] [&lt;entity&gt;/remove] 3 creates persistent packet entity at given location. world creates restart persistent packet entity at given location. this entity is visible for all players and exists until removed. each player only sees the persistent fakes within 4 chunks of themselves, rather than across their whole view distance."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="persistentfake" href="#persistentfake" onclick="doFlashFor('persistentfake')"><span class="doc_name">persistentfake</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">persistentfake</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;id&gt;</span>]</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;location&gt;</span>]</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;entity&gt;</span><span class="syntax_list">/</span>remove]</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Creates persistent packet entity at given location.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Creates restart persistent packet entity at given location. This entity is visible for all players and exists until removed.
+<br>Each player only sees the persistent fakes within 4 chunks of themselves, rather than across their whole view distance.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>world</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/PersistenFakeCommand.java#L1">org/darwin/denizenAdditions/commands/PersistenFakeCommand.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="slowadjustblock" data-text="slowadjustblock slowadjustblock slowadjustblock [&lt;location&gt;|...] [&lt;mechanism&gt;](:&lt;value&gt;) (no_physics) (max_delay_ms:&lt;#&gt;) 2 4 adjusts a mechanism on the material of a block at the location, spread out over multiple ticks. world same as &lt;@link command adjustblock&gt;, but instead of applying the mechanism to every location within a single tick, it spreads the work out across multiple ticks, similar to how &quot;modifyblock ... delayed&quot; throttles its own work. this is meant for large location lists, to avoid a single large lag spike. use the &quot;no_physics&quot; argument to indicate that the change should not apply a physics update. if not specified, physics will apply to the block and nearby blocks. optionally, specify &#x27;max_delay_ms&#x27; to control how many milliseconds this command may spend per tick (defaults to 50). the slowadjustblock command is ~waitable. refer to &lt;@link language ~waitable&gt;. &lt;locationtag.material&gt; use to slowly turn every block in a huge list of locations into stone. - slowadjustblock &lt;[locations]&gt; material:stone"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="slowadjustblock" href="#slowadjustblock" onclick="doFlashFor('slowadjustblock')"><span class="doc_name">SlowAdjustBlock</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">slowadjustblock</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;location&gt;</span><span class="syntax_list">|</span><span class="syntax_list">.</span><span class="syntax_list">.</span><span class="syntax_list">.</span>]</span> <span class="syntax_required">[<span class="syntax_fillable">&lt;mechanism&gt;</span>]</span><span class="syntax_optional">(<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;value&gt;</span>)</span> <span class="syntax_optional">(no_physics)</span> <span class="syntax_optional">(max_delay_ms<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#&gt;</span>)</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Adjusts a mechanism on the material of a block at the location, spread out over multiple ticks.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Same as <span class="meta_url">Command:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Commands/adjustblock">adjustblock</a>, but instead of applying the mechanism to every location within a single tick,
+<br>it spreads the work out across multiple ticks, similar to how "modifyblock ... delayed" throttles its own work.
+<br>This is meant for large location lists, to avoid a single large lag spike.
+<br>
+<br>Use the "no_physics" argument to indicate that the change should not apply a physics update.
+<br>If not specified, physics will apply to the block and nearby blocks.
+<br>
+<br>Optionally, specify 'max_delay_ms' to control how many milliseconds this command may spend per tick (defaults to 50).
+<br>
+<br>The slowadjustblock command is ~waitable. Refer to <span class="meta_url">Language:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Languages/~waitable">~waitable</a>.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Related Tags</td><td><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Tags/locationtag.material"><code><span class="script_tag">&lt;</span><span class="script_tag">LocationTag</span><span class="script_tag_dot">.</span><span class="script_tag">material</span><span class="script_tag">&gt;</span></code></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Use to slowly turn every block in a huge list of locations into stone.</span>
+<span class="script_normal">-</span><span class="script_command"> slowadjustblock</span> <span class="script_tag">&lt;</span><span class="script_tag_param_bracket">[</span><span class="script_def_name">locations</span><span class="script_tag_param_bracket">]</span><span class="script_tag">&gt;</span> <span class="script_normal">material:stone</span></code></pre></td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>world</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/SlowAdjustBlockCommand.java#L1">org/darwin/denizenAdditions/commands/SlowAdjustBlockCommand.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="sound" data-text="sound sound sound [sound:&lt;name&gt;] [emitter:&lt;location&gt;/&lt;entity&gt;] (sound_category:&lt;category&gt;) (volume:&lt;#.#&gt;) (pitch:&lt;#.#&gt;) 2 5 plays a vanilla or resource pack sound from a location or entity. world plays a sound using the provided emitter. if the emitter is a locationtag, the sound is played from that static location. if the emitter is an entitytag, the sound is played through paper&#x27;s entity sound source, so the sound follows the entity while it plays. the &#x27;sound&#x27; argument may be a vanilla sound name/key or a custom resource pack sound key. the &#x27;sound_category&#x27; argument defaults to master. the &#x27;volume&#x27; and &#x27;pitch&#x27; arguments default to 1. play a custom resource pack sound from an entity. - sound sound:custom:engine emitter:&lt;player&gt; sound_category:ambient volume:1 pitch:1 play a vanilla sound from a location. - sound sound:entity.player.levelup emitter:&lt;player.location&gt; volume:1 pitch:1"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="sound" href="#sound" onclick="doFlashFor('sound')"><span class="doc_name">sound</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Syntax</td><td><code><span class="syntax_command">sound</span> <span class="syntax_required">[sound<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;name&gt;</span>]</span> <span class="syntax_required">[emitter<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;location&gt;</span><span class="syntax_list">/</span><span class="syntax_fillable">&lt;entity&gt;</span>]</span> <span class="syntax_optional">(sound_category<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;category&gt;</span>)</span> <span class="syntax_optional">(volume<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#<span class="syntax_list">.</span>#&gt;</span>)</span> <span class="syntax_optional">(pitch<span class="syntax_colon">:</span><span class="syntax_fillable">&lt;#<span class="syntax_list">.</span>#&gt;</span>)</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Short Description</td><td>Plays a vanilla or resource pack sound from a location or entity.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Full Description</td><td>Plays a sound using the provided emitter.
+<br>
+<br>If the emitter is a LocationTag, the sound is played from that static location.
+<br>If the emitter is an EntityTag, the sound is played through Paper's entity sound source, so the sound follows the entity while it plays.
+<br>
+<br>The 'sound' argument may be a vanilla sound name/key or a custom resource pack sound key.
+<br>The 'sound_category' argument defaults to MASTER.
+<br>The 'volume' and 'pitch' arguments default to 1.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Play a custom resource pack sound from an entity.</span>
+<span class="script_normal">-</span><span class="script_command"> sound</span> <span class="script_normal">sound:custom:engine</span> <span class="script_normal">emitter:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag">&gt;</span> <span class="script_normal">sound_category:ambient</span> <span class="script_normal">volume:1</span> <span class="script_normal">pitch:1</span></code></pre></td></tr>
+<tr class="table-default"><td class="td-doc-key">Usage Example</td><td><pre><code><span class="script_comment_normal"># Play a vanilla sound from a location.</span>
+<span class="script_normal">-</span><span class="script_command"> sound</span> <span class="script_normal">sound:entity.player.levelup</span> <span class="script_normal">emitter:</span><span class="script_tag">&lt;</span><span class="script_tag">player</span><span class="script_tag_dot">.</span><span class="script_tag">location</span><span class="script_tag">&gt;</span> <span class="script_normal">volume:1</span> <span class="script_normal">pitch:1</span></code></pre></td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>world</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/commands/SoundCommand.java#L1">org/darwin/denizenAdditions/commands/SoundCommand.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+
+</center>
+
+    <footer>
+        <center>
+            <br>
+            <hr>
+            DenizenAdditions Meta Documentation: documentation for the commands, tags, events and more that DenizenAdditions adds to Denizen.
+            <br>Generated from the plugin's meta documentation in the format of <a href="https://github.com/DenizenScript/DenizenMetaWebsite">DenizenMetaWebsite</a>
+            (MIT License, Copyright (C) 2021-2026 The Denizen Script Team).
+            <br><span id="theme_footer"></span>
+            <br><br>
+        </center>
+    </footer>
+</body>
+</html>

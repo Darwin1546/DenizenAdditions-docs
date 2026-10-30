@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html data-root="../">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="bootstrap_css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="../css/meta_site.css">
+    <link id="theme_css" rel="stylesheet" href="../css/theme/colors_dark.css">
+    <link rel="stylesheet" href="../css/site_extra.css">
+    <script src="../js/meta.js"></script>
+    <title>Events | DenizenAdditions Meta Documentation</title>
+    <meta name="description" content="DenizenAdditions events" />
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary navbar-fixed-ifier">
+        <a class="navbar-brand" href="../index.html">DenizenAdditions Meta Documentation</a>
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="https://meta.denizenscript.com/">Denizen Meta</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Commands.html">Commands</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Tags.html">Tags</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Mechanisms.html">Mechanisms</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Languages.html">Language Explanations</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true">Theme</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" title="created by Alex 'mcmonkey' Goodwin" onclick="changetheme('dark')">Standard Dark</a>
+                        <a class="dropdown-item" title="created by Alex 'mcmonkey' Goodwin" onclick="changetheme('light')">Quite Light</a>
+                    </div>
+                </li>
+                <span class="topsearchbar">
+                    <input class="form-control mr-sm-2" type="text" id="top_search_bar" placeholder="Search">
+                </span>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav_spacer" style="height:90px;"></div>
+<span class="center_helper">
+    <div class="jumbotron">
+        <h3>DenizenAdditions Events</h3>
+        <br>Script events are used in 'world' script containers to run a script when something happens in the game.
+        <br>These are only the ones DenizenAdditions adds. For everything in Denizen itself, see the <a href="https://meta.denizenscript.com/Docs/Events">Denizen Meta Documentation</a>.
+    </div>
+    <input type="text" id="search_bar" placeholder="Search Events...">
+    <br><br>
+    <h5 id="shown_count" data-total="8" data-noun="events">Showing all 8 events...</h5>
+</span>
+<center>
+<div class="categories_box"><h4>Categories:</h4><div class="categories_container">
+<a class="category_link" data-category="discord" href="#discord" onclick="doFlashFor('discord')">Discord</a>
+ | <a class="category_link" data-category="entity" href="#entity" onclick="doFlashFor('entity')">Entity</a>
+ | <a class="category_link" data-category="player" href="#player" onclick="doFlashFor('player')">Player</a>
+</div></div>
+<div class="meta_category" data-category="discord"><div class="category_header"><br><hr><br><h4>Category: <a id="discord" href="#discord" onclick="doFlashFor('discord')">Discord</a></h4><br></div>
+<div class="meta_entry" data-names="discord thread archives|unarchives" data-text="discord thread archives|unarchives discord thread archives|unarchives for:&lt;bot&gt; to only process the event for a specified discord bot. group:&lt;group_id&gt; to only process the event for a specified discord group. parent:&lt;channel_id&gt; to only process the event for threads in a specified channel. ddiscordbot, denizenadditions discord when a thread is archived or unarchived - by discord itself after inactivity, by a user, or by a bot. ddiscordbot&#x27;s own &#x27;discord thread archived&#x27; event does not actually fire on archiving: it is tied to the bot losing access to a thread. this one listens to the archive flag itself. discord only sends this while the bot is connected: a thread archived during downtime is not reported later. &lt;context.bot&gt; returns the relevant discordbottag. &lt;context.group&gt; returns the discordgrouptag. &lt;context.thread&gt; returns the thread discordchanneltag."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="discord thread archives|unarchives" href="#discord%20thread%20archives%7Cunarchives" onclick="doFlashFor('discord thread archives|unarchives')"><span class="doc_name">discord thread archives|unarchives</span></a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Event Lines</td><td><code><span class="syntax_command"> discord thread <span title="List of options: pick one" class="syntax_list">archives|unarchives</span></span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Triggers</td><td>when a thread is archived or unarchived - by Discord itself after inactivity, by a user, or by a bot.
+<br>dDiscordBot's own 'discord thread archived' event does not actually fire on archiving: it is tied to the bot
+<br>losing access to a thread. This one listens to the archive flag itself.
+<br>
+<br>Discord only sends this while the bot is connected: a thread archived during downtime is not reported later.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Switches</td><td>for:&lt;bot&gt; to only process the event for a specified Discord bot.
+<br>group:&lt;group_id&gt; to only process the event for a specified Discord group.
+<br>parent:&lt;channel_id&gt; to only process the event for threads in a specified channel.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Contexts</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">bot</span><span class="script_tag">&gt;</span></code> returns the relevant DiscordBotTag.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">group</span><span class="script_tag">&gt;</span></code> returns the DiscordGroupTag.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">thread</span><span class="script_tag">&gt;</span></code> returns the thread DiscordChannelTag.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Discord</td></tr>
+<tr class="table-warning"><td class="td-doc-key">Requires</td><td>dDiscordBot, DenizenAdditions</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/discord/DiscordThreadArchiveScriptEvent.java#L1">org/darwin/denizenAdditions/discord/DiscordThreadArchiveScriptEvent.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="entity"><div class="category_header"><br><hr><br><h4>Category: <a id="entity" href="#entity" onclick="doFlashFor('entity')">Entity</a></h4><br></div>
+<div class="meta_entry" data-names="&lt;entity&gt; toggles|starts|stops sitting" data-text="&lt;entity&gt; toggles|starts|stops sitting &lt;entity&gt; toggles|starts|stops sitting entity true when an entity starts or stops sitting. &lt;context.entity&gt; returns the entity. &lt;context.state&gt; returns an elementtag(boolean) with a value of &quot;true&quot; if the entity is now sitting and &quot;false&quot; otherwise."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="&lt;entity&gt; toggles|starts|stops sitting" href="#%3Centity%3E%20toggles%7Cstarts%7Cstops%20sitting" onclick="doFlashFor('&lt;entity&gt; toggles|starts|stops sitting')"><span class="doc_name">&lt;entity&gt; toggles|starts|stops sitting</span></a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Event Lines</td><td><code><span class="syntax_command"> <span title="Fill-in spot: supply a value of the correct type" class="syntax_fillable">&lt;<abbr title="Fill-in spot: refer to the event documentation to learn what you can fill this spot with" class="syntax_fillable">entity</abbr>&gt;</span> <span title="List of options: pick one" class="syntax_list">toggles|starts|stops</span> sitting</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Triggers</td><td>when an entity starts or stops sitting.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Contexts</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">entity</span><span class="script_tag">&gt;</span></code> returns the entity.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">state</span><span class="script_tag">&gt;</span></code> returns an ElementTag(Boolean) with a value of "true" if the entity is now sitting and "false" otherwise.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Cancellable</td><td>True - This adds &lt;context.cancelled&gt; and determine 'cancelled' or 'cancelled:false'</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Entity</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/events/EntityToggleSitScriptEvent.java#L1">org/darwin/denizenAdditions/events/EntityToggleSitScriptEvent.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="&lt;entity&gt; walks" data-text="&lt;entity&gt; walks &lt;entity&gt; walks entity true true this event fires very very rapidly! when an entity moves in the slightest. does not fire for players - use &lt;@link event player walks&gt; for player movement. note that the &#x27;in:&lt;area&gt;&#x27; switch is checked against the location the entity moved to, so it also fires when an entity moves into the area. &lt;context.entity&gt; returns the entitytag that moved. &lt;context.old_location&gt; returns the locationtag of where the entity was. &lt;context.new_location&gt; returns the locationtag of where the entity is. &lt;context.block_changed&gt; returns an elementtag(boolean) of whether the entity moved to a different block. &lt;context.position_changed&gt; returns an elementtag(boolean) of whether the entity&#x27;s position changed (as opposed to only changing look direction). &lt;context.orientation_changed&gt; returns an elementtag(boolean) of whether the entity&#x27;s look direction (yaw/pitch) changed."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="&lt;entity&gt; walks" href="#%3Centity%3E%20walks" onclick="doFlashFor('&lt;entity&gt; walks')"><span class="doc_name">&lt;entity&gt; walks</span></a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Event Lines</td><td><code><span class="syntax_command"> <span title="Fill-in spot: supply a value of the correct type" class="syntax_fillable">&lt;<abbr title="Fill-in spot: refer to the event documentation to learn what you can fill this spot with" class="syntax_fillable">entity</abbr>&gt;</span> walks</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Triggers</td><td>when an entity moves in the slightest.
+<br>Does not fire for players - use <span class="meta_url">Event:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Events/player%20walks">player walks</a> for player movement.
+<br>Note that the 'in:&lt;area&gt;' switch is checked against the location the entity moved to, so it also fires when an entity moves into the area.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Contexts</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">entity</span><span class="script_tag">&gt;</span></code> returns the EntityTag that moved.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">old_location</span><span class="script_tag">&gt;</span></code> returns the LocationTag of where the entity was.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">new_location</span><span class="script_tag">&gt;</span></code> returns the LocationTag of where the entity is.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">block_changed</span><span class="script_tag">&gt;</span></code> returns an ElementTag(Boolean) of whether the entity moved to a different block.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">position_changed</span><span class="script_tag">&gt;</span></code> returns an ElementTag(Boolean) of whether the entity's position changed (as opposed to only changing look direction).
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">orientation_changed</span><span class="script_tag">&gt;</span></code> returns an ElementTag(Boolean) of whether the entity's look direction (yaw/pitch) changed.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Cancellable</td><td>True - This adds &lt;context.cancelled&gt; and determine 'cancelled' or 'cancelled:false'</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Location</td><td>True - This adds the switches 'in:&lt;area&gt;', 'location_flagged:&lt;flag&gt;', ...</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Entity</td></tr>
+<tr class="table-danger"><td class="td-doc-key">Warning(s)</td><td>This event fires very very rapidly!</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/events/EntityWalksScriptEvent.java#L1">org/darwin/denizenAdditions/events/EntityWalksScriptEvent.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="meta_category" data-category="player"><div class="category_header"><br><hr><br><h4>Category: <a id="player" href="#player" onclick="doFlashFor('player')">Player</a></h4><br></div>
+<div class="meta_entry" data-names="player changes|placing|takes flowerpot &lt;item&gt;" data-text="player changes|placing|takes flowerpot &lt;item&gt; player changes|placing|takes flowerpot &lt;item&gt; player true true when a player modifies a flowerpot block. &lt;context.location&gt; returns the flowerpot location. &lt;context.item&gt; returns a flowerpot item. &lt;context.placing&gt; returns true if item is being placed into the flowerpot. always."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="player changes|placing|takes flowerpot &lt;item&gt;" href="#player%20changes%7Cplacing%7Ctakes%20flowerpot%20%3Citem%3E" onclick="doFlashFor('player changes|placing|takes flowerpot &lt;item&gt;')"><span class="doc_name">player changes|placing|takes flowerpot &lt;item&gt;</span></a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Event Lines</td><td><code><span class="syntax_command"> player <span title="List of options: pick one" class="syntax_list">changes|placing|takes</span> flowerpot <span title="Fill-in spot: supply a value of the correct type" class="syntax_fillable">&lt;<abbr title="Fill-in spot: refer to the event documentation to learn what you can fill this spot with" class="syntax_fillable">item</abbr>&gt;</span></span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Triggers</td><td>when a player modifies a flowerpot block.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Player</td><td>Always. - this adds switches 'flagged:&lt;flag name&gt;' + 'permission:&lt;node&gt;', in addition to the '&lt;player&gt;' link.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Contexts</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">location</span><span class="script_tag">&gt;</span></code> returns the flowerpot location.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">item</span><span class="script_tag">&gt;</span></code> returns a flowerpot item.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">placing</span><span class="script_tag">&gt;</span></code> returns true if item is being placed into the flowerpot.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Cancellable</td><td>True - This adds &lt;context.cancelled&gt; and determine 'cancelled' or 'cancelled:false'</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Location</td><td>True - This adds the switches 'in:&lt;area&gt;', 'location_flagged:&lt;flag&gt;', ...</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Player</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/events/PlayerFlowerpotManipulateScriptEvent.java#L1">org/darwin/denizenAdditions/events/PlayerFlowerpotManipulateScriptEvent.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="player picks &lt;block&gt;" data-text="player picks &lt;block&gt; player picks &lt;block&gt; player true with:&lt;item&gt; to only process the event when the player is holding a specified item in their main hand. true when a player middle-clicks a block to pick its item (&quot;pick block&quot;). the client sends this in any gamemode and the server decides what to do with it, so it fires in survival too, once per press (holding the button does not repeat it). &lt;context.location&gt; returns the locationtag of the picked block. &lt;context.include_data&gt; returns whether the player held the key to copy the block&#x27;s data (creative ctrl+middle-click). always."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="player picks &lt;block&gt;" href="#player%20picks%20%3Cblock%3E" onclick="doFlashFor('player picks &lt;block&gt;')"><span class="doc_name">player picks &lt;block&gt;</span></a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Event Lines</td><td><code><span class="syntax_command"> player picks <span title="Fill-in spot: supply a value of the correct type" class="syntax_fillable">&lt;<abbr title="Fill-in spot: refer to the event documentation to learn what you can fill this spot with" class="syntax_fillable">block</abbr>&gt;</span></span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Triggers</td><td>when a player middle-clicks a block to pick its item ("pick block").
+<br>The client sends this in any gamemode and the server decides what to do with it, so it fires in survival too,
+<br>once per press (holding the button does not repeat it).</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Player</td><td>Always. - this adds switches 'flagged:&lt;flag name&gt;' + 'permission:&lt;node&gt;', in addition to the '&lt;player&gt;' link.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Switches</td><td>with:&lt;item&gt; to only process the event when the player is holding a specified item in their main hand.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Contexts</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">location</span><span class="script_tag">&gt;</span></code> returns the LocationTag of the picked block.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">include_data</span><span class="script_tag">&gt;</span></code> returns whether the player held the key to copy the block's data (creative ctrl+middle-click).</td></tr>
+<tr class="table-default"><td class="td-doc-key">Cancellable</td><td>True - This adds &lt;context.cancelled&gt; and determine 'cancelled' or 'cancelled:false'</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Location</td><td>True - This adds the switches 'in:&lt;area&gt;', 'location_flagged:&lt;flag&gt;', ...</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Player</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/events/PlayerPicksBlockScriptEvent.java#L1">org/darwin/denizenAdditions/events/PlayerPicksBlockScriptEvent.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="player picks &lt;entity&gt;" data-text="player picks &lt;entity&gt; player picks &lt;entity&gt; player true with:&lt;item&gt; to only process the event when the player is holding a specified item in their main hand. true when a player middle-clicks an entity to pick its item (&quot;pick block&quot; on an entity). the client sends this in any gamemode and the server decides what to do with it, so it fires in survival too, once per press (holding the button does not repeat it). only fires for entities that have a pick item at all - an item frame always does (its framed item, or the frame itself). &lt;context.entity&gt; returns the entitytag that was picked. &lt;context.include_data&gt; returns whether the player held the key to copy the entity&#x27;s data (creative ctrl+middle-click). always."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="player picks &lt;entity&gt;" href="#player%20picks%20%3Centity%3E" onclick="doFlashFor('player picks &lt;entity&gt;')"><span class="doc_name">player picks &lt;entity&gt;</span></a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Event Lines</td><td><code><span class="syntax_command"> player picks <span title="Fill-in spot: supply a value of the correct type" class="syntax_fillable">&lt;<abbr title="Fill-in spot: refer to the event documentation to learn what you can fill this spot with" class="syntax_fillable">entity</abbr>&gt;</span></span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Triggers</td><td>when a player middle-clicks an entity to pick its item ("pick block" on an entity).
+<br>The client sends this in any gamemode and the server decides what to do with it, so it fires in survival too,
+<br>once per press (holding the button does not repeat it).
+<br>Only fires for entities that have a pick item at all - an item frame always does (its framed item, or the frame itself).</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Player</td><td>Always. - this adds switches 'flagged:&lt;flag name&gt;' + 'permission:&lt;node&gt;', in addition to the '&lt;player&gt;' link.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Switches</td><td>with:&lt;item&gt; to only process the event when the player is holding a specified item in their main hand.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Contexts</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">entity</span><span class="script_tag">&gt;</span></code> returns the EntityTag that was picked.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">include_data</span><span class="script_tag">&gt;</span></code> returns whether the player held the key to copy the entity's data (creative ctrl+middle-click).</td></tr>
+<tr class="table-default"><td class="td-doc-key">Cancellable</td><td>True - This adds &lt;context.cancelled&gt; and determine 'cancelled' or 'cancelled:false'</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Location</td><td>True - This adds the switches 'in:&lt;area&gt;', 'location_flagged:&lt;flag&gt;', ...</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Player</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/events/PlayerPicksEntityScriptEvent.java#L1">org/darwin/denizenAdditions/events/PlayerPicksEntityScriptEvent.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="player server full check" data-text="player server full check player server full check player when the server computes whether it is currently considered full for a connecting player, before the player has finished joining. this runs very early in the connection process - the player has not actually joined yet, so most player data/state may not be available. should not be confused with &lt;@link event player joins&gt;. is_allowed:&lt;true/false&gt; to only handle the event when the player is (or isn&#x27;t) currently allowed to join, before this event runs. &lt;context.name&gt; returns the connecting player&#x27;s name. &lt;context.uuid&gt; returns the connecting player&#x27;s uuid. &lt;context.is_allowed&gt; returns whether the player is currently allowed to join (false means the server is currently considered full for them). &lt;context.kick_message&gt; returns the currently planned kick message, that would be shown if the player ends up rejected. &quot;allowed&quot; to let the player join even if the server would otherwise consider itself full. &quot;denied&quot; to reject the player, keeping whatever kick message is already planned. &quot;kick_message:&lt;elementtag&gt;&quot; to reject the player and set a custom kick message. when the player has previously joined (and thus the uuid is valid)."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="player server full check" href="#player%20server%20full%20check" onclick="doFlashFor('player server full check')"><span class="doc_name">player server full check</span></a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Event Lines</td><td><code><span class="syntax_command"> player server full check</span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Triggers</td><td>when the server computes whether it is currently considered full for a connecting player, before the player has finished joining.
+<br>This runs very early in the connection process - the player has not actually joined yet, so most player data/state may not be available.
+<br>Should NOT be confused with <span class="meta_url">Event:</span><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/Events/player%20joins">player joins</a>.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Player</td><td>When the player has previously joined (and thus the UUID is valid). - this adds switches 'flagged:&lt;flag name&gt;' + 'permission:&lt;node&gt;', in addition to the '&lt;player&gt;' link.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Switches</td><td>is_allowed:&lt;true/false&gt; to only handle the event when the player is (or isn't) currently allowed to join, before this event runs.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Contexts</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">name</span><span class="script_tag">&gt;</span></code> returns the connecting player's name.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">uuid</span><span class="script_tag">&gt;</span></code> returns the connecting player's UUID.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">is_allowed</span><span class="script_tag">&gt;</span></code> returns whether the player is currently allowed to join (false means the server is currently considered full for them).
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">kick_message</span><span class="script_tag">&gt;</span></code> returns the currently planned kick message, that would be shown if the player ends up rejected.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Determine</td><td>"ALLOWED" to let the player join even if the server would otherwise consider itself full.
+<br>"DENIED" to reject the player, keeping whatever kick message is already planned.
+<br>"KICK_MESSAGE:&lt;ElementTag&gt;" to reject the player and set a custom kick message.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Player</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/events/PlayerServerFullCheckScriptEvent.java#L1">org/darwin/denizenAdditions/events/PlayerServerFullCheckScriptEvent.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="player stops using &lt;item&gt;" data-text="player stops using &lt;item&gt; player stops using &lt;item&gt; player when a player stops using an item (eating, drawing a bow, raising a shield, etc). &lt;context.item&gt; returns the itemtag that was being used. &lt;context.held&gt; returns the durationtag of how long the item was used for. always."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="player stops using &lt;item&gt;" href="#player%20stops%20using%20%3Citem%3E" onclick="doFlashFor('player stops using &lt;item&gt;')"><span class="doc_name">player stops using &lt;item&gt;</span></a></td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Event Lines</td><td><code><span class="syntax_command"> player stops using <span title="Fill-in spot: supply a value of the correct type" class="syntax_fillable">&lt;<abbr title="Fill-in spot: refer to the event documentation to learn what you can fill this spot with" class="syntax_fillable">item</abbr>&gt;</span></span></code></td></tr>
+<tr class="table-default"><td class="td-doc-key">Triggers</td><td>when a player stops using an item (eating, drawing a bow, raising a shield, etc).</td></tr>
+<tr class="table-default"><td class="td-doc-key">Has Player</td><td>Always. - this adds switches 'flagged:&lt;flag name&gt;' + 'permission:&lt;node&gt;', in addition to the '&lt;player&gt;' link.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Contexts</td><td><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">item</span><span class="script_tag">&gt;</span></code> returns the ItemTag that was being used.
+<br><code><span class="script_tag">&lt;</span><span class="script_tag">context</span><span class="script_tag_dot">.</span><span class="script_tag">held</span><span class="script_tag">&gt;</span></code> returns the DurationTag of how long the item was used for.</td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Player</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/events/PlayerStoppedUsingItemScriptEvent.java#L1">org/darwin/denizenAdditions/events/PlayerStoppedUsingItemScriptEvent.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+
+</center>
+
+    <footer>
+        <center>
+            <br>
+            <hr>
+            DenizenAdditions Meta Documentation: documentation for the commands, tags, events and more that DenizenAdditions adds to Denizen.
+            <br>Generated from the plugin's meta documentation in the format of <a href="https://github.com/DenizenScript/DenizenMetaWebsite">DenizenMetaWebsite</a>
+            (MIT License, Copyright (C) 2021-2026 The Denizen Script Team).
+            <br><span id="theme_footer"></span>
+            <br><br>
+        </center>
+    </footer>
+</body>
+</html>
