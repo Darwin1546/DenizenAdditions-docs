@@ -1,4 +1,4 @@
-    // <--[container]
+    // <--[language]
     // @name Brigadier Command Script Containers
     //
     // @description

@@ -1,4 +1,4 @@
-    // <--[container]
+    // <--[language]
     // @name Dialog Script Containers
     //
     // @description
