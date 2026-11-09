@@ -22,6 +22,7 @@
                 <li class="nav-item"><a class="nav-link" href="../Docs/Mechanisms.html">Mechanisms</a></li>
                 <li class="nav-item"><a class="nav-link" href="../Docs/Events.html">Events</a></li>
                 <li class="nav-item"><a class="nav-link" href="../Docs/Languages.html">Language Explanations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/ObjectTypes.html">ObjectTypes</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true">Theme</a>
                     <div class="dropdown-menu">
@@ -40,18 +41,18 @@
     <div class="jumbotron">
         <h3>DenizenAdditions Language Explanations</h3>
         <br>Language explanations cover how parts of the plugin work, including its script containers.
-        <br>These are only the ones DenizenAdditions adds. For everything in Denizen itself, see the <a href="https://meta.denizenscript.com/Docs/Languages">Denizen Meta Documentation</a>.
+        <br>These are only the ones DenizenAdditions adds, along with the parts of Denizen that the Denizen fork changes. For everything in Denizen itself, see the <a href="https://meta.denizenscript.com/Docs/Languages">Denizen Meta Documentation</a>.
     </div>
     <input type="text" id="search_bar" placeholder="Search Language Explanations...">
     <br><br>
-    <h5 id="shown_count" data-total="6" data-noun="language explanations">Showing all 6 language explanations...</h5>
+    <h5 id="shown_count" data-total="7" data-noun="language explanations">Showing all 7 language explanations...</h5>
 </span>
 <center>
 <div class="categories_box"><h4>Categories:</h4><div class="categories_container">
 <a class="category_link" data-category="script+container+system" href="#script+container+system" onclick="doFlashFor('script+container+system')">Script Container System</a>
 </div></div>
 <div class="meta_category" data-category="script+container+system"><div class="category_header"><br><hr><br><h4>Category: <a id="script+container+system" href="#script+container+system" onclick="doFlashFor('script+container+system')">Script Container System</a></h4><br></div>
-<div class="meta_entry" data-names="brigadier argument types" data-text="brigadier argument types brigadier argument types script container system the &#x27;type&#x27; values available to arguments in &lt;@link language brigadier command script containers&gt;, and what each one becomes in &lt;context.(argument name)&gt;. text: - word: a single word (no spaces). elementtag. - string: a single word, or &quot;a quoted phrase&quot;. elementtag. - greedy: everything until the end of the input. must be the last argument. elementtag. - text: a json text component, as in /tellraw. elementtag of denizen formatted text. numbers (&#x27;min&#x27; and &#x27;max&#x27; keys are optional and checked by the client): - integer, long, float, double: elementtag(number). - bool: true or false. elementtag(boolean). game objects: - player: one player, by name or a single-player selector. playertag. - players: any number of players, by name or selector. listtag(playertag). - entity: one entity, by selector or uuid. entitytag. - entities: any number of entities. listtag(entitytag). - block_position: block coordinates, with ~ and ^ support. locationtag. - position: exact coordinates, with ~ and ^ support. locationtag. - angle: a yaw angle, with ~ support. elementtag(decimal). - block_state: a block with optional states, like oak_stairs[facing=north]. materialtag. - item: an item with optional components, like diamond_sword[damage=5]. itemtag. - world: a world (dimension) key. worldtag. - gamemode: a game mode name. elementtag. - color: a named chat color, like &#x27;red&#x27;. elementtag. - hex_color: a hex color, like &#x27;ff0000&#x27;. colortag. - uuid: a uuid. elementtag. - key: a namespaced key, like &#x27;minecraft:stone&#x27;. elementtag. - time: a duration like &#x27;5s&#x27;, &#x27;2d&#x27; or &#x27;100&#x27; (ticks). optional &#x27;min&#x27; key, in ticks. durationtag. - resource: an entry of a registry, chosen with the &#x27;registry&#x27; key (like &#x27;enchantment&#x27;, &#x27;biome&#x27;, &#x27;entity_type&#x27;, or a full registry name like &#x27;worldgen/biome&#x27;). the client suggests every entry. elementtag of its key."><table class="table table-hover"><tbody>
+<div class="meta_entry" data-names="brigadier argument types" data-text="brigadier argument types brigadier argument types script container system the &#x27;type&#x27; values available to arguments in &lt;@link language brigadier command script containers&gt;, and what each one becomes in &lt;context.(argument name)&gt;. text: - word: a single word (no spaces). elementtag. - string: a single word, or &quot;a quoted phrase&quot;. elementtag. - greedy: everything until the end of the input. must be the last argument. elementtag. - text: a json text component, as in /tellraw. elementtag of denizen formatted text. numbers (&#x27;min&#x27; and &#x27;max&#x27; keys are optional and checked by the client): - integer, long, float, double: elementtag(number). - bool: true or false. elementtag(boolean). game objects: - player: one player, by name or a single-player selector. playertag. - offline_player: any player that ever joined, online or not, by name. no selectors. suggests names by itself, unless the node has its own &#x27;suggest&#x27;: online players first, then recently seen ones (the server&#x27;s usercache - &#x27;user-cache-size&#x27; in spigot.yml), up to 100. players beyond that are still accepted when typed. playertag. an unknown name fails with the vanilla &quot;unknown player&quot; error pointing at the argument, even if later arguments are missing. - players: any number of players, by name or selector. listtag(playertag). - entity: one entity, by selector or uuid. entitytag. - entities: any number of entities. listtag(entitytag). - block_position: block coordinates, with ~ and ^ support. locationtag. - position: exact coordinates, with ~ and ^ support. locationtag. - angle: a yaw angle, with ~ support. elementtag(decimal). - block_state: a block with optional states, like oak_stairs[facing=north]. materialtag. - item: an item with optional components, like diamond_sword[damage=5]. itemtag. - world: a world (dimension) key. worldtag. - gamemode: a game mode name. elementtag. - color: a named chat color, like &#x27;red&#x27;. elementtag. - hex_color: a hex color, like &#x27;ff0000&#x27;. colortag. - uuid: a uuid. elementtag. - key: a namespaced key, like &#x27;minecraft:stone&#x27;. elementtag. - duration: a duration in denizen&#x27;s format, like &#x27;5s&#x27;, &#x27;1.5h&#x27; or &#x27;30&#x27; (seconds). units: t, s, m, h, d, w, y. &#x27;infinite&#x27; is accepted too and, as everywhere in denizen, is just a zero duration. suggests &#x27;1t&#x27; to &#x27;1y&#x27; and &#x27;infinite&#x27; while empty, then the units once a number is typed. optional &#x27;min&#x27; key, also a duration like &#x27;1s&#x27; - any min above zero rejects &#x27;infinite&#x27; as well. durationtag. - time: a duration in the vanilla format, like &#x27;5s&#x27;, &#x27;2d&#x27; or &#x27;100&#x27; (ticks). units: t, s, d. optional &#x27;min&#x27; key, in ticks. durationtag. - resource: an entry of a registry, chosen with the &#x27;registry&#x27; key (like &#x27;enchantment&#x27;, &#x27;biome&#x27;, &#x27;entity_type&#x27;, or a full registry name like &#x27;worldgen/biome&#x27;). the client suggests every entry. elementtag of its key."><table class="table table-hover"><tbody>
 <tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="brigadier argument types" href="#brigadier%20argument%20types" onclick="doFlashFor('brigadier argument types')"><span class="doc_name">Brigadier Argument Types</span></a></td></tr>
 <tr class="table-default"><td class="td-doc-key">Description</td><td>The 'type' values available to arguments in <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=brigadier%20command%20script%20containers">Brigadier Command Script Containers</a>,
 <br>and what each one becomes in &lt;context.(argument name)&gt;.
@@ -68,6 +69,10 @@
 <br>
 <br>Game objects:
 <br>- player: one player, by name or a single-player selector. PlayerTag.
+<br>- offline_player: any player that ever joined, online or not, by name. No selectors.
+<br>  Suggests names by itself, unless the node has its own 'suggest': online players first, then recently seen ones
+<br>  (the server's usercache - 'user-cache-size' in spigot.yml), up to 100. Players beyond that are still accepted when typed. PlayerTag.
+<br>  An unknown name fails with the vanilla "Unknown player" error pointing at the argument, even if later arguments are missing.
 <br>- players: any number of players, by name or selector. ListTag(PlayerTag).
 <br>- entity: one entity, by selector or UUID. EntityTag.
 <br>- entities: any number of entities. ListTag(EntityTag).
@@ -82,7 +87,11 @@
 <br>- hex_color: a hex color, like 'FF0000'. ColorTag.
 <br>- uuid: a UUID. ElementTag.
 <br>- key: a namespaced key, like 'minecraft:stone'. ElementTag.
-<br>- time: a duration like '5s', '2d' or '100' (ticks). Optional 'min' key, in ticks. DurationTag.
+<br>- duration: a duration in Denizen's format, like '5s', '1.5h' or '30' (seconds). Units: t, s, m, h, d, w, y.
+<br>  'infinite' is accepted too and, as everywhere in Denizen, is just a zero duration.
+<br>  Suggests '1t' to '1y' and 'infinite' while empty, then the units once a number is typed.
+<br>  Optional 'min' key, also a duration like '1s' - any min above zero rejects 'infinite' as well. DurationTag.
+<br>- time: a duration in the vanilla format, like '5s', '2d' or '100' (ticks). Units: t, s, d. Optional 'min' key, in ticks. DurationTag.
 <br>- resource: an entry of a registry, chosen with the 'registry' key (like 'enchantment', 'biome', 'entity_type',
 <br>  or a full registry name like 'worldgen/biome'). The client suggests every entry. ElementTag of its key.</td></tr>
 <tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Script Container System</td></tr>
@@ -422,6 +431,184 @@
 <br>See also <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20inputs">Dialog Inputs</a>, <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20buttons">Dialog Buttons</a> and <span class="meta_url">Language:</span><a href="../Docs/Languages.html?q=dialog%20bodies">Dialog Bodies</a>.</td></tr>
 <tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Script Container System</td></tr>
 <tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/org/darwin/denizenAdditions/dialog/DialogScriptContainer.java#L1">org/darwin/denizenAdditions/dialog/DialogScriptContainer.java#L1</a></td></tr>
+</tbody></table></div>
+<div class="meta_entry" data-names="item script containers" data-text="item script containers changed item script containers script container system item script containers are an easy way to pre-define custom items for use within scripts. item scripts work with the itemtag object, and can be fetched with the object fetcher by using the itemtag constructor itemtag_script_name. example: - drop &lt;player.location&gt; super_dooper_diamond the following is the format for the container. except for the &#x27;material&#x27; key (and the dscript required &#x27;type&#x27; key), all other keys are optional. &lt;code&gt; # the name of the item script is the same name that you can use to construct a new # itemtag based on this item script. for example, an item script named &#x27;sword_of_swiftness&#x27; # can be referred to as simply &#x27;sword_of_swiftness&#x27;. item_script_name: type: item # must be a valid itemtag. see &#x27;itemtag&#x27; for more information. # | all item scripts must have this key! material: base_material # list any mechanisms you want to apply to the item within # | some item scripts should have this key! mechanisms: # an example of a mechanism to apply unbreakable: true # other common example custom_model_data: 5 # this demonstrates how to add a custom attribute modifier. attribute_modifiers: # one subkey for each attribute you want to modify. # valid attribute names are listed at https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/attribute.html generic_armor: # each attribute can have a list of modifiers, using numbered keys. they will be applied in numeric order, low to high. 1: # each modifier requires keys &#x27;operation&#x27; and &#x27;amount&#x27;, and can optionally have keys &#x27;name&#x27;, &#x27;slot&#x27;, and &#x27;id&#x27;. # operations can be: add_number, add_scalar, and multiply_scalar_1 operation: add_number amount: 5 # slots can be: hand, off_hand, feet, legs, chest, head, any slot: head # id is a uuid used to uniquely identify modifiers. if unspecified the id will be randomly generated. # items with modifiers that lack ids cannot be stacked due to the random generation. id: 10000000-1000-1000-1000-100000000000 # the &#x27;custom name&#x27; can be anything you wish. use color tags to make colored custom names. # | some item scripts should have this key! display name: custom name # lore lines can make items extra unique. this is a list, so multiple entries will result in multiple lores. # if using a replaceable tag, they are filled in when the item script is given/created/dropped/etc. # | some item scripts should have this key! lore: - item - ... # if you want an item to be damaged on creation, you can change its durability. # | most item scripts should exclude this key! durability: 12 # each line must specify a valid enchantment name. # | some item scripts should have this key! enchantments: - enchantment_name:level - ... # set this to &#x27;true&#x27; to allow the item script item to be used in material-based recipe (eg most vanilla recipes). # defaults to false if unspecified. # | most item scripts should exclude this key! allow in material recipes: false # you can specify flags to be added to the item. flags: # each line within the flags section should be a flag name as a key, and the flag value as the value. # you can use lists or maps here the way you would expect them to work. my_flag: my value # you can optionally add crafting recipes for your item script. # note that recipes won&#x27;t show in the recipe book when you add a new item script, until you either reconnect or use the &quot;resend_recipes&quot; mechanism. # | most item scripts should exclude this key, unless you&#x27;re specifically building craftable items. recipes: 1: # the type can be: shaped, shapeless, stonecutting, furnace, blast, smoker, campfire, or smithing. # | all recipes must include this key! type: shaped # the recipe can optionally have a custom internal recipe id (for recipe books). # if not specified, will be of the form &quot;&lt;type&gt;_&lt;script.name&gt;_&lt;id&gt;&quot; where id is the recipe list index (starting at 1, counting up). # ids will always have the namespace &quot;denizen&quot;. so, for the below, the full id is &quot;denizen:my_custom_item_id&quot; # note that most users should not set a custom id. if you choose to set a custom one, be careful to avoid duplicates or invalid text. # note that the internal rules for recipe ids are very strict (limited to &quot;a-z&quot;, &quot;0-9&quot;, &quot;/&quot;, &quot;.&quot;, &quot;_&quot;, or &quot;-&quot;). # | most recipes should exclude this key. recipe_id: my_custom_item_id # you can optionally add a group as well. if unspecified, the item will have no group. # groups are used to merge together similar recipes in the recipe book (in particular, multiple recipes for one item). # | most recipes should exclude this key. group: my_custom_group # you can optionally specify the quantity to output. the default is 1 (or whatever the item script&#x27;s quantity is). # | only some recipes should have this key. output_quantity: 4 # you must specify the input for the recipe. the below is a sample of a 3x3 shaped recipe. other recipe types have a different format. # you are allowed to have non-3x3 shapes (can be any value 1-3 x 1-3, so for example 1x3, 2x1, and 2x2 are fine). # for an empty slot, use &quot;air&quot;. # by default, items require an exact match. for a material-based match, use the format &quot;material:materialnamehere&quot; like &quot;material:stick&quot;. # item script items in shaped and shapeless recipes are the exception on paper 26 and newer: they match by the item script they come from, so a renamed or otherwise modified item still counts. # to make multiple different items match for any slot, just separate them with slashes, like &quot;stick/stone&quot;. # to match multiple materials, use &quot;material:a/b/c&quot;. # you can also make a dynamic matcher using &#x27;*&#x27;, like &quot;material:*_log&quot; to match any log block, # or &#x27;test_*&#x27; to match any item script that has name starting with &#x27;test_&#x27;. # note that to require multiple of an item as an input, the only option is to use multiple slots. # a single slot cannot require a quantity of items, as that is not part of the minecraft recipe system. # | all recipes must include this key! input: - itemtag|itemtag|itemtag - itemtag|itemtag|itemtag - itemtag|itemtag|itemtag # you can add as many as you want. 2: # sample of the format for a 2x2 recipe type: shaped input: - itemtag|itemtag - itemtag|itemtag 3: # shapeless recipes take a list of input items. type: shapeless # optionally specify the shapeless category for shapeless recipes, as &quot;building&quot;, &quot;redstone&quot;, &quot;equipment&quot;, or &quot;misc&quot;. defaults to &quot;misc&quot; if unspecified. # | only some recipes should have this key. category: misc input: itemtag|... 4: # stonecutting recipes take exactly one input item. type: stonecutting input: itemtag 5: # furnace, blast, smoker, and campfire recipes take one input and have additional options. type: furnace # optionally specify the cook time as a duration (default 2s). # | only some recipes should have this key. cook_time: 1s # optionally specify the cooking category for cooking recipes, as &quot;food&quot;, &quot;blocks&quot;, or &quot;misc&quot;. defaults to &quot;misc&quot; if unspecified. # | only some recipes should have this key. category: misc # optionally specify experience reward amount (default 0). # | only some recipes should have this key. experience: 5 input: itemtag 6: # smithing recipes take one base item and one upgrade item. # in versions 1.20 and up, smithing recipes take one template item, one base item, and one upgrade item. type: smithing template: itemtag base: itemtag # optionally, choose what values to retain, as a simple pipe-separated list of parts to retain. # if unspecified, no values will be retained. # parts can be: &#x27;display&#x27;, &#x27;enchantments&#x27; retain: display|enchantments upgrade: itemtag 7: # brewing recipes take one base item and one ingredient item. # | brewing recipes are only available on paper versions 1.18 and up. # | brewing recipes also have a special input option on 1.20 and above: &quot;matcher:&lt;item matcher&gt;&quot;, to allow advanced matchers on the input/ingredient items. type: brewing input: itemtag ingredient: itemtag # set to true to not store the scriptid on the item, treating it as an item dropped by any other plugin. # note: this is not recommended unless you have a specific reason to use it. # | most item scripts should exclude this key! no_id: true/false # if your material is a &#x27;written_book&#x27;, you can specify a book script to automatically scribe your item # upon creation. see &#x27;book script containers&#x27; for more information. # | most item scripts should exclude this key, though there are certain rare cases it may be useful to. book: book_script_name &lt;/code&gt;"><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="item script containers" href="#item%20script%20containers" onclick="doFlashFor('item script containers')"><span class="doc_name">Item Script Containers</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>Item script containers are an easy way to pre-define custom items for use within scripts. Item
+<br>scripts work with the ItemTag object, and can be fetched with the Object Fetcher by using the
+<br>ItemTag constructor ItemTag_script_name. Example: - drop &lt;player.location&gt; super_dooper_diamond
+<br>
+<br>The following is the format for the container. Except for the 'material' key (and the dScript
+<br>required 'type' key), all other keys are optional.
+<br>
+<br><pre><code><span class="script_comment_normal"># The name of the item script is the same name that you can use to construct a new</span>
+<span class="script_comment_normal"># ItemTag based on this item script. For example, an item script named 'sword_of_swiftness'</span>
+<span class="script_comment_normal"># can be referred to as simply 'sword_of_swiftness'.</span>
+<span class="script_key">Item_Script_Name</span><span class="script_colon">:</span>
+
+<span class="script_key">    type</span><span class="script_colon">:</span><span class="script_normal"> item</span>
+
+<span class="script_comment_normal">    # Must be a valid ItemTag. See 'ItemTag' for more information.</span>
+<span class="script_comment_header">    # | All item scripts MUST have this key!</span>
+<span class="script_key">    material</span><span class="script_colon">:</span><span class="script_normal"> base_material</span>
+
+<span class="script_comment_normal">    # List any mechanisms you want to apply to the item within</span>
+<span class="script_comment_header">    # | Some item scripts should have this key!</span>
+<span class="script_key">    mechanisms</span><span class="script_colon">:</span>
+<span class="script_comment_normal">      # An example of a mechanism to apply</span>
+<span class="script_key">      unbreakable</span><span class="script_colon">:</span><span class="script_normal"> true</span>
+<span class="script_comment_normal">      # Other common example</span>
+<span class="script_key">      custom_model_data</span><span class="script_colon">:</span><span class="script_normal"> 5</span>
+<span class="script_comment_normal">      # This demonstrates how to add a custom attribute modifier.</span>
+<span class="script_key">      attribute_modifiers</span><span class="script_colon">:</span>
+<span class="script_comment_normal">          # One subkey for each attribute you want to modify.</span>
+<span class="script_comment_normal">          # Valid attribute names are listed at https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html</span>
+<span class="script_key">          generic_armor</span><span class="script_colon">:</span>
+<span class="script_comment_normal">              # Each attribute can have a list of modifiers, using numbered keys. They will be applied in numeric order, low to high.</span>
+<span class="script_key">              1</span><span class="script_colon">:</span>
+<span class="script_comment_normal">                  # Each modifier requires keys 'operation' and 'amount', and can optionally have keys 'name', 'slot', and 'id'.</span>
+<span class="script_comment_normal">                  # Operations can be: ADD_NUMBER, ADD_SCALAR, and MULTIPLY_SCALAR_1</span>
+<span class="script_key">                  operation</span><span class="script_colon">:</span><span class="script_normal"> add_number</span>
+<span class="script_key">                  amount</span><span class="script_colon">:</span><span class="script_normal"> 5</span>
+<span class="script_comment_normal">                  # Slots can be: HAND, OFF_HAND, FEET, LEGS, CHEST, HEAD, ANY</span>
+<span class="script_key">                  slot</span><span class="script_colon">:</span><span class="script_normal"> head</span>
+<span class="script_comment_normal">                  # ID is a UUID used to uniquely identify modifiers. If unspecified the ID will be randomly generated.</span>
+<span class="script_comment_normal">                  # Items with modifiers that lack IDs cannot be stacked due to the random generation.</span>
+<span class="script_key">                  id</span><span class="script_colon">:</span><span class="script_normal"> 10000000-1000-1000-1000-100000000000</span>
+
+<span class="script_comment_normal">    # The 'custom name' can be anything you wish. Use color tags to make colored custom names.</span>
+<span class="script_comment_header">    # | Some item scripts should have this key!</span>
+<span class="script_key">    display name</span><span class="script_colon">:</span><span class="script_normal"> custom name</span>
+
+<span class="script_comment_normal">    # Lore lines can make items extra unique. This is a list, so multiple entries will result in multiple lores.</span>
+<span class="script_comment_normal">    # If using a replaceable tag, they are filled in when the item script is given/created/dropped/etc.</span>
+<span class="script_comment_header">    # | Some item scripts should have this key!</span>
+<span class="script_key">    lore</span><span class="script_colon">:</span>
+<span class="script_normal">    -</span><span class="script_normal"> item</span>
+<span class="script_normal">    -</span><span class="script_normal"> ...</span>
+
+<span class="script_comment_normal">    # If you want an item to be damaged on creation, you can change its durability.</span>
+<span class="script_comment_header">    # | Most item scripts should exclude this key!</span>
+<span class="script_key">    durability</span><span class="script_colon">:</span><span class="script_normal"> 12</span>
+
+<span class="script_comment_normal">    # Each line must specify a valid enchantment name.</span>
+<span class="script_comment_header">    # | Some item scripts should have this key!</span>
+<span class="script_key">    enchantments</span><span class="script_colon">:</span>
+<span class="script_normal">    -</span><span class="script_normal"> enchantment_name:level</span>
+<span class="script_normal">    -</span><span class="script_normal"> ...</span>
+
+<span class="script_comment_normal">    # Set this to 'true' to allow the item script item to be used in material-based recipe (eg most vanilla recipes).</span>
+<span class="script_comment_normal">    # Defaults to false if unspecified.</span>
+<span class="script_comment_header">    # | Most item scripts should exclude this key!</span>
+<span class="script_key">    allow in material recipes</span><span class="script_colon">:</span><span class="script_normal"> false</span>
+
+<span class="script_comment_normal">    # You can specify flags to be added to the item.</span>
+<span class="script_key">    flags</span><span class="script_colon">:</span>
+<span class="script_comment_normal">      # Each line within the flags section should be a flag name as a key, and the flag value as the value.</span>
+<span class="script_comment_normal">      # You can use lists or maps here the way you would expect them to work.</span>
+<span class="script_key">      my_flag</span><span class="script_colon">:</span><span class="script_normal"> my value</span>
+
+<span class="script_comment_normal">    # You can optionally add crafting recipes for your item script.</span>
+<span class="script_comment_normal">    # Note that recipes won't show in the recipe book when you add a new item script, until you either reconnect or use the "resend_recipes" mechanism.</span>
+<span class="script_comment_header">    # | Most item scripts should exclude this key, unless you're specifically building craftable items.</span>
+<span class="script_key">    recipes</span><span class="script_colon">:</span>
+<span class="script_key">        1</span><span class="script_colon">:</span>
+<span class="script_comment_normal">            # The type can be: shaped, shapeless, stonecutting, furnace, blast, smoker, campfire, or smithing.</span>
+<span class="script_comment_header">            # | All recipes must include this key!</span>
+<span class="script_key">            type</span><span class="script_colon">:</span><span class="script_normal"> shaped</span>
+<span class="script_comment_normal">            # The recipe can optionally have a custom internal recipe ID (for recipe books).</span>
+<span class="script_comment_normal">            # If not specified, will be of the form "&lt;type&gt;_&lt;script.name&gt;_&lt;id&gt;" where ID is the recipe list index (starting at 1, counting up).</span>
+<span class="script_comment_normal">            # IDs will always have the namespace "denizen". So, for the below, the full ID is "denizen:my_custom_item_id"</span>
+<span class="script_comment_normal">            # Note that most users should not set a custom ID. If you choose to set a custom one, be careful to avoid duplicates or invalid text.</span>
+<span class="script_comment_normal">            # Note that the internal rules for Recipe IDs are very strict (limited to "a-z", "0-9", "/", ".", "_", or "-").</span>
+<span class="script_comment_header">            # | Most recipes should exclude this key.</span>
+<span class="script_key">            recipe_id</span><span class="script_colon">:</span><span class="script_normal"> my_custom_item_id</span>
+<span class="script_comment_normal">            # You can optionally add a group as well. If unspecified, the item will have no group.</span>
+<span class="script_comment_normal">            # Groups are used to merge together similar recipes in the recipe book (in particular, multiple recipes for one item).</span>
+<span class="script_comment_header">            # | Most recipes should exclude this key.</span>
+<span class="script_key">            group</span><span class="script_colon">:</span><span class="script_normal"> my_custom_group</span>
+<span class="script_comment_normal">            # You can optionally specify the quantity to output. The default is 1 (or whatever the item script's quantity is).</span>
+<span class="script_comment_header">            # | Only some recipes should have this key.</span>
+<span class="script_key">            output_quantity</span><span class="script_colon">:</span><span class="script_normal"> 4</span>
+<span class="script_comment_normal">            # You must specify the input for the recipe. The below is a sample of a 3x3 shaped recipe. Other recipe types have a different format.</span>
+<span class="script_comment_normal">            # You are allowed to have non-3x3 shapes (can be any value 1-3 x 1-3, so for example 1x3, 2x1, and 2x2 are fine).</span>
+<span class="script_comment_normal">            # For an empty slot, use "air".</span>
+<span class="script_comment_normal">            # By default, items require an exact match. For a material-based match, use the format "material:MaterialNameHere" like "material:stick".</span>
+<span class="script_comment_normal">            # Item script items in shaped and shapeless recipes are the exception on Paper 26 and newer: they match by the item script they come from, so a renamed or otherwise modified item still counts.</span>
+<span class="script_comment_normal">            # To make multiple different items match for any slot, just separate them with slashes, like "stick/stone".</span>
+<span class="script_comment_normal">            # To match multiple materials, use "material:a/b/c".</span>
+<span class="script_comment_normal">            # You can also make a dynamic matcher using '*', like "material:*_log" to match any log block,</span>
+<span class="script_comment_normal">            # or 'test_*' to match any item script that has name starting with 'test_'.</span>
+<span class="script_comment_normal">            # Note that to require multiple of an item as an input, the only option is to use multiple slots.</span>
+<span class="script_comment_normal">            # A single slot cannot require a quantity of items, as that is not part of the minecraft recipe system.</span>
+<span class="script_comment_header">            # | All recipes must include this key!</span>
+<span class="script_key">            input</span><span class="script_colon">:</span>
+<span class="script_normal">            -</span><span class="script_normal"> ItemTag|ItemTag|ItemTag</span>
+<span class="script_normal">            -</span><span class="script_normal"> ItemTag|ItemTag|ItemTag</span>
+<span class="script_normal">            -</span><span class="script_normal"> ItemTag|ItemTag|ItemTag</span>
+<span class="script_comment_normal">       # You can add as many as you want.</span>
+<span class="script_key">       2</span><span class="script_colon">:</span>
+<span class="script_comment_normal">            # Sample of the format for a 2x2 recipe</span>
+<span class="script_key">            type</span><span class="script_colon">:</span><span class="script_normal"> shaped</span>
+<span class="script_key">            input</span><span class="script_colon">:</span>
+<span class="script_normal">            -</span><span class="script_normal"> ItemTag|ItemTag</span>
+<span class="script_normal">            -</span><span class="script_normal"> ItemTag|ItemTag</span>
+<span class="script_key">       3</span><span class="script_colon">:</span>
+<span class="script_comment_normal">           # Shapeless recipes take a list of input items.</span>
+<span class="script_key">           type</span><span class="script_colon">:</span><span class="script_normal"> shapeless</span>
+<span class="script_comment_normal">           # Optionally specify the shapeless category for shapeless recipes, as "building", "redstone", "equipment", or "misc". Defaults to "misc" if unspecified.</span>
+<span class="script_comment_header">           # | Only some recipes should have this key.</span>
+<span class="script_key">           category</span><span class="script_colon">:</span><span class="script_normal"> misc</span>
+<span class="script_key">           input</span><span class="script_colon">:</span><span class="script_normal"> ItemTag|...</span>
+<span class="script_key">       4</span><span class="script_colon">:</span>
+<span class="script_comment_normal">           # Stonecutting recipes take exactly one input item.</span>
+<span class="script_key">           type</span><span class="script_colon">:</span><span class="script_normal"> stonecutting</span>
+<span class="script_key">           input</span><span class="script_colon">:</span><span class="script_normal"> ItemTag</span>
+<span class="script_key">       5</span><span class="script_colon">:</span>
+<span class="script_comment_normal">           # Furnace, blast, smoker, and campfire recipes take one input and have additional options.</span>
+<span class="script_key">           type</span><span class="script_colon">:</span><span class="script_normal"> furnace</span>
+<span class="script_comment_normal">           # Optionally specify the cook time as a duration (default 2s).</span>
+<span class="script_comment_header">           # | Only some recipes should have this key.</span>
+<span class="script_key">           cook_time</span><span class="script_colon">:</span><span class="script_normal"> 1s</span>
+<span class="script_comment_normal">           # Optionally specify the cooking category for cooking recipes, as "food", "blocks", or "misc". Defaults to "misc" if unspecified.</span>
+<span class="script_comment_header">           # | Only some recipes should have this key.</span>
+<span class="script_key">           category</span><span class="script_colon">:</span><span class="script_normal"> misc</span>
+<span class="script_comment_normal">           # Optionally specify experience reward amount (default 0).</span>
+<span class="script_comment_header">           # | Only some recipes should have this key.</span>
+<span class="script_key">           experience</span><span class="script_colon">:</span><span class="script_normal"> 5</span>
+<span class="script_key">           input</span><span class="script_colon">:</span><span class="script_normal"> ItemTag</span>
+<span class="script_key">       6</span><span class="script_colon">:</span>
+<span class="script_comment_normal">           # Smithing recipes take one base item and one upgrade item.</span>
+<span class="script_comment_normal">           # In versions 1.20 and up, smithing recipes take one template item, one base item, and one upgrade item.</span>
+<span class="script_key">           type</span><span class="script_colon">:</span><span class="script_normal"> smithing</span>
+<span class="script_key">           template</span><span class="script_colon">:</span><span class="script_normal"> ItemTag</span>
+<span class="script_key">           base</span><span class="script_colon">:</span><span class="script_normal"> ItemTag</span>
+<span class="script_comment_normal">           # Optionally, choose what values to retain, as a simple pipe-separated list of parts to retain.</span>
+<span class="script_comment_normal">           # If unspecified, no values will be retained.</span>
+<span class="script_comment_normal">           # Parts can be: 'display', 'enchantments'</span>
+<span class="script_key">           retain</span><span class="script_colon">:</span><span class="script_normal"> display|enchantments</span>
+<span class="script_key">           upgrade</span><span class="script_colon">:</span><span class="script_normal"> ItemTag</span>
+
+<span class="script_key">       7</span><span class="script_colon">:</span>
+<span class="script_comment_normal">           # Brewing recipes take one base item and one ingredient item.</span>
+<span class="script_comment_header">           # | Brewing recipes are only available on Paper versions 1.18 and up.</span>
+<span class="script_comment_header">           # | Brewing recipes also have a special input option on 1.20 and above: "matcher:&lt;item matcher&gt;", to allow advanced matchers on the input/ingredient items.</span>
+<span class="script_key">           type</span><span class="script_colon">:</span><span class="script_normal"> brewing</span>
+<span class="script_key">           input</span><span class="script_colon">:</span><span class="script_normal"> ItemTag</span>
+<span class="script_key">           ingredient</span><span class="script_colon">:</span><span class="script_normal"> ItemTag</span>
+
+<span class="script_comment_normal">    # Set to true to not store the scriptID on the item, treating it as an item dropped by any other plugin.</span>
+<span class="script_comment_normal">    # NOTE: THIS IS NOT RECOMMENDED UNLESS YOU HAVE A SPECIFIC REASON TO USE IT.</span>
+<span class="script_comment_header">    # | Most item scripts should exclude this key!</span>
+<span class="script_key">    no_id</span><span class="script_colon">:</span><span class="script_normal"> true/false</span>
+
+<span class="script_comment_normal">    # If your material is a 'written_book', you can specify a book script to automatically scribe your item</span>
+<span class="script_comment_normal">    # upon creation. See 'book script containers' for more information.</span>
+<span class="script_comment_header">    # | Most item scripts should exclude this key, though there are certain rare cases it may be useful to.</span>
+<span class="script_key">    book</span><span class="script_colon">:</span><span class="script_normal"> book_script_name</span></code></pre></td></tr>
+<tr class="table-default text-muted"><td class="td-doc-key">Group</td><td>Script Container System</td></tr>
+<tr class="table-info"><td class="td-doc-key">Denizen Fork</td><td>Changed by the Denizen fork, see the <a class="official_link" href="https://meta.denizenscript.com/Docs/Languages/item%20script%20containers">original documentation</a>.</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/Denizen/plugin/src/main/java/com/denizenscript/denizen/scripts/containers/core/ItemScriptContainer.java#L1">Denizen/plugin/src/main/java/com/denizenscript/denizen/scripts/containers/core/ItemScriptContainer.java#L1</a></td></tr>
 </tbody></table></div>
 </div>
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html data-root="../">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="bootstrap_css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="../css/meta_site.css">
+    <link id="theme_css" rel="stylesheet" href="../css/theme/colors_dark.css">
+    <link rel="stylesheet" href="../css/site_extra.css">
+    <script src="../js/meta.js"></script>
+    <title>ObjectTypes | DenizenAdditions Meta Documentation</title>
+    <meta name="description" content="DenizenAdditions object types" />
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary navbar-fixed-ifier">
+        <a class="navbar-brand" href="../index.html">DenizenAdditions Meta Documentation</a>
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="https://meta.denizenscript.com/">Denizen Meta</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Commands.html">Commands</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Tags.html">Tags</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Mechanisms.html">Mechanisms</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/Languages.html">Language Explanations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Docs/ObjectTypes.html">ObjectTypes</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true">Theme</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" title="created by Alex 'mcmonkey' Goodwin" onclick="changetheme('dark')">Standard Dark</a>
+                        <a class="dropdown-item" title="created by Alex 'mcmonkey' Goodwin" onclick="changetheme('light')">Quite Light</a>
+                    </div>
+                </li>
+                <span class="topsearchbar">
+                    <input class="form-control mr-sm-2" type="text" id="top_search_bar" placeholder="Search">
+                </span>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav_spacer" style="height:90px;"></div>
+<span class="center_helper">
+    <div class="jumbotron">
+        <h3>DenizenAdditions ObjectTypes</h3>
+        <br>Object types are the kinds of values scripts work with, like players, locations or items.
+        <br>These are only the ones DenizenAdditions adds, along with the parts of Denizen that the Denizen fork changes. For everything in Denizen itself, see the <a href="https://meta.denizenscript.com/Docs/ObjectTypes">Denizen Meta Documentation</a>.
+    </div>
+    <input type="text" id="search_bar" placeholder="Search ObjectTypes...">
+    <br><br>
+    <h5 id="shown_count" data-total="1" data-noun="object types">Showing all 1 object types...</h5>
+</span>
+<center>
+<div class="categories_box"><h4>Categories:</h4><div class="categories_container">
+<a class="category_link" data-category="denizen" href="#denizen" onclick="doFlashFor('denizen')">Denizen</a>
+</div></div>
+<div class="meta_category" data-category="denizen"><div class="category_header"><br><hr><br><h4>Category: <a id="denizen" href="#denizen" onclick="doFlashFor('denizen')">Denizen</a></h4><br></div>
+<div class="meta_entry" data-names="worldtag" data-text="worldtag changed worldtag w elementtag flaggableobject player.location.world &lt;player.location.world&gt;,space - adjust %value% destroy - adjust %value% full_time:0 the identity format for worlds is the name of the world it should be associated with. for example, to reference the world named &#x27;world1&#x27;, use simply &#x27;world1&#x27;. world names are case insensitive. a worldtag represents a world on the server. this object type is flaggable. flags on this object type will be stored in the world folder in a file named &#x27;denizen_flags.dat&#x27;, like &quot;server/world/denizen_flags.dat&quot;. since minecraft 26, worlds other than the main one are folders inside it, like &quot;server/world/dimensions/minecraft/my_world/denizen_flags.dat&quot;. flags from before a world was migrated to that layout are moved along with it automatically. worldtag matchers, sometimes identified as &quot;&lt;world&gt;&quot;: &quot;world&quot; plaintext: always matches. world name: matches if the world has the given world name, using advanced matchers. &quot;world_flagged:&lt;flag&gt;&quot;: a flag matchable for worldtag flags."><table class="table table-hover"><tbody>
+<tr class="table-primary"><td class="td-doc-key">Name</td><td><a id="worldtag" href="#worldtag" onclick="doFlashFor('worldtag')"><span class="doc_name">WorldTag</span></a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Prefix</td><td>w</td></tr>
+<tr class="table-default"><td class="td-doc-key">Base Type</td><td><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/ObjectTypes/ElementTag">ElementTag</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Implements</td><td><a class="official_link" title="Denizen meta documentation" href="https://meta.denizenscript.com/Docs/ObjectTypes/FlaggableObject">FlaggableObject</a></td></tr>
+<tr class="table-default"><td class="td-doc-key">Identity Format</td><td>The identity format for worlds is the name of the world it should be associated with.
+<br>For example, to reference the world named 'world1', use simply 'world1'.
+<br>World names are case insensitive.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Description</td><td>A WorldTag represents a world on the server.
+<br>
+<br>This object type is flaggable.
+<br>Flags on this object type will be stored in the world folder in a file named 'denizen_flags.dat', like "server/world/denizen_flags.dat".
+<br>Since Minecraft 26, worlds other than the main one are folders inside it, like "server/world/dimensions/minecraft/my_world/denizen_flags.dat".
+<br>Flags from before a world was migrated to that layout are moved along with it automatically.</td></tr>
+<tr class="table-default"><td class="td-doc-key">Matchable</td><td>WorldTag matchers, sometimes identified as "&lt;world&gt;":
+<br>"world" plaintext: always matches.
+<br>World name: matches if the world has the given world name, using advanced matchers.
+<br>"world_flagged:&lt;flag&gt;": a Flag Matchable for WorldTag flags.</td></tr>
+<tr class="table-info"><td class="td-doc-key">Denizen Fork</td><td>Changed by the Denizen fork, see the <a class="official_link" href="https://meta.denizenscript.com/Docs/ObjectTypes/worldtag">original documentation</a>.</td></tr>
+<tr class="table-secondary"><td class="td-doc-key">Source</td><td><a href="https://github.com/Darwin1546/DenizenAdditions-docs/blob/main/Denizen/plugin/src/main/java/com/denizenscript/denizen/objects/WorldTag.java#L1">Denizen/plugin/src/main/java/com/denizenscript/denizen/objects/WorldTag.java#L1</a></td></tr>
+</tbody></table></div>
+</div>
+
+</center>
+
+    <footer>
+        <center>
+            <br>
+            <hr>
+            DenizenAdditions Meta Documentation: documentation for the commands, tags, events and more that DenizenAdditions adds to Denizen.
+            <br>Generated from the plugin's meta documentation in the format of <a href="https://github.com/DenizenScript/DenizenMetaWebsite">DenizenMetaWebsite</a>
+            (MIT License, Copyright (C) 2021-2026 The Denizen Script Team).
+            <br><span id="theme_footer"></span>
+            <br><br>
+        </center>
+    </footer>
+</body>
+</html>
